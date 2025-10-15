@@ -93,6 +93,9 @@ namespace ProjectUTS
 
         public static void save()
         {
+            //save current time as last online
+            player.Rows[0]["lastOnline"] = DateTime.Now;
+
             map.WriteXml("saveMap.xml");
             progress.WriteXml("saveProgress.xml");
             player.WriteXml("savePlayer.xml");
@@ -160,6 +163,33 @@ namespace ProjectUTS
         }
 
 
+        //============================= BUAT SAVE DATA UPGRADE PAS KLUAR=============================
+        public static void upgrade(int id, int waktu)
+        {
+            player.Rows[0]["upgradeInProgress"] = true;
+            player.Rows[0]["upgradeMapId"] = id;
+            player.Rows[0]["upgradeFinishTime"] = getEstimateTime(waktu);
+        }
+
+        public static DateTime getEstimateTime(int waktu)
+        {
+            DateTime now = DateTime.Now;
+            return now.AddSeconds(waktu);
+        }
+
+        public static void setEstimateTime(int waktu)
+        {
+            DateTime now = DateTime.Now;
+            player.Rows[0]["upgradeFinishTime"] = now.AddSeconds(waktu);
+        }
+
+
+        public static void upgradeFinish()
+        {
+            player.Rows[0]["upgradeInProgress"] = false;
+            player.Rows[0]["upgradeMapId"] = -1;
+            player.Rows[0]["upgradeFinishTime"] = DateTime.Now;
+        }
 
     }
 

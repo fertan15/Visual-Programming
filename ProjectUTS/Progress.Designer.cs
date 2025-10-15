@@ -952,6 +952,14 @@ namespace ProjectUTS {
             
             private global::System.Data.DataColumn columncrop;
             
+            private global::System.Data.DataColumn columnupgradeInProgress;
+            
+            private global::System.Data.DataColumn columnidMapUpgrade;
+            
+            private global::System.Data.DataColumn columnEstimateTimeFinishUpgrade;
+            
+            private global::System.Data.DataColumn columnLastOnline;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public PlayerDataTable() {
@@ -1027,6 +1035,38 @@ namespace ProjectUTS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn upgradeInProgressColumn {
+                get {
+                    return this.columnupgradeInProgress;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn idMapUpgradeColumn {
+                get {
+                    return this.columnidMapUpgrade;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn EstimateTimeFinishUpgradeColumn {
+                get {
+                    return this.columnEstimateTimeFinishUpgrade;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn LastOnlineColumn {
+                get {
+                    return this.columnLastOnline;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1062,14 +1102,18 @@ namespace ProjectUTS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PlayerRow AddPlayerRow(short id, double clay, double iron, double wood, double crop) {
+            public PlayerRow AddPlayerRow(short id, double clay, double iron, double wood, double crop, bool upgradeInProgress, short idMapUpgrade, System.DateTime EstimateTimeFinishUpgrade, System.DateTime LastOnline) {
                 PlayerRow rowPlayerRow = ((PlayerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
                         clay,
                         iron,
                         wood,
-                        crop};
+                        crop,
+                        upgradeInProgress,
+                        idMapUpgrade,
+                        EstimateTimeFinishUpgrade,
+                        LastOnline};
                 rowPlayerRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPlayerRow);
                 return rowPlayerRow;
@@ -1097,6 +1141,10 @@ namespace ProjectUTS {
                 this.columniron = base.Columns["iron"];
                 this.columnwood = base.Columns["wood"];
                 this.columncrop = base.Columns["crop"];
+                this.columnupgradeInProgress = base.Columns["upgradeInProgress"];
+                this.columnidMapUpgrade = base.Columns["idMapUpgrade"];
+                this.columnEstimateTimeFinishUpgrade = base.Columns["EstimateTimeFinishUpgrade"];
+                this.columnLastOnline = base.Columns["LastOnline"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1112,6 +1160,14 @@ namespace ProjectUTS {
                 base.Columns.Add(this.columnwood);
                 this.columncrop = new global::System.Data.DataColumn("crop", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncrop);
+                this.columnupgradeInProgress = new global::System.Data.DataColumn("upgradeInProgress", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnupgradeInProgress);
+                this.columnidMapUpgrade = new global::System.Data.DataColumn("idMapUpgrade", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidMapUpgrade);
+                this.columnEstimateTimeFinishUpgrade = new global::System.Data.DataColumn("EstimateTimeFinishUpgrade", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEstimateTimeFinishUpgrade);
+                this.columnLastOnline = new global::System.Data.DataColumn("LastOnline", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLastOnline);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1576,6 +1632,70 @@ namespace ProjectUTS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool upgradeInProgress {
+                get {
+                    try {
+                        return ((bool)(this[this.tablePlayer.upgradeInProgressColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'upgradeInProgress\' in table \'Player\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePlayer.upgradeInProgressColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public short idMapUpgrade {
+                get {
+                    try {
+                        return ((short)(this[this.tablePlayer.idMapUpgradeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'idMapUpgrade\' in table \'Player\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePlayer.idMapUpgradeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime EstimateTimeFinishUpgrade {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablePlayer.EstimateTimeFinishUpgradeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'EstimateTimeFinishUpgrade\' in table \'Player\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePlayer.EstimateTimeFinishUpgradeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime LastOnline {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablePlayer.LastOnlineColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LastOnline\' in table \'Player\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePlayer.LastOnlineColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsidNull() {
                 return this.IsNull(this.tablePlayer.idColumn);
             }
@@ -1632,6 +1752,54 @@ namespace ProjectUTS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetcropNull() {
                 this[this.tablePlayer.cropColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsupgradeInProgressNull() {
+                return this.IsNull(this.tablePlayer.upgradeInProgressColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetupgradeInProgressNull() {
+                this[this.tablePlayer.upgradeInProgressColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsidMapUpgradeNull() {
+                return this.IsNull(this.tablePlayer.idMapUpgradeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetidMapUpgradeNull() {
+                this[this.tablePlayer.idMapUpgradeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsEstimateTimeFinishUpgradeNull() {
+                return this.IsNull(this.tablePlayer.EstimateTimeFinishUpgradeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetEstimateTimeFinishUpgradeNull() {
+                this[this.tablePlayer.EstimateTimeFinishUpgradeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsLastOnlineNull() {
+                return this.IsNull(this.tablePlayer.LastOnlineColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetLastOnlineNull() {
+                this[this.tablePlayer.LastOnlineColumn] = global::System.Convert.DBNull;
             }
         }
         

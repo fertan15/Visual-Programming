@@ -36,6 +36,9 @@ namespace ProjectUTS
             this.Controls.Add(pic);
             gameTimer.Start();
 
+
+            MessageBox.Show(Data.getEstimateTime(3600).ToString());
+
         }
 
 
@@ -198,6 +201,7 @@ namespace ProjectUTS
                 countdowntimer.Stop();
                 upgradeButton.Enabled = true;
                 selected = null;
+                Data.upgradeFinish();
                 //tes
                 waktu = 3;                
             }
