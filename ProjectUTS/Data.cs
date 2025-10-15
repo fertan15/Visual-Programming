@@ -167,8 +167,8 @@ namespace ProjectUTS
         public static void upgrade(int id, int waktu)
         {
             player.Rows[0]["upgradeInProgress"] = true;
-            player.Rows[0]["upgradeMapId"] = id;
-            player.Rows[0]["upgradeFinishTime"] = getEstimateTime(waktu);
+            player.Rows[0]["idMapUpgrade"] = id;
+            player.Rows[0]["EstimateTimeFinishUpgrade"] = getEstimateTime(waktu);
         }
 
         public static DateTime getEstimateTime(int waktu)
@@ -180,15 +180,20 @@ namespace ProjectUTS
         public static void setEstimateTime(int waktu)
         {
             DateTime now = DateTime.Now;
-            player.Rows[0]["upgradeFinishTime"] = now.AddSeconds(waktu);
+            player.Rows[0]["EstimateTimeFinishUpgrade"] = now.AddSeconds(waktu);
         }
 
 
         public static void upgradeFinish()
         {
             player.Rows[0]["upgradeInProgress"] = false;
-            player.Rows[0]["upgradeMapId"] = -1;
-            player.Rows[0]["upgradeFinishTime"] = DateTime.Now;
+            player.Rows[0]["idMapUpgrade"] = -1;
+            player.Rows[0]["EstimateTimeFinishUpgrade"] = DateTime.Now;
+        }
+
+        public static bool anyUpgrade()
+        {
+            return Convert.ToBoolean(player.Rows[0]["upgradeInProgress"]);
         }
 
     }

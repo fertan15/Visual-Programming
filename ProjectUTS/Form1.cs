@@ -14,7 +14,7 @@ namespace ProjectUTS
     {
         Map selected; //buat index map yang tak klik skarang soale ganti2
         int multiplier = 1; //buat multiplier production
-        int waktu = 3;
+        int waktu = 300;
         int gameIntervalNormal = 1000;
         bool gakMiskin = true;
         public Form1()
@@ -37,7 +37,6 @@ namespace ProjectUTS
             gameTimer.Start();
 
 
-            MessageBox.Show(Data.getEstimateTime(3600).ToString());
 
         }
 
@@ -177,8 +176,11 @@ namespace ProjectUTS
                 Data.addWood(-1);
                 Data.addCrop(-1);
                 upgradeButton.Enabled = false;
+
                 countdowntimer.Start();
                 gakMiskin = true;
+                //mulai upgrade -> buat save di dataset
+                Data.upgrade(selected.id, waktu);
             }
                 
         }
@@ -217,6 +219,12 @@ namespace ProjectUTS
         {
             gameTimer.Interval = gameIntervalNormal / multiplier; // biar cepet kalo multiplier gede
             countdowntimer.Interval = gameIntervalNormal / multiplier;
+            if (Data.anyUpgrade())
+            {
+                //sek masih rodok rodok error
+                Data.setEstimateTime(waktu/multiplier);
+
+            }
 
             clayPerHour.Text = Data.getAllClayProduction().ToString();
             ironPerHour.Text = Data.getAllIronProduction().ToString();

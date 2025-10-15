@@ -30,17 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jenisMapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.levelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productionPerHour = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.positionXDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.positionYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mapProgressBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.progress = new ProjectUTS.Progress();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jenisMapBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
@@ -48,6 +40,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.progress = new ProjectUTS.Progress();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jenisMapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.levelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.positionXDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.positionYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ironDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,14 +56,15 @@
             this.upgradeInProgress = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.idMapUpgrade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstimateTimeFinishUpgrade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastOnline = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mapProgressBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.progress)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jenisMapBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.progress)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -82,34 +83,11 @@
             this.dataGridView1.DataSource = this.mapProgressBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(0, 162);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1118, 237);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // jenisMapDataGridViewTextBoxColumn
-            // 
-            this.jenisMapDataGridViewTextBoxColumn.DataPropertyName = "jenisMap";
-            this.jenisMapDataGridViewTextBoxColumn.HeaderText = "jenisMap";
-            this.jenisMapDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.jenisMapDataGridViewTextBoxColumn.Name = "jenisMapDataGridViewTextBoxColumn";
-            this.jenisMapDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // levelDataGridViewTextBoxColumn
-            // 
-            this.levelDataGridViewTextBoxColumn.DataPropertyName = "level";
-            this.levelDataGridViewTextBoxColumn.HeaderText = "level";
-            this.levelDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.levelDataGridViewTextBoxColumn.Name = "levelDataGridViewTextBoxColumn";
-            this.levelDataGridViewTextBoxColumn.Width = 125;
             // 
             // productionPerHour
             // 
@@ -117,41 +95,17 @@
             this.productionPerHour.HeaderText = "productionPerHour";
             this.productionPerHour.MinimumWidth = 6;
             this.productionPerHour.Name = "productionPerHour";
+            this.productionPerHour.ReadOnly = true;
             this.productionPerHour.Width = 125;
-            // 
-            // positionXDataGridViewTextBoxColumn
-            // 
-            this.positionXDataGridViewTextBoxColumn.DataPropertyName = "positionX";
-            this.positionXDataGridViewTextBoxColumn.HeaderText = "positionX";
-            this.positionXDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.positionXDataGridViewTextBoxColumn.Name = "positionXDataGridViewTextBoxColumn";
-            this.positionXDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // positionYDataGridViewTextBoxColumn
-            // 
-            this.positionYDataGridViewTextBoxColumn.DataPropertyName = "positionY";
-            this.positionYDataGridViewTextBoxColumn.HeaderText = "positionY";
-            this.positionYDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.positionYDataGridViewTextBoxColumn.Name = "positionYDataGridViewTextBoxColumn";
-            this.positionYDataGridViewTextBoxColumn.Width = 125;
             // 
             // mapProgressBindingSource
             // 
             this.mapProgressBindingSource.DataMember = "MapProgress";
             this.mapProgressBindingSource.DataSource = this.bindingSource1;
             // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = this.progress;
-            this.bindingSource1.Position = 0;
-            // 
-            // progress
-            // 
-            this.progress.DataSetName = "Progress";
-            this.progress.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // dataGridView2
             // 
+            this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -161,18 +115,11 @@
             this.dataGridView2.DataSource = this.jenisMapBindingSource;
             this.dataGridView2.Location = new System.Drawing.Point(0, 441);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(1118, 215);
             this.dataGridView2.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "id";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 125;
             // 
             // nama
             // 
@@ -180,6 +127,7 @@
             this.nama.HeaderText = "nama";
             this.nama.MinimumWidth = 6;
             this.nama.Name = "nama";
+            this.nama.ReadOnly = true;
             this.nama.Width = 125;
             // 
             // jenisMapBindingSource
@@ -201,10 +149,12 @@
             this.cropDataGridViewTextBoxColumn,
             this.upgradeInProgress,
             this.idMapUpgrade,
-            this.EstimateTimeFinishUpgrade});
+            this.EstimateTimeFinishUpgrade,
+            this.LastOnline});
             this.dataGridView3.DataSource = this.playerBindingSource;
             this.dataGridView3.Location = new System.Drawing.Point(0, 46);
             this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.Size = new System.Drawing.Size(1118, 69);
@@ -245,12 +195,77 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Map Data";
             // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = this.progress;
+            this.bindingSource1.Position = 0;
+            // 
+            // progress
+            // 
+            this.progress.DataSetName = "Progress";
+            this.progress.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "id";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // jenisMapDataGridViewTextBoxColumn
+            // 
+            this.jenisMapDataGridViewTextBoxColumn.DataPropertyName = "jenisMap";
+            this.jenisMapDataGridViewTextBoxColumn.HeaderText = "jenisMap";
+            this.jenisMapDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.jenisMapDataGridViewTextBoxColumn.Name = "jenisMapDataGridViewTextBoxColumn";
+            this.jenisMapDataGridViewTextBoxColumn.ReadOnly = true;
+            this.jenisMapDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // levelDataGridViewTextBoxColumn
+            // 
+            this.levelDataGridViewTextBoxColumn.DataPropertyName = "level";
+            this.levelDataGridViewTextBoxColumn.HeaderText = "level";
+            this.levelDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.levelDataGridViewTextBoxColumn.Name = "levelDataGridViewTextBoxColumn";
+            this.levelDataGridViewTextBoxColumn.ReadOnly = true;
+            this.levelDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // positionXDataGridViewTextBoxColumn
+            // 
+            this.positionXDataGridViewTextBoxColumn.DataPropertyName = "positionX";
+            this.positionXDataGridViewTextBoxColumn.HeaderText = "positionX";
+            this.positionXDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.positionXDataGridViewTextBoxColumn.Name = "positionXDataGridViewTextBoxColumn";
+            this.positionXDataGridViewTextBoxColumn.ReadOnly = true;
+            this.positionXDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // positionYDataGridViewTextBoxColumn
+            // 
+            this.positionYDataGridViewTextBoxColumn.DataPropertyName = "positionY";
+            this.positionYDataGridViewTextBoxColumn.HeaderText = "positionY";
+            this.positionYDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.positionYDataGridViewTextBoxColumn.Name = "positionYDataGridViewTextBoxColumn";
+            this.positionYDataGridViewTextBoxColumn.ReadOnly = true;
+            this.positionYDataGridViewTextBoxColumn.Width = 125;
+            // 
             // idDataGridViewTextBoxColumn1
             // 
             this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
             this.idDataGridViewTextBoxColumn1.HeaderText = "id";
             this.idDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
             this.idDataGridViewTextBoxColumn1.Width = 125;
             // 
             // clayDataGridViewTextBoxColumn
@@ -259,6 +274,7 @@
             this.clayDataGridViewTextBoxColumn.HeaderText = "clay";
             this.clayDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.clayDataGridViewTextBoxColumn.Name = "clayDataGridViewTextBoxColumn";
+            this.clayDataGridViewTextBoxColumn.ReadOnly = true;
             this.clayDataGridViewTextBoxColumn.Width = 125;
             // 
             // ironDataGridViewTextBoxColumn
@@ -267,6 +283,7 @@
             this.ironDataGridViewTextBoxColumn.HeaderText = "iron";
             this.ironDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.ironDataGridViewTextBoxColumn.Name = "ironDataGridViewTextBoxColumn";
+            this.ironDataGridViewTextBoxColumn.ReadOnly = true;
             this.ironDataGridViewTextBoxColumn.Width = 125;
             // 
             // woodDataGridViewTextBoxColumn
@@ -275,6 +292,7 @@
             this.woodDataGridViewTextBoxColumn.HeaderText = "wood";
             this.woodDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.woodDataGridViewTextBoxColumn.Name = "woodDataGridViewTextBoxColumn";
+            this.woodDataGridViewTextBoxColumn.ReadOnly = true;
             this.woodDataGridViewTextBoxColumn.Width = 125;
             // 
             // cropDataGridViewTextBoxColumn
@@ -283,6 +301,7 @@
             this.cropDataGridViewTextBoxColumn.HeaderText = "crop";
             this.cropDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.cropDataGridViewTextBoxColumn.Name = "cropDataGridViewTextBoxColumn";
+            this.cropDataGridViewTextBoxColumn.ReadOnly = true;
             this.cropDataGridViewTextBoxColumn.Width = 125;
             // 
             // upgradeInProgress
@@ -291,6 +310,7 @@
             this.upgradeInProgress.HeaderText = "upgradeInProgress";
             this.upgradeInProgress.MinimumWidth = 6;
             this.upgradeInProgress.Name = "upgradeInProgress";
+            this.upgradeInProgress.ReadOnly = true;
             this.upgradeInProgress.Width = 125;
             // 
             // idMapUpgrade
@@ -299,6 +319,7 @@
             this.idMapUpgrade.HeaderText = "idMapUpgrade";
             this.idMapUpgrade.MinimumWidth = 6;
             this.idMapUpgrade.Name = "idMapUpgrade";
+            this.idMapUpgrade.ReadOnly = true;
             this.idMapUpgrade.Width = 125;
             // 
             // EstimateTimeFinishUpgrade
@@ -307,7 +328,17 @@
             this.EstimateTimeFinishUpgrade.HeaderText = "EstimateTimeFinishUpgrade";
             this.EstimateTimeFinishUpgrade.MinimumWidth = 6;
             this.EstimateTimeFinishUpgrade.Name = "EstimateTimeFinishUpgrade";
+            this.EstimateTimeFinishUpgrade.ReadOnly = true;
             this.EstimateTimeFinishUpgrade.Width = 125;
+            // 
+            // LastOnline
+            // 
+            this.LastOnline.DataPropertyName = "LastOnline";
+            this.LastOnline.HeaderText = "LastOnline";
+            this.LastOnline.MinimumWidth = 6;
+            this.LastOnline.Name = "LastOnline";
+            this.LastOnline.ReadOnly = true;
+            this.LastOnline.Width = 125;
             // 
             // CheckData
             // 
@@ -324,12 +355,12 @@
             this.Text = "CheckData";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mapProgressBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.progress)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jenisMapBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.progress)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,5 +395,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn upgradeInProgress;
         private System.Windows.Forms.DataGridViewTextBoxColumn idMapUpgrade;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstimateTimeFinishUpgrade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LastOnline;
     }
 }
