@@ -127,15 +127,36 @@ namespace ProjectUTS
                 return;
             }
 
-            if(Data.getWood() < 1000)
+            if(Data.getClay() < 1000)
             {
                 gakMiskin = false;
                 MessageBox.Show("minggir lu miskin");
                 return;
             }
-            if(gakMiskin)
+            if(Data.getIron() < 1000)
             {
+                gakMiskin = false;
+                MessageBox.Show("minggir lu miskin");
+                return;
+            }
+            if (Data.getWood() < 1000)
+            {
+                gakMiskin = false;
+                MessageBox.Show("minggir lu miskin");
+                return;
+            }
+            if (Data.getCrop() < 1000)
+            {
+                gakMiskin = false;
+                MessageBox.Show("minggir lu miskin");
+                return;
+            }
+            if (gakMiskin)
+            {
+                Data.addClay(-1000);
+                Data.addIron(-1000);
                 Data.addWood(-1000);
+                Data.addCrop(-1000);
                 upgradeButton.Enabled = false;
                 countdowntimer.Start();
                 gakMiskin = false;
