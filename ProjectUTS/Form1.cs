@@ -16,6 +16,7 @@ namespace ProjectUTS
         int multiplier = 1; //buat multiplier production
         int waktu = 300;
         int gameIntervalNormal = 1000;
+        bool gakMiskin = true;
         public Form1()
         {
             InitializeComponent();
@@ -112,6 +113,10 @@ namespace ProjectUTS
             selected = (Map)sender;
 
             MessageBox.Show("Map ID: " + selected.id + "\nProduction : "  + selected.getProductionPerHour());
+
+            // ini tak taruk detailnya disini
+            showDetails(selected.getJenis());
+
         }
 
         private void upgradeButton_Click(object sender, EventArgs e)
@@ -121,8 +126,21 @@ namespace ProjectUTS
                 MessageBox.Show("Pilih map dulu");
                 return;
             }
-            upgradeButton.Enabled = false;
-            countdowntimer.Start();
+
+            if(Data.getWood() < 1000)
+            {
+                gakMiskin = false;
+                MessageBox.Show("minggir lu miskin");
+                return;
+            }
+            if(gakMiskin)
+            {
+                Data.addWood(-1000);
+                upgradeButton.Enabled = false;
+                countdowntimer.Start();
+                gakMiskin = false;
+            }
+                
         }
 
         private void countdowntimer_Tick(object sender, EventArgs e)
@@ -174,5 +192,37 @@ namespace ProjectUTS
             woodInven.Text = Data.getWood().ToString();
             cropInven.Text = Data.getCrop().ToString();
         }
+
+        public void showDetails(int id)
+        {
+
+            if(id == 0)
+            {
+                //clay
+                buildingDetails.Text = "hohoho";
+                timeNeeded.Text = "ko keset pepega";
+            }
+            else if(id == 1)
+            {
+                //iron
+                buildingDetails.Text = "";
+                timeNeeded.Text = "";
+            }
+            else if(id == 2)
+            {
+                //wood
+                buildingDetails.Text = "";
+                timeNeeded.Text = "";
+            }
+            else if(id == 3)
+            {
+                //crop
+                buildingDetails.Text = "";
+                timeNeeded.Text = "";
+            }
+
+        }
+
+
     }
 }
