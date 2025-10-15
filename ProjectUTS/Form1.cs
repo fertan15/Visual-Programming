@@ -35,6 +35,9 @@ namespace ProjectUTS
             this.Controls.Add(pic);
             gameTimer.Start();
 
+
+            MessageBox.Show(Data.getEstimateTime(3600).ToString());
+
         }
 
 
@@ -122,6 +125,7 @@ namespace ProjectUTS
                 return;
             }
             upgradeButton.Enabled = false;
+
             countdowntimer.Start();
         }
 

@@ -160,6 +160,26 @@ namespace ProjectUTS
         }
 
 
+        //============================= BUAT SAVE DATA UPGRADE PAS KLUAR=============================
+        public static void upgrade(int id, int waktu)
+        {
+            player.Rows[0]["upgradeInProgress"] = true;
+            player.Rows[0]["upgradeMapId"] = id;
+            player.Rows[0]["upgradeFinishTime"] = getEstimateTime(waktu);
+        }
+
+        public static DateTime getEstimateTime(int waktu)
+        {
+            DateTime now = DateTime.Now;
+            return now.AddSeconds(waktu);
+        }
+
+        public static void upgradeFinish()
+        {
+            player.Rows[0]["upgradeInProgress"] = false;
+            player.Rows[0]["upgradeMapId"] = -1;
+            player.Rows[0]["upgradeFinishTime"] = DateTime.Now;
+        }
 
     }
 
