@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\mengamankan dokumen negara.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="..\..\mengamankan dokumen negara.Designer.cs">
-      <DependentUpon>mengamankan dokumen negara.cs</DependentUpon>
-    </Compile>
     <Compile Include="CheckData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +53,12 @@
       <DependentUpon>CheckData.cs</DependentUpon>
     </Compile>
     <Compile Include="Data.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Initialize.cs" />
     <Compile Include="Map.cs">
       <SubType>Component</SubType>
@@ -73,11 +73,11 @@
       <DependentUpon>Progress.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="..\..\mengamankan dokumen negara.resx">
-      <DependentUpon>mengamankan dokumen negara.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CheckData.resx">
       <DependentUpon>CheckData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

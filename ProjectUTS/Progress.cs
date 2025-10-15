@@ -4,8 +4,5 @@
 
     public partial class Progress
     {
-        partial class MapProgressDataTable
-        {
-        }
     }
 }
