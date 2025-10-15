@@ -1062,7 +1062,7 @@ namespace ProjectUTS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PlayerRow AddPlayerRow(short id, long clay, long iron, long wood, long crop) {
+            public PlayerRow AddPlayerRow(short id, double clay, double iron, double wood, double crop) {
                 PlayerRow rowPlayerRow = ((PlayerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
@@ -1104,13 +1104,13 @@ namespace ProjectUTS {
             private void InitClass() {
                 this.columnid = new global::System.Data.DataColumn("id", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid);
-                this.columnclay = new global::System.Data.DataColumn("clay", typeof(long), null, global::System.Data.MappingType.Element);
+                this.columnclay = new global::System.Data.DataColumn("clay", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnclay);
-                this.columniron = new global::System.Data.DataColumn("iron", typeof(long), null, global::System.Data.MappingType.Element);
+                this.columniron = new global::System.Data.DataColumn("iron", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columniron);
-                this.columnwood = new global::System.Data.DataColumn("wood", typeof(long), null, global::System.Data.MappingType.Element);
+                this.columnwood = new global::System.Data.DataColumn("wood", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnwood);
-                this.columncrop = new global::System.Data.DataColumn("crop", typeof(long), null, global::System.Data.MappingType.Element);
+                this.columncrop = new global::System.Data.DataColumn("crop", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncrop);
             }
             
@@ -1512,10 +1512,10 @@ namespace ProjectUTS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long clay {
+            public double clay {
                 get {
                     try {
-                        return ((long)(this[this.tablePlayer.clayColumn]));
+                        return ((double)(this[this.tablePlayer.clayColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'clay\' in table \'Player\' is DBNull.", e);
@@ -1528,10 +1528,10 @@ namespace ProjectUTS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long iron {
+            public double iron {
                 get {
                     try {
-                        return ((long)(this[this.tablePlayer.ironColumn]));
+                        return ((double)(this[this.tablePlayer.ironColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'iron\' in table \'Player\' is DBNull.", e);
@@ -1544,10 +1544,10 @@ namespace ProjectUTS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long wood {
+            public double wood {
                 get {
                     try {
-                        return ((long)(this[this.tablePlayer.woodColumn]));
+                        return ((double)(this[this.tablePlayer.woodColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'wood\' in table \'Player\' is DBNull.", e);
@@ -1560,10 +1560,10 @@ namespace ProjectUTS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long crop {
+            public double crop {
                 get {
                     try {
-                        return ((long)(this[this.tablePlayer.cropColumn]));
+                        return ((double)(this[this.tablePlayer.cropColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'crop\' in table \'Player\' is DBNull.", e);

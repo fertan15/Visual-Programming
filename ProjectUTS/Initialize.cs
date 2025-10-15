@@ -33,7 +33,7 @@ namespace ProjectUTS
             if(!Data.isThereSavedProgress)
             {
                 initDefaultData();
-                MessageBox.Show("No data Found jadi mulai dari awal");
+                //MessageBox.Show("No data Found jadi mulai dari awal");
             }
             else
             {

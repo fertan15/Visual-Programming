@@ -41,21 +41,21 @@ namespace ProjectUTS
             }
 
         //kalo mau otak atik inventory -> di add sih kalo maw lgsng modif bikin lagi aja
-            public static void addClay(int amount)
+            public static void addClay(double amount)
             {
-                player.Rows[0]["clay"] = getClay() + amount;
+                player.Rows[0]["clay"] = Convert.ToDouble(player.Rows[0]["clay"]) + amount;
             }
-            public static void addIron(int amount)
+            public static void addIron(double amount)
             {
-                player.Rows[0]["iron"] = getIron() + amount;
+                player.Rows[0]["iron"] = Convert.ToDouble(player.Rows[0]["iron"]) + amount;
             }
-            public static void addWood(int amount)
+            public static void addWood(double amount)
             {
-                player.Rows[0]["wood"] = getWood() + amount;
+                player.Rows[0]["wood"] = Convert.ToDouble(player.Rows[0]["wood"]) + amount;
             }
-            public static void addCrop(int amount)
+            public static void addCrop(double amount)
             {
-                player.Rows[0]["crop"] = getCrop() + amount;
+                player.Rows[0]["crop"] = Convert.ToDouble(player.Rows[0]["crop"]) + amount;
             }
 
 

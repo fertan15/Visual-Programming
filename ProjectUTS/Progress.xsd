@@ -9,37 +9,37 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="Progress" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="Progress" msprop:Generator_DataSetName="Progress">
+  <xs:element name="Progress" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Progress" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Progress">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="MapProgress" msprop:Generator_RowEvHandlerName="MapProgressRowChangeEventHandler" msprop:Generator_RowDeletedName="MapProgressRowDeleted" msprop:Generator_RowDeletingName="MapProgressRowDeleting" msprop:Generator_RowEvArgName="MapProgressRowChangeEvent" msprop:Generator_TablePropName="MapProgress" msprop:Generator_RowChangedName="MapProgressRowChanged" msprop:Generator_RowChangingName="MapProgressRowChanging" msprop:Generator_TableClassName="MapProgressDataTable" msprop:Generator_RowClassName="MapProgressRow" msprop:Generator_TableVarName="tableMapProgress" msprop:Generator_UserTableName="MapProgress">
+        <xs:element name="MapProgress" msprop:Generator_RowClassName="MapProgressRow" msprop:Generator_RowEvHandlerName="MapProgressRowChangeEventHandler" msprop:Generator_RowDeletedName="MapProgressRowDeleted" msprop:Generator_RowDeletingName="MapProgressRowDeleting" msprop:Generator_RowEvArgName="MapProgressRowChangeEvent" msprop:Generator_TablePropName="MapProgress" msprop:Generator_RowChangedName="MapProgressRowChanged" msprop:Generator_UserTableName="MapProgress" msprop:Generator_RowChangingName="MapProgressRowChanging" msprop:Generator_TableClassName="MapProgressDataTable" msprop:Generator_TableVarName="tableMapProgress">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:short" />
-              <xs:element name="jenisMap" msprop:Generator_ColumnPropNameInRow="jenisMap" msprop:Generator_ColumnPropNameInTable="jenisMapColumn" msprop:Generator_ColumnVarNameInTable="columnjenisMap" msprop:Generator_UserColumnName="jenisMap" type="xs:short" />
-              <xs:element name="level" msprop:Generator_ColumnPropNameInRow="level" msprop:Generator_ColumnPropNameInTable="levelColumn" msprop:Generator_ColumnVarNameInTable="columnlevel" msprop:Generator_UserColumnName="level" type="xs:short" minOccurs="0" />
-              <xs:element name="positionX" msprop:Generator_ColumnPropNameInRow="positionX" msprop:Generator_ColumnPropNameInTable="positionXColumn" msprop:Generator_ColumnVarNameInTable="columnpositionX" msprop:Generator_UserColumnName="positionX" type="xs:long" minOccurs="0" />
-              <xs:element name="positionY" msprop:Generator_ColumnPropNameInRow="positionY" msprop:Generator_ColumnPropNameInTable="positionYColumn" msprop:Generator_ColumnVarNameInTable="columnpositionY" msprop:Generator_UserColumnName="positionY" type="xs:long" minOccurs="0" />
-              <xs:element name="productionPerHour" msprop:Generator_ColumnPropNameInRow="productionPerHour" msprop:Generator_ColumnPropNameInTable="productionPerHourColumn" msprop:Generator_ColumnVarNameInTable="columnproductionPerHour" msprop:Generator_UserColumnName="productionPerHour" type="xs:long" minOccurs="0" />
+              <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" type="xs:short" />
+              <xs:element name="jenisMap" msprop:Generator_UserColumnName="jenisMap" msprop:Generator_ColumnPropNameInTable="jenisMapColumn" msprop:Generator_ColumnPropNameInRow="jenisMap" msprop:Generator_ColumnVarNameInTable="columnjenisMap" type="xs:short" />
+              <xs:element name="level" msprop:Generator_UserColumnName="level" msprop:Generator_ColumnPropNameInTable="levelColumn" msprop:Generator_ColumnPropNameInRow="level" msprop:Generator_ColumnVarNameInTable="columnlevel" type="xs:short" minOccurs="0" />
+              <xs:element name="positionX" msprop:Generator_UserColumnName="positionX" msprop:Generator_ColumnPropNameInTable="positionXColumn" msprop:Generator_ColumnPropNameInRow="positionX" msprop:Generator_ColumnVarNameInTable="columnpositionX" type="xs:long" minOccurs="0" />
+              <xs:element name="positionY" msprop:Generator_UserColumnName="positionY" msprop:Generator_ColumnPropNameInTable="positionYColumn" msprop:Generator_ColumnPropNameInRow="positionY" msprop:Generator_ColumnVarNameInTable="columnpositionY" type="xs:long" minOccurs="0" />
+              <xs:element name="productionPerHour" msprop:Generator_UserColumnName="productionPerHour" msprop:Generator_ColumnPropNameInTable="productionPerHourColumn" msprop:Generator_ColumnPropNameInRow="productionPerHour" msprop:Generator_ColumnVarNameInTable="columnproductionPerHour" type="xs:long" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="JenisMap" msprop:Generator_RowEvHandlerName="JenisMapRowChangeEventHandler" msprop:Generator_RowDeletedName="JenisMapRowDeleted" msprop:Generator_RowDeletingName="JenisMapRowDeleting" msprop:Generator_RowEvArgName="JenisMapRowChangeEvent" msprop:Generator_TablePropName="JenisMap" msprop:Generator_RowChangedName="JenisMapRowChanged" msprop:Generator_RowChangingName="JenisMapRowChanging" msprop:Generator_TableClassName="JenisMapDataTable" msprop:Generator_RowClassName="JenisMapRow" msprop:Generator_TableVarName="tableJenisMap" msprop:Generator_UserTableName="JenisMap">
+        <xs:element name="JenisMap" msprop:Generator_RowClassName="JenisMapRow" msprop:Generator_RowEvHandlerName="JenisMapRowChangeEventHandler" msprop:Generator_RowDeletedName="JenisMapRowDeleted" msprop:Generator_RowDeletingName="JenisMapRowDeleting" msprop:Generator_RowEvArgName="JenisMapRowChangeEvent" msprop:Generator_TablePropName="JenisMap" msprop:Generator_RowChangedName="JenisMapRowChanged" msprop:Generator_UserTableName="JenisMap" msprop:Generator_RowChangingName="JenisMapRowChanging" msprop:Generator_TableClassName="JenisMapDataTable" msprop:Generator_TableVarName="tableJenisMap">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:short" minOccurs="0" />
-              <xs:element name="nama" msprop:Generator_ColumnPropNameInRow="nama" msprop:Generator_ColumnPropNameInTable="namaColumn" msprop:Generator_ColumnVarNameInTable="columnnama" msprop:Generator_UserColumnName="nama" type="xs:string" minOccurs="0" />
+              <xs:element name="id" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" type="xs:short" minOccurs="0" />
+              <xs:element name="nama" msprop:Generator_UserColumnName="nama" msprop:Generator_ColumnPropNameInTable="namaColumn" msprop:Generator_ColumnPropNameInRow="nama" msprop:Generator_ColumnVarNameInTable="columnnama" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Player" msprop:Generator_RowEvHandlerName="PlayerRowChangeEventHandler" msprop:Generator_RowDeletedName="PlayerRowDeleted" msprop:Generator_RowDeletingName="PlayerRowDeleting" msprop:Generator_RowEvArgName="PlayerRowChangeEvent" msprop:Generator_TablePropName="Player" msprop:Generator_RowChangedName="PlayerRowChanged" msprop:Generator_RowChangingName="PlayerRowChanging" msprop:Generator_TableClassName="PlayerDataTable" msprop:Generator_RowClassName="PlayerRow" msprop:Generator_TableVarName="tablePlayer" msprop:Generator_UserTableName="Player">
+        <xs:element name="Player" msprop:Generator_RowClassName="PlayerRow" msprop:Generator_RowEvHandlerName="PlayerRowChangeEventHandler" msprop:Generator_RowDeletedName="PlayerRowDeleted" msprop:Generator_RowDeletingName="PlayerRowDeleting" msprop:Generator_RowEvArgName="PlayerRowChangeEvent" msprop:Generator_TablePropName="Player" msprop:Generator_RowChangedName="PlayerRowChanged" msprop:Generator_UserTableName="Player" msprop:Generator_RowChangingName="PlayerRowChanging" msprop:Generator_TableClassName="PlayerDataTable" msprop:Generator_TableVarName="tablePlayer">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:short" minOccurs="0" />
-              <xs:element name="clay" msprop:Generator_ColumnPropNameInRow="clay" msprop:Generator_ColumnPropNameInTable="clayColumn" msprop:Generator_ColumnVarNameInTable="columnclay" msprop:Generator_UserColumnName="clay" type="xs:long" minOccurs="0" />
-              <xs:element name="iron" msprop:Generator_ColumnPropNameInRow="iron" msprop:Generator_ColumnPropNameInTable="ironColumn" msprop:Generator_ColumnVarNameInTable="columniron" msprop:Generator_UserColumnName="iron" type="xs:long" minOccurs="0" />
-              <xs:element name="wood" msprop:Generator_ColumnPropNameInRow="wood" msprop:Generator_ColumnPropNameInTable="woodColumn" msprop:Generator_ColumnVarNameInTable="columnwood" msprop:Generator_UserColumnName="wood" type="xs:long" minOccurs="0" />
-              <xs:element name="crop" msprop:Generator_ColumnPropNameInRow="crop" msprop:Generator_ColumnPropNameInTable="cropColumn" msprop:Generator_ColumnVarNameInTable="columncrop" msprop:Generator_UserColumnName="crop" type="xs:long" minOccurs="0" />
+              <xs:element name="id" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" type="xs:short" minOccurs="0" />
+              <xs:element name="clay" msprop:Generator_UserColumnName="clay" msprop:Generator_ColumnPropNameInTable="clayColumn" msprop:Generator_ColumnPropNameInRow="clay" msprop:Generator_ColumnVarNameInTable="columnclay" type="xs:double" minOccurs="0" />
+              <xs:element name="iron" msprop:Generator_UserColumnName="iron" msprop:Generator_ColumnPropNameInTable="ironColumn" msprop:Generator_ColumnPropNameInRow="iron" msprop:Generator_ColumnVarNameInTable="columniron" type="xs:double" minOccurs="0" />
+              <xs:element name="wood" msprop:Generator_UserColumnName="wood" msprop:Generator_ColumnPropNameInTable="woodColumn" msprop:Generator_ColumnPropNameInRow="wood" msprop:Generator_ColumnVarNameInTable="columnwood" type="xs:double" minOccurs="0" />
+              <xs:element name="crop" msprop:Generator_UserColumnName="crop" msprop:Generator_ColumnPropNameInTable="cropColumn" msprop:Generator_ColumnPropNameInRow="crop" msprop:Generator_ColumnVarNameInTable="columncrop" type="xs:double" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -48,7 +48,7 @@
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="JenisMap_MapProgress" msdata:parent="JenisMap" msdata:child="MapProgress" msdata:parentkey="id" msdata:childkey="jenisMap" msprop:Generator_UserParentTable="JenisMap" msprop:Generator_UserChildTable="MapProgress" msprop:Generator_RelationVarName="relationJenisMap_MapProgress" msprop:Generator_UserRelationName="JenisMap_MapProgress" msprop:Generator_ChildPropName="GetMapProgressRows" msprop:Generator_ParentPropName="JenisMapRow" />
+      <msdata:Relationship name="JenisMap_MapProgress" msdata:parent="JenisMap" msdata:child="MapProgress" msdata:parentkey="id" msdata:childkey="jenisMap" msprop:Generator_UserParentTable="JenisMap" msprop:Generator_UserChildTable="MapProgress" msprop:Generator_RelationVarName="relationJenisMap_MapProgress" msprop:Generator_ChildPropName="GetMapProgressRows" msprop:Generator_ParentPropName="JenisMapRow" msprop:Generator_UserRelationName="JenisMap_MapProgress" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

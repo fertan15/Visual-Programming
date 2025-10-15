@@ -51,6 +51,10 @@
             this.Timer = new System.Windows.Forms.GroupBox();
             this.countDown = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
+            this.cropInven = new System.Windows.Forms.Label();
+            this.woodInven = new System.Windows.Forms.Label();
+            this.ironInven = new System.Windows.Forms.Label();
+            this.clayInven = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.mapProgressBindingSource)).BeginInit();
             this.production_box.SuspendLayout();
             this.buildingBox.SuspendLayout();
@@ -260,14 +264,54 @@
             // 
             // gameTimer
             // 
-            this.gameTimer.Interval = 1000;
+            this.gameTimer.Interval = 10;
             this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
+            // 
+            // cropInven
+            // 
+            this.cropInven.AutoSize = true;
+            this.cropInven.Location = new System.Drawing.Point(216, 41);
+            this.cropInven.Name = "cropInven";
+            this.cropInven.Size = new System.Drawing.Size(10, 13);
+            this.cropInven.TabIndex = 8;
+            this.cropInven.Text = ".";
+            // 
+            // woodInven
+            // 
+            this.woodInven.AutoSize = true;
+            this.woodInven.Location = new System.Drawing.Point(151, 41);
+            this.woodInven.Name = "woodInven";
+            this.woodInven.Size = new System.Drawing.Size(10, 13);
+            this.woodInven.TabIndex = 9;
+            this.woodInven.Text = ".";
+            // 
+            // ironInven
+            // 
+            this.ironInven.AutoSize = true;
+            this.ironInven.Location = new System.Drawing.Point(83, 41);
+            this.ironInven.Name = "ironInven";
+            this.ironInven.Size = new System.Drawing.Size(10, 13);
+            this.ironInven.TabIndex = 10;
+            this.ironInven.Text = ".";
+            // 
+            // clayInven
+            // 
+            this.clayInven.AutoSize = true;
+            this.clayInven.Location = new System.Drawing.Point(23, 41);
+            this.clayInven.Name = "clayInven";
+            this.clayInven.Size = new System.Drawing.Size(10, 13);
+            this.clayInven.TabIndex = 11;
+            this.clayInven.Text = ".";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1271, 816);
+            this.Controls.Add(this.clayInven);
+            this.Controls.Add(this.ironInven);
+            this.Controls.Add(this.woodInven);
+            this.Controls.Add(this.cropInven);
             this.Controls.Add(this.Timer);
             this.Controls.Add(this.buildingBox);
             this.Controls.Add(this.production_box);
@@ -315,6 +359,10 @@
         private System.Windows.Forms.GroupBox Timer;
         private System.Windows.Forms.Label countDown;
         private System.Windows.Forms.Timer gameTimer;
+        private System.Windows.Forms.Label cropInven;
+        private System.Windows.Forms.Label woodInven;
+        private System.Windows.Forms.Label ironInven;
+        private System.Windows.Forms.Label clayInven;
     }
 }
 
