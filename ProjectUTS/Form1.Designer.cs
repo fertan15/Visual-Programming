@@ -121,9 +121,9 @@
             this.production_box.Controls.Add(this.ironBox);
             this.production_box.Controls.Add(this.clayBox);
             this.production_box.Location = new System.Drawing.Point(1356, 15);
-            this.production_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.production_box.Margin = new System.Windows.Forms.Padding(4);
             this.production_box.Name = "production_box";
-            this.production_box.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.production_box.Padding = new System.Windows.Forms.Padding(4);
             this.production_box.Size = new System.Drawing.Size(311, 234);
             this.production_box.TabIndex = 5;
             this.production_box.TabStop = false;
@@ -215,9 +215,9 @@
             this.buildingBox.Controls.Add(this.buildingDetails);
             this.buildingBox.Controls.Add(this.upgradeButton);
             this.buildingBox.Location = new System.Drawing.Point(1356, 271);
-            this.buildingBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buildingBox.Margin = new System.Windows.Forms.Padding(4);
             this.buildingBox.Name = "buildingBox";
-            this.buildingBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buildingBox.Padding = new System.Windows.Forms.Padding(4);
             this.buildingBox.Size = new System.Drawing.Size(311, 548);
             this.buildingBox.TabIndex = 0;
             this.buildingBox.TabStop = false;
@@ -246,7 +246,7 @@
             // upgradeButton
             // 
             this.upgradeButton.Location = new System.Drawing.Point(69, 434);
-            this.upgradeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.upgradeButton.Margin = new System.Windows.Forms.Padding(4);
             this.upgradeButton.Name = "upgradeButton";
             this.upgradeButton.Size = new System.Drawing.Size(175, 46);
             this.upgradeButton.TabIndex = 0;
@@ -258,9 +258,9 @@
             // 
             this.Timer.Controls.Add(this.countDown);
             this.Timer.Location = new System.Drawing.Point(17, 847);
-            this.Timer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Timer.Margin = new System.Windows.Forms.Padding(4);
             this.Timer.Name = "Timer";
-            this.Timer.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Timer.Padding = new System.Windows.Forms.Padding(4);
             this.Timer.Size = new System.Drawing.Size(1519, 70);
             this.Timer.TabIndex = 6;
             this.Timer.TabStop = false;

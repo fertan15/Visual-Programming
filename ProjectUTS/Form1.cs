@@ -265,6 +265,11 @@ namespace ProjectUTS
 
         }
 
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
 
+            //save data pas form di tutup
+            Data.save();
+        }
     }
 }
