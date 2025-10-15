@@ -14,7 +14,7 @@ namespace ProjectUTS
     {
         Map selected; //buat index map yang tak klik skarang soale ganti2
         int multiplier = 1; //buat multiplier production
-        int waktu = 300;
+        int waktu = 3;
         int gameIntervalNormal = 1000;
         bool gakMiskin = true;
         public Form1()
@@ -127,39 +127,55 @@ namespace ProjectUTS
                 return;
             }
 
-            if(Data.getClay() < 1000)
+            if(Data.getClay() < 1)
             {
                 gakMiskin = false;
                 MessageBox.Show("minggir lu miskin");
                 return;
             }
-            if(Data.getIron() < 1000)
+            else
+            { 
+                gakMiskin = true; 
+            }
+            if (Data.getIron() < 1)
             {
                 gakMiskin = false;
                 MessageBox.Show("minggir lu miskin");
                 return;
             }
-            if (Data.getWood() < 1000)
+            else
+            {
+                gakMiskin = true;
+            }
+            if (Data.getWood() < 1)
             {
                 gakMiskin = false;
                 MessageBox.Show("minggir lu miskin");
                 return;
             }
-            if (Data.getCrop() < 1000)
+            else
+            {
+                gakMiskin = true;
+            }
+            if (Data.getCrop() < 1)
             {
                 gakMiskin = false;
                 MessageBox.Show("minggir lu miskin");
                 return;
+            }
+            else
+            {
+                gakMiskin = true;
             }
             if (gakMiskin)
             {
-                Data.addClay(-1000);
-                Data.addIron(-1000);
-                Data.addWood(-1000);
-                Data.addCrop(-1000);
+                Data.addClay(-1);
+                Data.addIron(-1);
+                Data.addWood(-1);
+                Data.addCrop(-1);
                 upgradeButton.Enabled = false;
                 countdowntimer.Start();
-                gakMiskin = false;
+                gakMiskin = true;
             }
                 
         }
@@ -177,12 +193,13 @@ namespace ProjectUTS
             if (waktu <= 0)
             {
                 selected.addLevel();
+                selected.setProductionPerHour(20); //nambah produksi bang
                 countDown.Text = "00:00:00";
                 countdowntimer.Stop();
                 upgradeButton.Enabled = true;
                 selected = null;
                 //tes
-                waktu = 300;
+                waktu = 3;                
             }
         }
 
