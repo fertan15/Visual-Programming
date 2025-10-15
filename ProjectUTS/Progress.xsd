@@ -43,6 +43,7 @@
               <xs:element name="upgradeInProgress" msprop:Generator_ColumnPropNameInRow="upgradeInProgress" msprop:Generator_ColumnPropNameInTable="upgradeInProgressColumn" msprop:Generator_ColumnVarNameInTable="columnupgradeInProgress" msprop:Generator_UserColumnName="upgradeInProgress" type="xs:boolean" minOccurs="0" />
               <xs:element name="idMapUpgrade" msprop:Generator_ColumnPropNameInRow="idMapUpgrade" msprop:Generator_ColumnPropNameInTable="idMapUpgradeColumn" msprop:Generator_ColumnVarNameInTable="columnidMapUpgrade" msprop:Generator_UserColumnName="idMapUpgrade" type="xs:short" minOccurs="0" />
               <xs:element name="EstimateTimeFinishUpgrade" msprop:Generator_ColumnPropNameInRow="EstimateTimeFinishUpgrade" msprop:Generator_ColumnPropNameInTable="EstimateTimeFinishUpgradeColumn" msprop:Generator_ColumnVarNameInTable="columnEstimateTimeFinishUpgrade" msprop:Generator_UserColumnName="EstimateTimeFinishUpgrade" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastOnline" msprop:Generator_ColumnPropNameInRow="LastOnline" msprop:Generator_ColumnPropNameInTable="LastOnlineColumn" msprop:Generator_ColumnVarNameInTable="columnLastOnline" msprop:Generator_UserColumnName="LastOnline" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

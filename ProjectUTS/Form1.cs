@@ -163,6 +163,7 @@ namespace ProjectUTS
                 upgradeButton.Enabled = false;
                 countdowntimer.Start();
                 gakMiskin = false;
+
             }
                 
         }
@@ -184,6 +185,7 @@ namespace ProjectUTS
                 countdowntimer.Stop();
                 upgradeButton.Enabled = true;
                 selected = null;
+                Data.upgradeFinish();
                 //tes
                 waktu = 300;
             }
