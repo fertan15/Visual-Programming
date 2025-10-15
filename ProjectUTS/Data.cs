@@ -98,6 +98,67 @@ namespace ProjectUTS
             player.WriteXml("savePlayer.xml");
         }
 
+        //============================GET TOTAL PRODUCTION PER HOUR=============================================
+        public static int getAllClayProduction()
+        {
+            int acc = 0;
+
+            foreach (Map map in mapList)
+            {
+                if(map.getJenis() == 0)
+                {
+                    acc += map.getProductionPerHour();
+                }
+            }
+
+            return acc;
+        }
+
+        public static int getAllIronProduction()
+        {
+            int acc = 0;
+
+            foreach (Map map in mapList)
+            {
+                if (map.getJenis() == 1)
+                {
+                    acc += map.getProductionPerHour();
+                }
+            }
+
+            return acc;
+        }
+
+        public static int getAllWoodProduction()
+        {
+            int acc = 0;
+
+            foreach (Map map in mapList)
+            {
+                if (map.getJenis() == 2)
+                {
+                    acc += map.getProductionPerHour();
+                }
+            }
+
+            return acc;
+        }
+
+        public static int getAllCropProduction()
+        {
+            int acc = 0;
+
+            foreach (Map map in mapList)
+            {
+                if (map.getJenis() == 3)
+                {
+                    acc += map.getProductionPerHour();
+                }
+            }
+
+            return acc;
+        }
+
 
 
     }

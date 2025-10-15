@@ -12,6 +12,9 @@ namespace ProjectUTS
 {
     public partial class Form1 : Form
     {
+        Map selected; //buat index map yang tak klik skarang soale ganti2
+        int multiplier = 1; //buat multiplier production
+        int detik = 0;
         public Form1()
         {
             InitializeComponent();
@@ -29,7 +32,8 @@ namespace ProjectUTS
 
             placeLabel();
             this.Controls.Add(pic);
-    
+            gameTimer.Start();
+
 
         }
 
@@ -60,13 +64,42 @@ namespace ProjectUTS
             }
         }
 
-    
+
         private void Map_Click(object sender, EventArgs e)
         {
             //ini set kalo misal map di klik gimana
-            Map selected = (Map)sender;
+            selected = (Map)sender;
 
             MessageBox.Show("Map ID: " + selected.id + "\nProduction : "  + selected.getProductionPerHour());
+        }
+
+        private void upgradeButton_Click(object sender, EventArgs e)
+        {
+            upgradeButton.Enabled = false;
+            countdowntimer.Start();
+        }
+
+        private void countdowntimer_Tick(object sender, EventArgs e)
+        {
+            int hours;
+            int minutes;
+
+            
+            if(detik <= 0)
+            {
+                selected.addLevel();
+                countDown.Text = "00:00:00";
+                countdowntimer.Stop();
+                upgradeButton.Enabled = true;
+            }
+        }
+
+        private void gameTimer_Tick(object sender, EventArgs e)
+        {
+            clayPerHour.Text = Data.getAllClayProduction().ToString();
+            ironPerHour.Text = Data.getAllIronProduction().ToString();
+            woodPerHour.Text = Data.getAllWoodProduction().ToString();
+            cropPerHour.Text = Data.getAllCropProduction().ToString();
         }
     }
 }

@@ -50,8 +50,6 @@ namespace ProjectUTS
             Data.progress.Rows[this.id]["level"] = getLevel() + 1;
             this.Text = getLevel().ToString();
 
-            //save data
-            Data.save();
 
 
         }
@@ -60,9 +58,6 @@ namespace ProjectUTS
         {
             //ini ganti langsung sesuai amount -> sesuaiin aja nanti
             Data.progress.Rows[this.id]["productionPerHour"] = amount;
-
-            //save data
-            Data.save();
 
 
         }
