@@ -41,21 +41,21 @@ namespace ProjectUTS
             }
 
         //kalo mau otak atik inventory -> di add sih kalo maw lgsng modif bikin lagi aja
-            public static void addClay(int amount)
+            public static void addClay(double amount)
             {
-                player.Rows[0]["clay"] = getClay() + amount;
+                player.Rows[0]["clay"] = Convert.ToDouble(player.Rows[0]["clay"]) + amount;
             }
-            public static void addIron(int amount)
+            public static void addIron(double amount)
             {
-                player.Rows[0]["iron"] = getIron() + amount;
+                player.Rows[0]["iron"] = Convert.ToDouble(player.Rows[0]["iron"]) + amount;
             }
-            public static void addWood(int amount)
+            public static void addWood(double amount)
             {
-                player.Rows[0]["wood"] = getWood() + amount;
+                player.Rows[0]["wood"] = Convert.ToDouble(player.Rows[0]["wood"]) + amount;
             }
-            public static void addCrop(int amount)
+            public static void addCrop(double amount)
             {
-                player.Rows[0]["crop"] = getCrop() + amount;
+                player.Rows[0]["crop"] = Convert.ToDouble(player.Rows[0]["crop"]) + amount;
             }
 
 
@@ -93,12 +93,108 @@ namespace ProjectUTS
 
         public static void save()
         {
+            //save current time as last online
+            player.Rows[0]["lastOnline"] = DateTime.Now;
+
             map.WriteXml("saveMap.xml");
             progress.WriteXml("saveProgress.xml");
             player.WriteXml("savePlayer.xml");
         }
 
+        //============================GET TOTAL PRODUCTION PER HOUR=============================================
+        public static int getAllClayProduction()
+        {
+            int acc = 0;
 
+            foreach (Map map in mapList)
+            {
+                if(map.getJenis() == 0)
+                {
+                    acc += map.getProductionPerHour();
+                }
+            }
+
+            return acc;
+        }
+
+        public static int getAllIronProduction()
+        {
+            int acc = 0;
+
+            foreach (Map map in mapList)
+            {
+                if (map.getJenis() == 1)
+                {
+                    acc += map.getProductionPerHour();
+                }
+            }
+
+            return acc;
+        }
+
+        public static int getAllWoodProduction()
+        {
+            int acc = 0;
+
+            foreach (Map map in mapList)
+            {
+                if (map.getJenis() == 2)
+                {
+                    acc += map.getProductionPerHour();
+                }
+            }
+
+            return acc;
+        }
+
+        public static int getAllCropProduction()
+        {
+            int acc = 0;
+
+            foreach (Map map in mapList)
+            {
+                if (map.getJenis() == 3)
+                {
+                    acc += map.getProductionPerHour();
+                }
+            }
+
+            return acc;
+        }
+
+
+        //============================= BUAT SAVE DATA UPGRADE PAS KLUAR=============================
+        public static void upgrade(int id, int waktu)
+        {
+            player.Rows[0]["upgradeInProgress"] = true;
+            player.Rows[0]["idMapUpgrade"] = id;
+            player.Rows[0]["EstimateTimeFinishUpgrade"] = getEstimateTime(waktu);
+        }
+
+        public static DateTime getEstimateTime(int waktu)
+        {
+            DateTime now = DateTime.Now;
+            return now.AddSeconds(waktu);
+        }
+
+        public static void setEstimateTime(int waktu)
+        {
+            DateTime now = DateTime.Now;
+            player.Rows[0]["EstimateTimeFinishUpgrade"] = now.AddSeconds(waktu);
+        }
+
+
+        public static void upgradeFinish()
+        {
+            player.Rows[0]["upgradeInProgress"] = false;
+            player.Rows[0]["idMapUpgrade"] = -1;
+            player.Rows[0]["EstimateTimeFinishUpgrade"] = DateTime.Now;
+        }
+
+        public static bool anyUpgrade()
+        {
+            return Convert.ToBoolean(player.Rows[0]["upgradeInProgress"]);
+        }
 
     }
 
