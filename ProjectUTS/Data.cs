@@ -20,10 +20,17 @@ namespace ProjectUTS
 
         public static List<Map> mapList = new List<Map>();
 
-//============================INVENTORY=============================================
+        //source e
+        public static sources dataSetSources;
+        public static DataTable woodCutter;
+        public static DataTable clayPit;
+        public static DataTable ironMine;
+        public static DataTable cropLand;
+
+        //============================INVENTORY=============================================
 
         //buat liat / mau pake current Inventory
-            public static int getClay()
+        public static int getClay()
             {
                 return Convert.ToInt32(player.Rows[0]["clay"]);
             }

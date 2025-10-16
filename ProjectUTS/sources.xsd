@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="sources" targetNamespace="http://tempuri.org/sources.xsd" xmlns:mstns="http://tempuri.org/sources.xsd" xmlns="http://tempuri.org/sources.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="sources" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="sources" msprop:Generator_DataSetName="sources">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="woodCutter" msprop:Generator_RowEvHandlerName="woodCutterRowChangeEventHandler" msprop:Generator_RowDeletedName="woodCutterRowDeleted" msprop:Generator_RowDeletingName="woodCutterRowDeleting" msprop:Generator_RowEvArgName="woodCutterRowChangeEvent" msprop:Generator_TablePropName="woodCutter" msprop:Generator_RowChangedName="woodCutterRowChanged" msprop:Generator_RowChangingName="woodCutterRowChanging" msprop:Generator_TableClassName="woodCutterDataTable" msprop:Generator_RowClassName="woodCutterRow" msprop:Generator_TableVarName="tablewoodCutter" msprop:Generator_UserTableName="woodCutter">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="level" msprop:Generator_ColumnPropNameInRow="level" msprop:Generator_ColumnPropNameInTable="levelColumn" msprop:Generator_ColumnVarNameInTable="columnlevel" msprop:Generator_UserColumnName="level" type="xs:long" minOccurs="0" />
+              <xs:element name="woodWoodCutter" msprop:Generator_ColumnPropNameInRow="woodWoodCutter" msprop:Generator_ColumnPropNameInTable="woodWoodCutterColumn" msprop:Generator_ColumnVarNameInTable="columnwoodWoodCutter" msprop:Generator_UserColumnName="woodWoodCutter" type="xs:long" minOccurs="0" />
+              <xs:element name="clayWoodCutter" msprop:Generator_ColumnPropNameInRow="clayWoodCutter" msprop:Generator_ColumnPropNameInTable="clayWoodCutterColumn" msprop:Generator_ColumnVarNameInTable="columnclayWoodCutter" msprop:Generator_UserColumnName="clayWoodCutter" type="xs:long" minOccurs="0" />
+              <xs:element name="ironWoodCutter" msprop:Generator_ColumnPropNameInRow="ironWoodCutter" msprop:Generator_ColumnPropNameInTable="ironWoodCutterColumn" msprop:Generator_ColumnVarNameInTable="columnironWoodCutter" msprop:Generator_UserColumnName="ironWoodCutter" type="xs:long" minOccurs="0" />
+              <xs:element name="cropWoodCutter" msprop:Generator_ColumnPropNameInRow="cropWoodCutter" msprop:Generator_ColumnPropNameInTable="cropWoodCutterColumn" msprop:Generator_ColumnVarNameInTable="columncropWoodCutter" msprop:Generator_UserColumnName="cropWoodCutter" type="xs:long" minOccurs="0" />
+              <xs:element name="produceTimeWoodCutter" msprop:Generator_ColumnPropNameInRow="produceTimeWoodCutter" msprop:Generator_ColumnPropNameInTable="produceTimeWoodCutterColumn" msprop:Generator_ColumnVarNameInTable="columnproduceTimeWoodCutter" msprop:Generator_UserColumnName="produceTimeWoodCutter" type="xs:long" minOccurs="0" />
+              <xs:element name="producePerHourWoodCutter" msprop:Generator_ColumnPropNameInRow="producePerHourWoodCutter" msprop:Generator_ColumnPropNameInTable="producePerHourWoodCutterColumn" msprop:Generator_ColumnVarNameInTable="columnproducePerHourWoodCutter" msprop:Generator_UserColumnName="producePerHourWoodCutter" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="clayPit" msprop:Generator_RowEvHandlerName="clayPitRowChangeEventHandler" msprop:Generator_RowDeletedName="clayPitRowDeleted" msprop:Generator_RowDeletingName="clayPitRowDeleting" msprop:Generator_RowEvArgName="clayPitRowChangeEvent" msprop:Generator_TablePropName="clayPit" msprop:Generator_RowChangedName="clayPitRowChanged" msprop:Generator_RowChangingName="clayPitRowChanging" msprop:Generator_TableClassName="clayPitDataTable" msprop:Generator_RowClassName="clayPitRow" msprop:Generator_TableVarName="tableclayPit" msprop:Generator_UserTableName="clayPit">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="level" msprop:Generator_ColumnPropNameInRow="level" msprop:Generator_ColumnPropNameInTable="levelColumn" msprop:Generator_ColumnVarNameInTable="columnlevel" msprop:Generator_UserColumnName="level" type="xs:long" minOccurs="0" />
+              <xs:element name="woodClayPit" msdata:Caption="woodWoodCutter" msprop:Generator_ColumnPropNameInRow="woodClayPit" msprop:Generator_ColumnPropNameInTable="woodClayPitColumn" msprop:Generator_ColumnVarNameInTable="columnwoodClayPit" msprop:Generator_UserColumnName="woodClayPit" type="xs:long" minOccurs="0" />
+              <xs:element name="clayClayPit" msdata:Caption="clayWoodCutter" msprop:Generator_ColumnPropNameInRow="clayClayPit" msprop:Generator_ColumnPropNameInTable="clayClayPitColumn" msprop:Generator_ColumnVarNameInTable="columnclayClayPit" msprop:Generator_UserColumnName="clayClayPit" type="xs:long" minOccurs="0" />
+              <xs:element name="ironClayPit" msdata:Caption="ironWoodCutter" msprop:Generator_ColumnPropNameInRow="ironClayPit" msprop:Generator_ColumnPropNameInTable="ironClayPitColumn" msprop:Generator_ColumnVarNameInTable="columnironClayPit" msprop:Generator_UserColumnName="ironClayPit" type="xs:long" minOccurs="0" />
+              <xs:element name="cropClayPit" msdata:Caption="cropWoodCutter" msprop:Generator_ColumnPropNameInRow="cropClayPit" msprop:Generator_ColumnPropNameInTable="cropClayPitColumn" msprop:Generator_ColumnVarNameInTable="columncropClayPit" msprop:Generator_UserColumnName="cropClayPit" type="xs:long" minOccurs="0" />
+              <xs:element name="produceTimeClayPit" msdata:Caption="produceTimeWoodCutter" msprop:Generator_ColumnPropNameInRow="produceTimeClayPit" msprop:Generator_ColumnPropNameInTable="produceTimeClayPitColumn" msprop:Generator_ColumnVarNameInTable="columnproduceTimeClayPit" msprop:Generator_UserColumnName="produceTimeClayPit" type="xs:long" minOccurs="0" />
+              <xs:element name="producePerHourClayPit" msdata:Caption="producePerHourWoodCutter" msprop:Generator_ColumnPropNameInRow="producePerHourClayPit" msprop:Generator_ColumnPropNameInTable="producePerHourClayPitColumn" msprop:Generator_ColumnVarNameInTable="columnproducePerHourClayPit" msprop:Generator_UserColumnName="producePerHourClayPit" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ironMine" msprop:Generator_RowEvHandlerName="ironMineRowChangeEventHandler" msprop:Generator_RowDeletedName="ironMineRowDeleted" msprop:Generator_RowDeletingName="ironMineRowDeleting" msprop:Generator_RowEvArgName="ironMineRowChangeEvent" msprop:Generator_TablePropName="ironMine" msprop:Generator_RowChangedName="ironMineRowChanged" msprop:Generator_RowChangingName="ironMineRowChanging" msprop:Generator_TableClassName="ironMineDataTable" msprop:Generator_RowClassName="ironMineRow" msprop:Generator_TableVarName="tableironMine" msprop:Generator_UserTableName="ironMine">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="level" msprop:Generator_ColumnPropNameInRow="level" msprop:Generator_ColumnPropNameInTable="levelColumn" msprop:Generator_ColumnVarNameInTable="columnlevel" msprop:Generator_UserColumnName="level" type="xs:long" minOccurs="0" />
+              <xs:element name="woodIronMine" msdata:Caption="woodWoodCutter" msprop:Generator_ColumnPropNameInRow="woodIronMine" msprop:Generator_ColumnPropNameInTable="woodIronMineColumn" msprop:Generator_ColumnVarNameInTable="columnwoodIronMine" msprop:Generator_UserColumnName="woodIronMine" type="xs:long" minOccurs="0" />
+              <xs:element name="clayIronMine" msdata:Caption="clayWoodCutter" msprop:Generator_ColumnPropNameInRow="clayIronMine" msprop:Generator_ColumnPropNameInTable="clayIronMineColumn" msprop:Generator_ColumnVarNameInTable="columnclayIronMine" msprop:Generator_UserColumnName="clayIronMine" type="xs:long" minOccurs="0" />
+              <xs:element name="ironIronMine" msdata:Caption="ironWoodCutter" msprop:Generator_ColumnPropNameInRow="ironIronMine" msprop:Generator_ColumnPropNameInTable="ironIronMineColumn" msprop:Generator_ColumnVarNameInTable="columnironIronMine" msprop:Generator_UserColumnName="ironIronMine" type="xs:long" minOccurs="0" />
+              <xs:element name="cropIronMine" msdata:Caption="cropWoodCutter" msprop:Generator_ColumnPropNameInRow="cropIronMine" msprop:Generator_ColumnPropNameInTable="cropIronMineColumn" msprop:Generator_ColumnVarNameInTable="columncropIronMine" msprop:Generator_UserColumnName="cropIronMine" type="xs:long" minOccurs="0" />
+              <xs:element name="produceTimeIronMine" msdata:Caption="produceTimeWoodCutter" msprop:Generator_ColumnPropNameInRow="produceTimeIronMine" msprop:Generator_ColumnPropNameInTable="produceTimeIronMineColumn" msprop:Generator_ColumnVarNameInTable="columnproduceTimeIronMine" msprop:Generator_UserColumnName="produceTimeIronMine" type="xs:long" minOccurs="0" />
+              <xs:element name="producePerHourIronMine" msdata:Caption="producePerHourWoodCutter" msprop:Generator_ColumnPropNameInRow="producePerHourIronMine" msprop:Generator_ColumnPropNameInTable="producePerHourIronMineColumn" msprop:Generator_ColumnVarNameInTable="columnproducePerHourIronMine" msprop:Generator_UserColumnName="producePerHourIronMine" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="cropLand" msprop:Generator_RowEvHandlerName="cropLandRowChangeEventHandler" msprop:Generator_RowDeletedName="cropLandRowDeleted" msprop:Generator_RowDeletingName="cropLandRowDeleting" msprop:Generator_RowEvArgName="cropLandRowChangeEvent" msprop:Generator_TablePropName="cropLand" msprop:Generator_RowChangedName="cropLandRowChanged" msprop:Generator_RowChangingName="cropLandRowChanging" msprop:Generator_TableClassName="cropLandDataTable" msprop:Generator_RowClassName="cropLandRow" msprop:Generator_TableVarName="tablecropLand" msprop:Generator_UserTableName="cropLand">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="level" msprop:Generator_ColumnPropNameInRow="level" msprop:Generator_ColumnPropNameInTable="levelColumn" msprop:Generator_ColumnVarNameInTable="columnlevel" msprop:Generator_UserColumnName="level" type="xs:long" minOccurs="0" />
+              <xs:element name="woodCropLand" msdata:Caption="woodWoodCutter" msprop:Generator_ColumnPropNameInRow="woodCropLand" msprop:Generator_ColumnPropNameInTable="woodCropLandColumn" msprop:Generator_ColumnVarNameInTable="columnwoodCropLand" msprop:Generator_UserColumnName="woodCropLand" type="xs:long" minOccurs="0" />
+              <xs:element name="clayCropLand" msdata:Caption="clayWoodCutter" msprop:Generator_ColumnPropNameInRow="clayCropLand" msprop:Generator_ColumnPropNameInTable="clayCropLandColumn" msprop:Generator_ColumnVarNameInTable="columnclayCropLand" msprop:Generator_UserColumnName="clayCropLand" type="xs:long" minOccurs="0" />
+              <xs:element name="ironCropLand" msdata:Caption="ironWoodCutter" msprop:Generator_ColumnPropNameInRow="ironCropLand" msprop:Generator_ColumnPropNameInTable="ironCropLandColumn" msprop:Generator_ColumnVarNameInTable="columnironCropLand" msprop:Generator_UserColumnName="ironCropLand" type="xs:long" minOccurs="0" />
+              <xs:element name="cropCropLand" msdata:Caption="cropWoodCutter" msprop:Generator_ColumnPropNameInRow="cropCropLand" msprop:Generator_ColumnPropNameInTable="cropCropLandColumn" msprop:Generator_ColumnVarNameInTable="columncropCropLand" msprop:Generator_UserColumnName="cropCropLand" type="xs:long" minOccurs="0" />
+              <xs:element name="produceTimeCropLand" msdata:Caption="produceTimeWoodCutter" msprop:Generator_ColumnPropNameInRow="produceTimeCropLand" msprop:Generator_ColumnPropNameInTable="produceTimeCropLandColumn" msprop:Generator_ColumnVarNameInTable="columnproduceTimeCropLand" msprop:Generator_UserColumnName="produceTimeCropLand" type="xs:long" minOccurs="0" />
+              <xs:element name="producePerHourCropLand" msdata:Caption="producePerHourWoodCutter" msprop:Generator_ColumnPropNameInRow="producePerHourCropLand" msprop:Generator_ColumnPropNameInTable="producePerHourCropLandColumn" msprop:Generator_ColumnVarNameInTable="columnproducePerHourCropLand" msprop:Generator_UserColumnName="producePerHourCropLand" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
