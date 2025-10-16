@@ -27,6 +27,11 @@ namespace ProjectUTS
             Data.ironMine = Data.dataSetSources.Tables["ironMine"];
             Data.woodCutter = Data.dataSetSources.Tables["woodCutter"];
 
+            addDataClayPit();
+            addDataCropLand();
+            addDataIronMine();
+            addDataWoodCutter();
+
 
 
             if (File.Exists("saveMap.xml") && File.Exists("saveProgress.xml") && File.Exists("savePlayer.xml"))
