@@ -150,7 +150,7 @@ namespace ProjectUTS
         }
         public void addDataWoodCutter()
         {
-            MessageBox.Show("masuk addwoodcutter");
+            //MessageBox.Show("masuk addwoodcutter");
             DataTable woodCutterTable = Data.woodCutter;
 
             DataRow row1 = woodCutterTable.NewRow();
@@ -768,7 +768,7 @@ namespace ProjectUTS
         }
         public void addDataCropLand()
         {
-            MessageBox.Show("masuk crop lang");
+            //MessageBox.Show("masuk crop lang");
             DataTable cropLandTable = Data.cropLand;
 
             DataRow row1 = cropLandTable.NewRow();
