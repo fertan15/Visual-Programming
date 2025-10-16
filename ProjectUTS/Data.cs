@@ -65,6 +65,23 @@ namespace ProjectUTS
             player.Rows[0]["crop"] = Convert.ToDouble(player.Rows[0]["crop"]) + amount;
         }
 
+        public static void deleteClay(double amount)
+        {
+            player.Rows[0]["clay"] = Convert.ToDouble(player.Rows[0]["clay"]) - amount;
+        }
+        public static void deleteIron(double amount)
+        {
+            player.Rows[0]["iron"] = Convert.ToDouble(player.Rows[0]["iron"]) - amount;
+        }
+        public static void deleteWood(double amount)
+        {
+            player.Rows[0]["wood"] = Convert.ToDouble(player.Rows[0]["wood"]) - amount;
+        }
+        public static void deleteCrop(double amount)
+        {
+            player.Rows[0]["crop"] = Convert.ToDouble(player.Rows[0]["crop"]) - amount;
+        }
+
 
         //============================FUNCTION INITIALIZE=============================================
 

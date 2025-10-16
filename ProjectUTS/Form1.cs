@@ -18,7 +18,7 @@ namespace ProjectUTS
         int waktu = 300;
         int gameIntervalNormal = 1000;
         bool gakMiskin = true;
-        int wood, clay, iron, crop; //buat dikurangi
+        int woodNeeded, clayNeeded, ironNeeded, cropNeeded; //buat dikurangi
         public Form1()
         {
             InitializeComponent();
@@ -134,30 +134,17 @@ namespace ProjectUTS
                 return;
             }
             
-            cekResource(selected, selected.getLevel(),gakMiskin,clay,iron,wood,crop);
+            cekResource(selected, selected.getLevel(),gakMiskin);
 
             if (gakMiskin)
             {
-                if (selected.getJenis() == 0)
-                {
-                    waktu = Data.getProduceTime_clayPit(selected.getLevel());
-                }
-                else if (selected.getJenis() == 1)
-                {
-                    waktu = Data.getProduceTime_ironMine(selected.getLevel());
-                }
-                else if (selected.getJenis() == 2)
-                {
-                    waktu = Data.getProduceTime_woodCutter(selected.getLevel());
-                }
-                else if (selected.getJenis() == 3)
-                {
-                    waktu = Data.getProduceTime_cropLand(selected.getLevel());
-                }
-                Data.addClay(-clay);
-                Data.addIron(-iron);
-                Data.addWood(-wood);
-                Data.addCrop(-crop);
+                updateHarga(selected);
+
+                MessageBox.Show("Upgrade started");
+                Data.deleteClay(clayNeeded);
+                Data.deleteIron(ironNeeded);
+                Data.deleteWood(woodNeeded);
+                Data.deleteCrop(cropNeeded);
                 upgradeButton.Enabled = false;
 
                 countdowntimer.Start();
@@ -180,9 +167,9 @@ namespace ProjectUTS
 
             if (waktu <= 0)
             {
-                selected.addLevel();
                 int produceBaru = Data.getProducePerHour_clayPit(selected.getLevel());
-                selected.setProductionPerHour(selected.getProductionPerHour() + produceBaru); 
+                selected.setProductionPerHour(selected.getProductionPerHour() + produceBaru);
+                selected.addLevel();
                 countDown.Text = "00:00:00";
                 countdowntimer.Stop();
                 upgradeButton.Enabled = true;
@@ -272,7 +259,7 @@ namespace ProjectUTS
             }
         }
 
-        private void cekResource(Map selected, int lvl, bool gakMiskin,int clay,int iron, int wood, int crop)
+        private void cekResource(Map selected, int lvl, bool gakMiskin)
         {
             //buat cek resource cukup apa enggak
             if(selected.getJenis() == 0)
@@ -285,7 +272,6 @@ namespace ProjectUTS
                 }
                 else
                 {
-                    clay = Data.getClay_clayPit(lvl);
                     gakMiskin = true;
                 }
                 if (Data.getIron() < Data.getIron_clayPit(lvl))
@@ -296,7 +282,6 @@ namespace ProjectUTS
                 }
                 else
                 {
-                    iron = Data.getIron_clayPit(lvl);
                     gakMiskin = true;
                 }
                 if (Data.getWood() < Data.getWood_clayPit(lvl))
@@ -307,7 +292,6 @@ namespace ProjectUTS
                 }
                 else
                 {
-                    wood = Data.getWood_clayPit(lvl);
                     gakMiskin = true;
                 }
                 if (Data.getCrop() < Data.getCrop_clayPit(lvl))
@@ -318,7 +302,6 @@ namespace ProjectUTS
                 }
                 else
                 {
-                    crop = Data.getCrop_clayPit(lvl);
                     gakMiskin = true;
                 }
             }
@@ -332,7 +315,6 @@ namespace ProjectUTS
                 }
                 else
                 {
-                    clay = Data.getClay_ironMine(lvl);
                     gakMiskin = true;
                 }
                 if (Data.getIron() < Data.getIron_ironMine(lvl))
@@ -343,7 +325,6 @@ namespace ProjectUTS
                 }
                 else
                 {
-                    iron = Data.getIron_ironMine(lvl);
                     gakMiskin = true;
                 }
                 if (Data.getWood() < Data.getWood_ironMine(lvl))
@@ -354,7 +335,6 @@ namespace ProjectUTS
                 }
                 else
                 {
-                    wood = Data.getWood_ironMine(lvl);
                     gakMiskin = true;
                 }
                 if (Data.getCrop() < Data.getCrop_ironMine(lvl))
@@ -365,7 +345,6 @@ namespace ProjectUTS
                 }
                 else
                 {
-                    crop = Data.getCrop_ironMine(lvl);
                     gakMiskin = true;
                 }
             }
@@ -379,7 +358,6 @@ namespace ProjectUTS
                 }
                 else
                 {
-                    clay = Data.getClay_woodCutter(lvl);
                     gakMiskin = true;
                 }
                 if (Data.getIron() < Data.getIron_woodCutter(lvl))
@@ -390,7 +368,6 @@ namespace ProjectUTS
                 }
                 else
                 {
-                    iron = Data.getIron_woodCutter(lvl);
                     gakMiskin = true;
                 }
                 if (Data.getWood() < Data.getWood_woodCutter(lvl))
@@ -401,7 +378,6 @@ namespace ProjectUTS
                 }
                 else
                 {
-                    wood = Data.getWood_woodCutter(lvl);
                     gakMiskin = true;
                 }
                 if (Data.getCrop() < Data.getCrop_woodCutter(lvl))
@@ -412,7 +388,6 @@ namespace ProjectUTS
                 }
                 else
                 {
-                    crop = Data.getCrop_woodCutter(lvl);
                     gakMiskin = true;
                 }
             }
@@ -426,7 +401,6 @@ namespace ProjectUTS
                 }
                 else
                 {
-                    clay = Data.getClay_cropLand(lvl);
                     gakMiskin = true;
                 }
                 if (Data.getIron() < Data.getIron_cropLand(lvl))
@@ -437,7 +411,6 @@ namespace ProjectUTS
                 }
                 else
                 {
-                    iron = Data.getIron_cropLand(lvl);
                     gakMiskin = true;
                 }
                 if (Data.getWood() < Data.getWood_cropLand(lvl))
@@ -448,7 +421,6 @@ namespace ProjectUTS
                 }
                 else
                 {
-                    wood = Data.getWood_cropLand(lvl);
                     gakMiskin = true;
                 }
                 if (Data.getCrop() < Data.getCrop_cropLand(lvl))
@@ -459,9 +431,44 @@ namespace ProjectUTS
                 }
                 else
                 {
-                    crop = Data.getCrop_cropLand(lvl);
                     gakMiskin = true;
                 }
+            }
+        }
+
+        private void updateHarga(Map selected)
+        {
+            if (selected.getJenis() == 0)
+            {
+                waktu = Data.getProduceTime_clayPit(selected.getLevel());
+                clayNeeded = Data.getClay_clayPit(selected.getLevel());
+                ironNeeded = Data.getIron_clayPit(selected.getLevel());
+                woodNeeded = Data.getWood_clayPit(selected.getLevel());
+                cropNeeded = Data.getCrop_clayPit(selected.getLevel());
+            }
+            else if (selected.getJenis() == 1)
+            {
+                waktu = Data.getProduceTime_ironMine(selected.getLevel());
+                clayNeeded = Data.getClay_ironMine(selected.getLevel());
+                ironNeeded = Data.getIron_ironMine(selected.getLevel());
+                woodNeeded = Data.getWood_ironMine(selected.getLevel());
+                cropNeeded = Data.getCrop_ironMine(selected.getLevel());
+            }
+            else if (selected.getJenis() == 2)
+            {
+                waktu = Data.getProduceTime_woodCutter(selected.getLevel());
+                clayNeeded = Data.getClay_woodCutter(selected.getLevel());
+                ironNeeded = Data.getIron_woodCutter(selected.getLevel());
+                woodNeeded = Data.getWood_woodCutter(selected.getLevel());
+                cropNeeded = Data.getCrop_woodCutter(selected.getLevel());
+            }
+            else if (selected.getJenis() == 3)
+            {
+                waktu = Data.getProduceTime_cropLand(selected.getLevel());
+                clayNeeded = Data.getClay_cropLand(selected.getLevel());
+                ironNeeded = Data.getIron_cropLand(selected.getLevel());
+                woodNeeded = Data.getWood_cropLand(selected.getLevel());
+                cropNeeded = Data.getCrop_cropLand(selected.getLevel());
             }
         }
 
