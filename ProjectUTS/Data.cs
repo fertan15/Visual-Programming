@@ -471,14 +471,12 @@ namespace ProjectUTS
             TimeSpan durationOffline = DateTime.Now - lastOnline;
             double hoursOffline = durationOffline.TotalHours;
 
-            // --- DEBUG CHECKPOINT 1: Waktu Offline ---
             MessageBox.Show(
                 "Last Online: " + lastOnline.ToString() +
                 "\nCurrent Time: " + DateTime.Now.ToString() +
                 "\nTotal Jam Offline: " + hoursOffline.ToString("F2") + " jam",
                 "DEBUG WAKTU OFFLINE"
             );
-            // ------------------------------------------
 
             if (hoursOffline <= 0)
                 return;
@@ -486,30 +484,64 @@ namespace ProjectUTS
             int initialWood = getWood();
             int woodProductionPerHour = getAllWoodProduction();
 
-            // Total Wood (masih bertipe double/double)
             double totalWoodGained_Raw = woodProductionPerHour * hoursOffline;
 
-            // 🎯 Konversi/Pembulatan untuk Penambahan: 
-            // Jika Anda ingin hanya menambahkan integer penuh: gunakan Math.Floor
             int totalWoodGained_Int = (int)Math.Floor(totalWoodGained_Raw);
 
-            // Gunakan fungsi addWood Anda, yang menerima double
-            addWood(totalWoodGained_Int); // Lebih aman jika Anda menambahkannya sebagai integer
+            addWood(totalWoodGained_Int);
 
-            // --- DEBUG CHECKPOINT 2: Hasil Produksi ---
             MessageBox.Show(
                 "Awal Wood: " + initialWood +
                 "\nProd/Jam: " + woodProductionPerHour +
-                // 🎯 Tampilkan total wood yang BENAR-BENAR ditambahkan (nilai INT)
                 "\nTotal Wood Didapat: " + totalWoodGained_Int +
-                // 🎯 Nilai wood baru harus SAMA dengan (Awal Wood + Total Wood Didapat)
                 "\nWood Baru: " + getWood(),
                 "DEBUG PRODUKSI OFFLINE (WOOD)"
             );
-            // ------------------------------------------
 
-            // Ulangi untuk Clay, Iron, dan Crop
-            // ...
+            int initialClay = getClay();
+            int clayProductionPerHour = getAllClayProduction();
+
+            double totalClayGained_Raw = clayProductionPerHour * hoursOffline;
+
+            int totalClayGained_Int = (int)Math.Floor(totalWoodGained_Raw);
+
+            addClay(totalClayGained_Int); 
+            MessageBox.Show(
+                "Awal Clay: " + initialClay +
+                "\nProd/Jam: " + clayProductionPerHour +
+                "\nTotal Clay Didapat: " + totalClayGained_Int +
+                "\nClay Baru: " + getClay(),
+                "DEBUG PRODUKSI OFFLINE (CLAY)"
+            );
+
+            int initialIron = getIron();
+            int ironProductionPerHour = getAllIronProduction();
+            double totalironGained_Raw = ironProductionPerHour * hoursOffline;
+            int totalironGained_Int = (int)Math.Floor(totalironGained_Raw);
+            addIron(totalironGained_Int);
+            MessageBox.Show(
+                "Awal iron: " + initialIron +
+                "\nProd/Jam: " + ironProductionPerHour +
+                "\nTotal iron Didapat: " + totalironGained_Int +
+                "\nIron  Baru: " + getIron(),
+                "DEBUG PRODUKSI OFFLINE (iron)"
+            );
+
+            int initialCrop = getIron();
+            int cropProductionPerHour = getAllIronProduction();
+
+            double totalcropGained_Raw = cropProductionPerHour * hoursOffline;
+
+            int totalcropGained_Int = (int)Math.Floor(totalcropGained_Raw);
+
+            addCrop(totalcropGained_Int);
+            MessageBox.Show(
+                "Awal crop: " + initialCrop +
+                "\nProd/Jam: " + cropProductionPerHour +
+                "\nTotal crop Didapat: " + totalcropGained_Int +
+                "\ncrop  Baru: " + getCrop(),
+                "DEBUG PRODUKSI OFFLINE (crop)"
+            );
         }
 
 
