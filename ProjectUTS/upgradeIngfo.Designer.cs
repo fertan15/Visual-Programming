@@ -30,55 +30,33 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.sources = new ProjectUTS.sources();
             this.woodCutterBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.levelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.woodWoodCutterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clayWoodCutterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ironWoodCutterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cropWoodCutterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.produceTimeWoodCutterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.producePerHourWoodCutterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clayPitBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sources = new ProjectUTS.sources();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.levelDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.woodClayPitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clayClayPitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ironClayPitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cropClayPitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.produceTimeClayPitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.producePerHourClayPitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ironMineBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.levelDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.woodIronMineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clayIronMineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ironIronMineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cropIronMineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.produceTimeIronMineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.producePerHourIronMineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clayPitBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.cropLandBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.levelDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.woodCropLandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clayCropLandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ironCropLandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cropCropLandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.produceTimeCropLandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.producePerHourCropLandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.levelDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ironMineBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.levelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wood = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.levelDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sources)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.woodCutterBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sources)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clayPitBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ironMineBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cropLandBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ironMineBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -89,12 +67,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.levelDataGridViewTextBoxColumn,
-            this.woodWoodCutterDataGridViewTextBoxColumn,
-            this.clayWoodCutterDataGridViewTextBoxColumn,
-            this.ironWoodCutterDataGridViewTextBoxColumn,
-            this.cropWoodCutterDataGridViewTextBoxColumn,
-            this.produceTimeWoodCutterDataGridViewTextBoxColumn,
-            this.producePerHourWoodCutterDataGridViewTextBoxColumn});
+            this.wood});
             this.dataGridView1.DataSource = this.woodCutterBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(3, 26);
             this.dataGridView1.Name = "dataGridView1";
@@ -104,6 +77,16 @@
             this.dataGridView1.Size = new System.Drawing.Size(598, 341);
             this.dataGridView1.TabIndex = 0;
             // 
+            // woodCutterBindingSource
+            // 
+            this.woodCutterBindingSource.DataMember = "woodCutter";
+            this.woodCutterBindingSource.DataSource = this.sources;
+            // 
+            // sources
+            // 
+            this.sources.DataSetName = "sources";
+            this.sources.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
@@ -111,13 +94,7 @@
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.levelDataGridViewTextBoxColumn1,
-            this.woodClayPitDataGridViewTextBoxColumn,
-            this.clayClayPitDataGridViewTextBoxColumn,
-            this.ironClayPitDataGridViewTextBoxColumn,
-            this.cropClayPitDataGridViewTextBoxColumn,
-            this.produceTimeClayPitDataGridViewTextBoxColumn,
-            this.producePerHourClayPitDataGridViewTextBoxColumn});
+            this.levelDataGridViewTextBoxColumn1});
             this.dataGridView2.DataSource = this.clayPitBindingSource;
             this.dataGridView2.Location = new System.Drawing.Point(634, 26);
             this.dataGridView2.Name = "dataGridView2";
@@ -126,130 +103,6 @@
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(598, 341);
             this.dataGridView2.TabIndex = 1;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AllowUserToAddRows = false;
-            this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.AutoGenerateColumns = false;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.levelDataGridViewTextBoxColumn3,
-            this.woodCropLandDataGridViewTextBoxColumn,
-            this.clayCropLandDataGridViewTextBoxColumn,
-            this.ironCropLandDataGridViewTextBoxColumn,
-            this.cropCropLandDataGridViewTextBoxColumn,
-            this.produceTimeCropLandDataGridViewTextBoxColumn,
-            this.producePerHourCropLandDataGridViewTextBoxColumn});
-            this.dataGridView3.DataSource = this.cropLandBindingSource;
-            this.dataGridView3.Location = new System.Drawing.Point(634, 391);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(598, 341);
-            this.dataGridView3.TabIndex = 3;
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.AllowUserToAddRows = false;
-            this.dataGridView4.AllowUserToDeleteRows = false;
-            this.dataGridView4.AutoGenerateColumns = false;
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.levelDataGridViewTextBoxColumn2,
-            this.woodIronMineDataGridViewTextBoxColumn,
-            this.clayIronMineDataGridViewTextBoxColumn,
-            this.ironIronMineDataGridViewTextBoxColumn,
-            this.cropIronMineDataGridViewTextBoxColumn,
-            this.produceTimeIronMineDataGridViewTextBoxColumn,
-            this.producePerHourIronMineDataGridViewTextBoxColumn});
-            this.dataGridView4.DataSource = this.ironMineBindingSource;
-            this.dataGridView4.Location = new System.Drawing.Point(3, 391);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.ReadOnly = true;
-            this.dataGridView4.RowHeadersWidth = 51;
-            this.dataGridView4.RowTemplate.Height = 24;
-            this.dataGridView4.Size = new System.Drawing.Size(598, 341);
-            this.dataGridView4.TabIndex = 2;
-            // 
-            // sources
-            // 
-            this.sources.DataSetName = "sources";
-            this.sources.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // woodCutterBindingSource
-            // 
-            this.woodCutterBindingSource.DataMember = "woodCutter";
-            this.woodCutterBindingSource.DataSource = this.sources;
-            // 
-            // levelDataGridViewTextBoxColumn
-            // 
-            this.levelDataGridViewTextBoxColumn.DataPropertyName = "level";
-            this.levelDataGridViewTextBoxColumn.HeaderText = "level";
-            this.levelDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.levelDataGridViewTextBoxColumn.Name = "levelDataGridViewTextBoxColumn";
-            this.levelDataGridViewTextBoxColumn.ReadOnly = true;
-            this.levelDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // woodWoodCutterDataGridViewTextBoxColumn
-            // 
-            this.woodWoodCutterDataGridViewTextBoxColumn.DataPropertyName = "woodWoodCutter";
-            this.woodWoodCutterDataGridViewTextBoxColumn.HeaderText = "woodWoodCutter";
-            this.woodWoodCutterDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.woodWoodCutterDataGridViewTextBoxColumn.Name = "woodWoodCutterDataGridViewTextBoxColumn";
-            this.woodWoodCutterDataGridViewTextBoxColumn.ReadOnly = true;
-            this.woodWoodCutterDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // clayWoodCutterDataGridViewTextBoxColumn
-            // 
-            this.clayWoodCutterDataGridViewTextBoxColumn.DataPropertyName = "clayWoodCutter";
-            this.clayWoodCutterDataGridViewTextBoxColumn.HeaderText = "clayWoodCutter";
-            this.clayWoodCutterDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.clayWoodCutterDataGridViewTextBoxColumn.Name = "clayWoodCutterDataGridViewTextBoxColumn";
-            this.clayWoodCutterDataGridViewTextBoxColumn.ReadOnly = true;
-            this.clayWoodCutterDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // ironWoodCutterDataGridViewTextBoxColumn
-            // 
-            this.ironWoodCutterDataGridViewTextBoxColumn.DataPropertyName = "ironWoodCutter";
-            this.ironWoodCutterDataGridViewTextBoxColumn.HeaderText = "ironWoodCutter";
-            this.ironWoodCutterDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ironWoodCutterDataGridViewTextBoxColumn.Name = "ironWoodCutterDataGridViewTextBoxColumn";
-            this.ironWoodCutterDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ironWoodCutterDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // cropWoodCutterDataGridViewTextBoxColumn
-            // 
-            this.cropWoodCutterDataGridViewTextBoxColumn.DataPropertyName = "cropWoodCutter";
-            this.cropWoodCutterDataGridViewTextBoxColumn.HeaderText = "cropWoodCutter";
-            this.cropWoodCutterDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cropWoodCutterDataGridViewTextBoxColumn.Name = "cropWoodCutterDataGridViewTextBoxColumn";
-            this.cropWoodCutterDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cropWoodCutterDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // produceTimeWoodCutterDataGridViewTextBoxColumn
-            // 
-            this.produceTimeWoodCutterDataGridViewTextBoxColumn.DataPropertyName = "produceTimeWoodCutter";
-            this.produceTimeWoodCutterDataGridViewTextBoxColumn.HeaderText = "produceTimeWoodCutter";
-            this.produceTimeWoodCutterDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.produceTimeWoodCutterDataGridViewTextBoxColumn.Name = "produceTimeWoodCutterDataGridViewTextBoxColumn";
-            this.produceTimeWoodCutterDataGridViewTextBoxColumn.ReadOnly = true;
-            this.produceTimeWoodCutterDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // producePerHourWoodCutterDataGridViewTextBoxColumn
-            // 
-            this.producePerHourWoodCutterDataGridViewTextBoxColumn.DataPropertyName = "producePerHourWoodCutter";
-            this.producePerHourWoodCutterDataGridViewTextBoxColumn.HeaderText = "producePerHourWoodCutter";
-            this.producePerHourWoodCutterDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.producePerHourWoodCutterDataGridViewTextBoxColumn.Name = "producePerHourWoodCutterDataGridViewTextBoxColumn";
-            this.producePerHourWoodCutterDataGridViewTextBoxColumn.ReadOnly = true;
-            this.producePerHourWoodCutterDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // clayPitBindingSource
-            // 
-            this.clayPitBindingSource.DataMember = "clayPit";
-            this.clayPitBindingSource.DataSource = this.sources;
             // 
             // levelDataGridViewTextBoxColumn1
             // 
@@ -260,64 +113,50 @@
             this.levelDataGridViewTextBoxColumn1.ReadOnly = true;
             this.levelDataGridViewTextBoxColumn1.Width = 125;
             // 
-            // woodClayPitDataGridViewTextBoxColumn
+            // clayPitBindingSource
             // 
-            this.woodClayPitDataGridViewTextBoxColumn.DataPropertyName = "woodClayPit";
-            this.woodClayPitDataGridViewTextBoxColumn.HeaderText = "woodClayPit";
-            this.woodClayPitDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.woodClayPitDataGridViewTextBoxColumn.Name = "woodClayPitDataGridViewTextBoxColumn";
-            this.woodClayPitDataGridViewTextBoxColumn.ReadOnly = true;
-            this.woodClayPitDataGridViewTextBoxColumn.Width = 125;
+            this.clayPitBindingSource.DataMember = "clayPit";
+            this.clayPitBindingSource.DataSource = this.sources;
             // 
-            // clayClayPitDataGridViewTextBoxColumn
+            // dataGridView3
             // 
-            this.clayClayPitDataGridViewTextBoxColumn.DataPropertyName = "clayClayPit";
-            this.clayClayPitDataGridViewTextBoxColumn.HeaderText = "clayClayPit";
-            this.clayClayPitDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.clayClayPitDataGridViewTextBoxColumn.Name = "clayClayPitDataGridViewTextBoxColumn";
-            this.clayClayPitDataGridViewTextBoxColumn.ReadOnly = true;
-            this.clayClayPitDataGridViewTextBoxColumn.Width = 125;
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
+            this.dataGridView3.AutoGenerateColumns = false;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.levelDataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn1});
+            this.dataGridView3.DataSource = this.cropLandBindingSource;
+            this.dataGridView3.Location = new System.Drawing.Point(634, 391);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.ReadOnly = true;
+            this.dataGridView3.RowHeadersWidth = 51;
+            this.dataGridView3.RowTemplate.Height = 24;
+            this.dataGridView3.Size = new System.Drawing.Size(598, 341);
+            this.dataGridView3.TabIndex = 3;
             // 
-            // ironClayPitDataGridViewTextBoxColumn
+            // cropLandBindingSource
             // 
-            this.ironClayPitDataGridViewTextBoxColumn.DataPropertyName = "ironClayPit";
-            this.ironClayPitDataGridViewTextBoxColumn.HeaderText = "ironClayPit";
-            this.ironClayPitDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ironClayPitDataGridViewTextBoxColumn.Name = "ironClayPitDataGridViewTextBoxColumn";
-            this.ironClayPitDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ironClayPitDataGridViewTextBoxColumn.Width = 125;
+            this.cropLandBindingSource.DataMember = "cropLand";
+            this.cropLandBindingSource.DataSource = this.sources;
             // 
-            // cropClayPitDataGridViewTextBoxColumn
+            // dataGridView4
             // 
-            this.cropClayPitDataGridViewTextBoxColumn.DataPropertyName = "cropClayPit";
-            this.cropClayPitDataGridViewTextBoxColumn.HeaderText = "cropClayPit";
-            this.cropClayPitDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cropClayPitDataGridViewTextBoxColumn.Name = "cropClayPitDataGridViewTextBoxColumn";
-            this.cropClayPitDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cropClayPitDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // produceTimeClayPitDataGridViewTextBoxColumn
-            // 
-            this.produceTimeClayPitDataGridViewTextBoxColumn.DataPropertyName = "produceTimeClayPit";
-            this.produceTimeClayPitDataGridViewTextBoxColumn.HeaderText = "produceTimeClayPit";
-            this.produceTimeClayPitDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.produceTimeClayPitDataGridViewTextBoxColumn.Name = "produceTimeClayPitDataGridViewTextBoxColumn";
-            this.produceTimeClayPitDataGridViewTextBoxColumn.ReadOnly = true;
-            this.produceTimeClayPitDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // producePerHourClayPitDataGridViewTextBoxColumn
-            // 
-            this.producePerHourClayPitDataGridViewTextBoxColumn.DataPropertyName = "producePerHourClayPit";
-            this.producePerHourClayPitDataGridViewTextBoxColumn.HeaderText = "producePerHourClayPit";
-            this.producePerHourClayPitDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.producePerHourClayPitDataGridViewTextBoxColumn.Name = "producePerHourClayPitDataGridViewTextBoxColumn";
-            this.producePerHourClayPitDataGridViewTextBoxColumn.ReadOnly = true;
-            this.producePerHourClayPitDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // ironMineBindingSource
-            // 
-            this.ironMineBindingSource.DataMember = "ironMine";
-            this.ironMineBindingSource.DataSource = this.sources;
+            this.dataGridView4.AllowUserToAddRows = false;
+            this.dataGridView4.AllowUserToDeleteRows = false;
+            this.dataGridView4.AutoGenerateColumns = false;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.levelDataGridViewTextBoxColumn2});
+            this.dataGridView4.DataSource = this.ironMineBindingSource;
+            this.dataGridView4.Location = new System.Drawing.Point(3, 391);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.ReadOnly = true;
+            this.dataGridView4.RowHeadersWidth = 51;
+            this.dataGridView4.RowTemplate.Height = 24;
+            this.dataGridView4.Size = new System.Drawing.Size(598, 341);
+            this.dataGridView4.TabIndex = 2;
             // 
             // levelDataGridViewTextBoxColumn2
             // 
@@ -328,127 +167,10 @@
             this.levelDataGridViewTextBoxColumn2.ReadOnly = true;
             this.levelDataGridViewTextBoxColumn2.Width = 125;
             // 
-            // woodIronMineDataGridViewTextBoxColumn
+            // ironMineBindingSource
             // 
-            this.woodIronMineDataGridViewTextBoxColumn.DataPropertyName = "woodIronMine";
-            this.woodIronMineDataGridViewTextBoxColumn.HeaderText = "woodIronMine";
-            this.woodIronMineDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.woodIronMineDataGridViewTextBoxColumn.Name = "woodIronMineDataGridViewTextBoxColumn";
-            this.woodIronMineDataGridViewTextBoxColumn.ReadOnly = true;
-            this.woodIronMineDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // clayIronMineDataGridViewTextBoxColumn
-            // 
-            this.clayIronMineDataGridViewTextBoxColumn.DataPropertyName = "clayIronMine";
-            this.clayIronMineDataGridViewTextBoxColumn.HeaderText = "clayIronMine";
-            this.clayIronMineDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.clayIronMineDataGridViewTextBoxColumn.Name = "clayIronMineDataGridViewTextBoxColumn";
-            this.clayIronMineDataGridViewTextBoxColumn.ReadOnly = true;
-            this.clayIronMineDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // ironIronMineDataGridViewTextBoxColumn
-            // 
-            this.ironIronMineDataGridViewTextBoxColumn.DataPropertyName = "ironIronMine";
-            this.ironIronMineDataGridViewTextBoxColumn.HeaderText = "ironIronMine";
-            this.ironIronMineDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ironIronMineDataGridViewTextBoxColumn.Name = "ironIronMineDataGridViewTextBoxColumn";
-            this.ironIronMineDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ironIronMineDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // cropIronMineDataGridViewTextBoxColumn
-            // 
-            this.cropIronMineDataGridViewTextBoxColumn.DataPropertyName = "cropIronMine";
-            this.cropIronMineDataGridViewTextBoxColumn.HeaderText = "cropIronMine";
-            this.cropIronMineDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cropIronMineDataGridViewTextBoxColumn.Name = "cropIronMineDataGridViewTextBoxColumn";
-            this.cropIronMineDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cropIronMineDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // produceTimeIronMineDataGridViewTextBoxColumn
-            // 
-            this.produceTimeIronMineDataGridViewTextBoxColumn.DataPropertyName = "produceTimeIronMine";
-            this.produceTimeIronMineDataGridViewTextBoxColumn.HeaderText = "produceTimeIronMine";
-            this.produceTimeIronMineDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.produceTimeIronMineDataGridViewTextBoxColumn.Name = "produceTimeIronMineDataGridViewTextBoxColumn";
-            this.produceTimeIronMineDataGridViewTextBoxColumn.ReadOnly = true;
-            this.produceTimeIronMineDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // producePerHourIronMineDataGridViewTextBoxColumn
-            // 
-            this.producePerHourIronMineDataGridViewTextBoxColumn.DataPropertyName = "producePerHourIronMine";
-            this.producePerHourIronMineDataGridViewTextBoxColumn.HeaderText = "producePerHourIronMine";
-            this.producePerHourIronMineDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.producePerHourIronMineDataGridViewTextBoxColumn.Name = "producePerHourIronMineDataGridViewTextBoxColumn";
-            this.producePerHourIronMineDataGridViewTextBoxColumn.ReadOnly = true;
-            this.producePerHourIronMineDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // cropLandBindingSource
-            // 
-            this.cropLandBindingSource.DataMember = "cropLand";
-            this.cropLandBindingSource.DataSource = this.sources;
-            // 
-            // levelDataGridViewTextBoxColumn3
-            // 
-            this.levelDataGridViewTextBoxColumn3.DataPropertyName = "level";
-            this.levelDataGridViewTextBoxColumn3.HeaderText = "level";
-            this.levelDataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.levelDataGridViewTextBoxColumn3.Name = "levelDataGridViewTextBoxColumn3";
-            this.levelDataGridViewTextBoxColumn3.ReadOnly = true;
-            this.levelDataGridViewTextBoxColumn3.Width = 125;
-            // 
-            // woodCropLandDataGridViewTextBoxColumn
-            // 
-            this.woodCropLandDataGridViewTextBoxColumn.DataPropertyName = "woodCropLand";
-            this.woodCropLandDataGridViewTextBoxColumn.HeaderText = "woodCropLand";
-            this.woodCropLandDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.woodCropLandDataGridViewTextBoxColumn.Name = "woodCropLandDataGridViewTextBoxColumn";
-            this.woodCropLandDataGridViewTextBoxColumn.ReadOnly = true;
-            this.woodCropLandDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // clayCropLandDataGridViewTextBoxColumn
-            // 
-            this.clayCropLandDataGridViewTextBoxColumn.DataPropertyName = "clayCropLand";
-            this.clayCropLandDataGridViewTextBoxColumn.HeaderText = "clayCropLand";
-            this.clayCropLandDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.clayCropLandDataGridViewTextBoxColumn.Name = "clayCropLandDataGridViewTextBoxColumn";
-            this.clayCropLandDataGridViewTextBoxColumn.ReadOnly = true;
-            this.clayCropLandDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // ironCropLandDataGridViewTextBoxColumn
-            // 
-            this.ironCropLandDataGridViewTextBoxColumn.DataPropertyName = "ironCropLand";
-            this.ironCropLandDataGridViewTextBoxColumn.HeaderText = "ironCropLand";
-            this.ironCropLandDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ironCropLandDataGridViewTextBoxColumn.Name = "ironCropLandDataGridViewTextBoxColumn";
-            this.ironCropLandDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ironCropLandDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // cropCropLandDataGridViewTextBoxColumn
-            // 
-            this.cropCropLandDataGridViewTextBoxColumn.DataPropertyName = "cropCropLand";
-            this.cropCropLandDataGridViewTextBoxColumn.HeaderText = "cropCropLand";
-            this.cropCropLandDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cropCropLandDataGridViewTextBoxColumn.Name = "cropCropLandDataGridViewTextBoxColumn";
-            this.cropCropLandDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cropCropLandDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // produceTimeCropLandDataGridViewTextBoxColumn
-            // 
-            this.produceTimeCropLandDataGridViewTextBoxColumn.DataPropertyName = "produceTimeCropLand";
-            this.produceTimeCropLandDataGridViewTextBoxColumn.HeaderText = "produceTimeCropLand";
-            this.produceTimeCropLandDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.produceTimeCropLandDataGridViewTextBoxColumn.Name = "produceTimeCropLandDataGridViewTextBoxColumn";
-            this.produceTimeCropLandDataGridViewTextBoxColumn.ReadOnly = true;
-            this.produceTimeCropLandDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // producePerHourCropLandDataGridViewTextBoxColumn
-            // 
-            this.producePerHourCropLandDataGridViewTextBoxColumn.DataPropertyName = "producePerHourCropLand";
-            this.producePerHourCropLandDataGridViewTextBoxColumn.HeaderText = "producePerHourCropLand";
-            this.producePerHourCropLandDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.producePerHourCropLandDataGridViewTextBoxColumn.Name = "producePerHourCropLandDataGridViewTextBoxColumn";
-            this.producePerHourCropLandDataGridViewTextBoxColumn.ReadOnly = true;
-            this.producePerHourCropLandDataGridViewTextBoxColumn.Width = 125;
+            this.ironMineBindingSource.DataMember = "ironMine";
+            this.ironMineBindingSource.DataSource = this.sources;
             // 
             // label1
             // 
@@ -486,6 +208,42 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Crop";
             // 
+            // levelDataGridViewTextBoxColumn
+            // 
+            this.levelDataGridViewTextBoxColumn.DataPropertyName = "level";
+            this.levelDataGridViewTextBoxColumn.HeaderText = "level";
+            this.levelDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.levelDataGridViewTextBoxColumn.Name = "levelDataGridViewTextBoxColumn";
+            this.levelDataGridViewTextBoxColumn.ReadOnly = true;
+            this.levelDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // wood
+            // 
+            this.wood.DataPropertyName = "wood";
+            this.wood.HeaderText = "wood";
+            this.wood.MinimumWidth = 6;
+            this.wood.Name = "wood";
+            this.wood.ReadOnly = true;
+            this.wood.Width = 125;
+            // 
+            // levelDataGridViewTextBoxColumn3
+            // 
+            this.levelDataGridViewTextBoxColumn3.DataPropertyName = "level";
+            this.levelDataGridViewTextBoxColumn3.HeaderText = "level";
+            this.levelDataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.levelDataGridViewTextBoxColumn3.Name = "levelDataGridViewTextBoxColumn3";
+            this.levelDataGridViewTextBoxColumn3.ReadOnly = true;
+            this.levelDataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "wood";
+            this.dataGridViewTextBoxColumn1.HeaderText = "wood";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
             // upgradeIngfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -502,14 +260,14 @@
             this.Name = "upgradeIngfo";
             this.Text = "upgradeIngfo";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sources)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.woodCutterBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sources)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clayPitBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ironMineBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cropLandBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ironMineBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -518,7 +276,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn levelDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn woodWoodCutterDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn clayWoodCutterDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ironWoodCutterDataGridViewTextBoxColumn;
@@ -538,7 +295,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn produceTimeClayPitDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn producePerHourClayPitDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource clayPitBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn levelDataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn woodCropLandDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn clayCropLandDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ironCropLandDataGridViewTextBoxColumn;
@@ -558,5 +314,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn levelDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn wood;
+        private System.Windows.Forms.DataGridViewTextBoxColumn levelDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
     }
 }
