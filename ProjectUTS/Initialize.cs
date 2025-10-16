@@ -25,7 +25,7 @@ namespace ProjectUTS
             Data.woodCutter = Data.dataSetSources.Tables["woodCutter"];
             Data.clayPit = Data.dataSetSources.Tables["clayPit"];
             Data.ironMine = Data.dataSetSources.Tables["ironMine"];
-            Data.woodCutter = Data.dataSetSources.Tables["woodCutter"];
+            Data.cropLand = Data.dataSetSources.Tables["cropLand"];
 
             addDataClayPit();
             addDataCropLand();
@@ -588,7 +588,7 @@ namespace ProjectUTS
             row3["level"] = 3;
             row3["woodIronMine"] = 280;
             row3["clayIronMine"] = 225;
-            row3["ironWoodCutter"] = 85;
+            row3["ironIronMine"] = 85;
             row3["cropIronMine"] = 165;
             row3["produceTimeIronMine"] = 1670;
             row3["producePerHourIronMine"] = 21;
@@ -628,7 +628,7 @@ namespace ProjectUTS
             row7["level"] = 7;
             row7["woodIronMine"] = 2170;
             row7["clayIronMine"] = 1735;
-            row7["ironWoodCutter"] = 650;
+            row7["ironIronMine"] = 650;
             row7["cropIronMine"] = 1300;
             row7["produceTimeIronMine"] = 12810;
             row7["producePerHourIronMine"] = 98;
@@ -648,7 +648,7 @@ namespace ProjectUTS
             row9["level"] = 9;
             row9["woodIronMine"] = 6050;
             row9["clayIronMine"] = 4840;
-            row9["ironWoodCutter"] = 1815;
+            row9["ironIronMine"] = 1815;
             row9["cropIronMine"] = 3630;
             row9["produceTimeIronMine"] = 33310;
             row9["producePerHourIronMine"] = 203;
