@@ -65,7 +65,13 @@ namespace ProjectUTS
                 CheckData b = new CheckData();
                 b.ShowDialog();
             }
-            if(e.KeyCode == Keys.D1)
+            if (e.KeyCode == Keys.F2)
+            {
+                upgradeIngfo b = new upgradeIngfo();
+                b.ShowDialog();
+            }
+
+            if (e.KeyCode == Keys.D1)
             {
                 multiplier = 1;
                 

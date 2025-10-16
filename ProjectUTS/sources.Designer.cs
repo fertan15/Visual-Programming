@@ -386,17 +386,17 @@ namespace ProjectUTS {
             
             private global::System.Data.DataColumn columnlevel;
             
-            private global::System.Data.DataColumn columnwoodWoodCutter;
+            private global::System.Data.DataColumn columnwood;
             
-            private global::System.Data.DataColumn columnclayWoodCutter;
+            private global::System.Data.DataColumn columnclay;
             
-            private global::System.Data.DataColumn columnironWoodCutter;
+            private global::System.Data.DataColumn columniron;
             
-            private global::System.Data.DataColumn columncropWoodCutter;
+            private global::System.Data.DataColumn columncrop;
             
-            private global::System.Data.DataColumn columnproduceTimeWoodCutter;
+            private global::System.Data.DataColumn columnproduceTime;
             
-            private global::System.Data.DataColumn columnproducePerHourWoodCutter;
+            private global::System.Data.DataColumn columnproducePerHour;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -441,49 +441,49 @@ namespace ProjectUTS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn woodWoodCutterColumn {
+            public global::System.Data.DataColumn woodColumn {
                 get {
-                    return this.columnwoodWoodCutter;
+                    return this.columnwood;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn clayWoodCutterColumn {
+            public global::System.Data.DataColumn clayColumn {
                 get {
-                    return this.columnclayWoodCutter;
+                    return this.columnclay;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ironWoodCutterColumn {
+            public global::System.Data.DataColumn ironColumn {
                 get {
-                    return this.columnironWoodCutter;
+                    return this.columniron;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn cropWoodCutterColumn {
+            public global::System.Data.DataColumn cropColumn {
                 get {
-                    return this.columncropWoodCutter;
+                    return this.columncrop;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn produceTimeWoodCutterColumn {
+            public global::System.Data.DataColumn produceTimeColumn {
                 get {
-                    return this.columnproduceTimeWoodCutter;
+                    return this.columnproduceTime;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn producePerHourWoodCutterColumn {
+            public global::System.Data.DataColumn producePerHourColumn {
                 get {
-                    return this.columnproducePerHourWoodCutter;
+                    return this.columnproducePerHour;
                 }
             }
             
@@ -524,16 +524,16 @@ namespace ProjectUTS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public woodCutterRow AddwoodCutterRow(long level, long woodWoodCutter, long clayWoodCutter, long ironWoodCutter, long cropWoodCutter, long produceTimeWoodCutter, long producePerHourWoodCutter) {
+            public woodCutterRow AddwoodCutterRow(long level, long wood, long clay, long iron, long crop, long produceTime, long producePerHour) {
                 woodCutterRow rowwoodCutterRow = ((woodCutterRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         level,
-                        woodWoodCutter,
-                        clayWoodCutter,
-                        ironWoodCutter,
-                        cropWoodCutter,
-                        produceTimeWoodCutter,
-                        producePerHourWoodCutter};
+                        wood,
+                        clay,
+                        iron,
+                        crop,
+                        produceTime,
+                        producePerHour};
                 rowwoodCutterRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowwoodCutterRow);
                 return rowwoodCutterRow;
@@ -557,12 +557,12 @@ namespace ProjectUTS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
                 this.columnlevel = base.Columns["level"];
-                this.columnwoodWoodCutter = base.Columns["woodWoodCutter"];
-                this.columnclayWoodCutter = base.Columns["clayWoodCutter"];
-                this.columnironWoodCutter = base.Columns["ironWoodCutter"];
-                this.columncropWoodCutter = base.Columns["cropWoodCutter"];
-                this.columnproduceTimeWoodCutter = base.Columns["produceTimeWoodCutter"];
-                this.columnproducePerHourWoodCutter = base.Columns["producePerHourWoodCutter"];
+                this.columnwood = base.Columns["wood"];
+                this.columnclay = base.Columns["clay"];
+                this.columniron = base.Columns["iron"];
+                this.columncrop = base.Columns["crop"];
+                this.columnproduceTime = base.Columns["produceTime"];
+                this.columnproducePerHour = base.Columns["producePerHour"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -570,18 +570,18 @@ namespace ProjectUTS {
             private void InitClass() {
                 this.columnlevel = new global::System.Data.DataColumn("level", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnlevel);
-                this.columnwoodWoodCutter = new global::System.Data.DataColumn("woodWoodCutter", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnwoodWoodCutter);
-                this.columnclayWoodCutter = new global::System.Data.DataColumn("clayWoodCutter", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnclayWoodCutter);
-                this.columnironWoodCutter = new global::System.Data.DataColumn("ironWoodCutter", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnironWoodCutter);
-                this.columncropWoodCutter = new global::System.Data.DataColumn("cropWoodCutter", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncropWoodCutter);
-                this.columnproduceTimeWoodCutter = new global::System.Data.DataColumn("produceTimeWoodCutter", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnproduceTimeWoodCutter);
-                this.columnproducePerHourWoodCutter = new global::System.Data.DataColumn("producePerHourWoodCutter", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnproducePerHourWoodCutter);
+                this.columnwood = new global::System.Data.DataColumn("wood", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnwood);
+                this.columnclay = new global::System.Data.DataColumn("clay", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnclay);
+                this.columniron = new global::System.Data.DataColumn("iron", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columniron);
+                this.columncrop = new global::System.Data.DataColumn("crop", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncrop);
+                this.columnproduceTime = new global::System.Data.DataColumn("produceTime", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnproduceTime);
+                this.columnproducePerHour = new global::System.Data.DataColumn("producePerHour", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnproducePerHour);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -717,17 +717,17 @@ namespace ProjectUTS {
             
             private global::System.Data.DataColumn columnlevel;
             
-            private global::System.Data.DataColumn columnwoodClayPit;
+            private global::System.Data.DataColumn columnwood;
             
-            private global::System.Data.DataColumn columnclayClayPit;
+            private global::System.Data.DataColumn columnclay;
             
-            private global::System.Data.DataColumn columnironClayPit;
+            private global::System.Data.DataColumn columniron;
             
-            private global::System.Data.DataColumn columncropClayPit;
+            private global::System.Data.DataColumn columncrop;
             
-            private global::System.Data.DataColumn columnproduceTimeClayPit;
+            private global::System.Data.DataColumn columnproduceTime;
             
-            private global::System.Data.DataColumn columnproducePerHourClayPit;
+            private global::System.Data.DataColumn columnproducePerHour;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -772,49 +772,49 @@ namespace ProjectUTS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn woodClayPitColumn {
+            public global::System.Data.DataColumn woodColumn {
                 get {
-                    return this.columnwoodClayPit;
+                    return this.columnwood;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn clayClayPitColumn {
+            public global::System.Data.DataColumn clayColumn {
                 get {
-                    return this.columnclayClayPit;
+                    return this.columnclay;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ironClayPitColumn {
+            public global::System.Data.DataColumn ironColumn {
                 get {
-                    return this.columnironClayPit;
+                    return this.columniron;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn cropClayPitColumn {
+            public global::System.Data.DataColumn cropColumn {
                 get {
-                    return this.columncropClayPit;
+                    return this.columncrop;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn produceTimeClayPitColumn {
+            public global::System.Data.DataColumn produceTimeColumn {
                 get {
-                    return this.columnproduceTimeClayPit;
+                    return this.columnproduceTime;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn producePerHourClayPitColumn {
+            public global::System.Data.DataColumn producePerHourColumn {
                 get {
-                    return this.columnproducePerHourClayPit;
+                    return this.columnproducePerHour;
                 }
             }
             
@@ -855,16 +855,16 @@ namespace ProjectUTS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public clayPitRow AddclayPitRow(long level, long woodClayPit, long clayClayPit, long ironClayPit, long cropClayPit, long produceTimeClayPit, long producePerHourClayPit) {
+            public clayPitRow AddclayPitRow(long level, long wood, long clay, long iron, long crop, long produceTime, long producePerHour) {
                 clayPitRow rowclayPitRow = ((clayPitRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         level,
-                        woodClayPit,
-                        clayClayPit,
-                        ironClayPit,
-                        cropClayPit,
-                        produceTimeClayPit,
-                        producePerHourClayPit};
+                        wood,
+                        clay,
+                        iron,
+                        crop,
+                        produceTime,
+                        producePerHour};
                 rowclayPitRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowclayPitRow);
                 return rowclayPitRow;
@@ -888,12 +888,12 @@ namespace ProjectUTS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
                 this.columnlevel = base.Columns["level"];
-                this.columnwoodClayPit = base.Columns["woodClayPit"];
-                this.columnclayClayPit = base.Columns["clayClayPit"];
-                this.columnironClayPit = base.Columns["ironClayPit"];
-                this.columncropClayPit = base.Columns["cropClayPit"];
-                this.columnproduceTimeClayPit = base.Columns["produceTimeClayPit"];
-                this.columnproducePerHourClayPit = base.Columns["producePerHourClayPit"];
+                this.columnwood = base.Columns["wood"];
+                this.columnclay = base.Columns["clay"];
+                this.columniron = base.Columns["iron"];
+                this.columncrop = base.Columns["crop"];
+                this.columnproduceTime = base.Columns["produceTime"];
+                this.columnproducePerHour = base.Columns["producePerHour"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -901,24 +901,24 @@ namespace ProjectUTS {
             private void InitClass() {
                 this.columnlevel = new global::System.Data.DataColumn("level", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnlevel);
-                this.columnwoodClayPit = new global::System.Data.DataColumn("woodClayPit", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnwoodClayPit);
-                this.columnclayClayPit = new global::System.Data.DataColumn("clayClayPit", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnclayClayPit);
-                this.columnironClayPit = new global::System.Data.DataColumn("ironClayPit", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnironClayPit);
-                this.columncropClayPit = new global::System.Data.DataColumn("cropClayPit", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncropClayPit);
-                this.columnproduceTimeClayPit = new global::System.Data.DataColumn("produceTimeClayPit", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnproduceTimeClayPit);
-                this.columnproducePerHourClayPit = new global::System.Data.DataColumn("producePerHourClayPit", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnproducePerHourClayPit);
-                this.columnwoodClayPit.Caption = "woodWoodCutter";
-                this.columnclayClayPit.Caption = "clayWoodCutter";
-                this.columnironClayPit.Caption = "ironWoodCutter";
-                this.columncropClayPit.Caption = "cropWoodCutter";
-                this.columnproduceTimeClayPit.Caption = "produceTimeWoodCutter";
-                this.columnproducePerHourClayPit.Caption = "producePerHourWoodCutter";
+                this.columnwood = new global::System.Data.DataColumn("wood", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnwood);
+                this.columnclay = new global::System.Data.DataColumn("clay", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnclay);
+                this.columniron = new global::System.Data.DataColumn("iron", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columniron);
+                this.columncrop = new global::System.Data.DataColumn("crop", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncrop);
+                this.columnproduceTime = new global::System.Data.DataColumn("produceTime", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnproduceTime);
+                this.columnproducePerHour = new global::System.Data.DataColumn("producePerHour", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnproducePerHour);
+                this.columnwood.Caption = "woodWoodCutter";
+                this.columnclay.Caption = "clayWoodCutter";
+                this.columniron.Caption = "ironWoodCutter";
+                this.columncrop.Caption = "cropWoodCutter";
+                this.columnproduceTime.Caption = "produceTimeWoodCutter";
+                this.columnproducePerHour.Caption = "producePerHourWoodCutter";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1054,17 +1054,17 @@ namespace ProjectUTS {
             
             private global::System.Data.DataColumn columnlevel;
             
-            private global::System.Data.DataColumn columnwoodIronMine;
+            private global::System.Data.DataColumn columnwood;
             
-            private global::System.Data.DataColumn columnclayIronMine;
+            private global::System.Data.DataColumn columnclay;
             
-            private global::System.Data.DataColumn columnironIronMine;
+            private global::System.Data.DataColumn columniron;
             
-            private global::System.Data.DataColumn columncropIronMine;
+            private global::System.Data.DataColumn columncrop;
             
-            private global::System.Data.DataColumn columnproduceTimeIronMine;
+            private global::System.Data.DataColumn columnproduceTime;
             
-            private global::System.Data.DataColumn columnproducePerHourIronMine;
+            private global::System.Data.DataColumn columnproducePerHour;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -1109,49 +1109,49 @@ namespace ProjectUTS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn woodIronMineColumn {
+            public global::System.Data.DataColumn woodColumn {
                 get {
-                    return this.columnwoodIronMine;
+                    return this.columnwood;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn clayIronMineColumn {
+            public global::System.Data.DataColumn clayColumn {
                 get {
-                    return this.columnclayIronMine;
+                    return this.columnclay;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ironIronMineColumn {
+            public global::System.Data.DataColumn ironColumn {
                 get {
-                    return this.columnironIronMine;
+                    return this.columniron;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn cropIronMineColumn {
+            public global::System.Data.DataColumn cropColumn {
                 get {
-                    return this.columncropIronMine;
+                    return this.columncrop;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn produceTimeIronMineColumn {
+            public global::System.Data.DataColumn produceTimeColumn {
                 get {
-                    return this.columnproduceTimeIronMine;
+                    return this.columnproduceTime;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn producePerHourIronMineColumn {
+            public global::System.Data.DataColumn producePerHourColumn {
                 get {
-                    return this.columnproducePerHourIronMine;
+                    return this.columnproducePerHour;
                 }
             }
             
@@ -1192,16 +1192,16 @@ namespace ProjectUTS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ironMineRow AddironMineRow(long level, long woodIronMine, long clayIronMine, long ironIronMine, long cropIronMine, long produceTimeIronMine, long producePerHourIronMine) {
+            public ironMineRow AddironMineRow(long level, long wood, long clay, long iron, long crop, long produceTime, long producePerHour) {
                 ironMineRow rowironMineRow = ((ironMineRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         level,
-                        woodIronMine,
-                        clayIronMine,
-                        ironIronMine,
-                        cropIronMine,
-                        produceTimeIronMine,
-                        producePerHourIronMine};
+                        wood,
+                        clay,
+                        iron,
+                        crop,
+                        produceTime,
+                        producePerHour};
                 rowironMineRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowironMineRow);
                 return rowironMineRow;
@@ -1225,12 +1225,12 @@ namespace ProjectUTS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
                 this.columnlevel = base.Columns["level"];
-                this.columnwoodIronMine = base.Columns["woodIronMine"];
-                this.columnclayIronMine = base.Columns["clayIronMine"];
-                this.columnironIronMine = base.Columns["ironIronMine"];
-                this.columncropIronMine = base.Columns["cropIronMine"];
-                this.columnproduceTimeIronMine = base.Columns["produceTimeIronMine"];
-                this.columnproducePerHourIronMine = base.Columns["producePerHourIronMine"];
+                this.columnwood = base.Columns["wood"];
+                this.columnclay = base.Columns["clay"];
+                this.columniron = base.Columns["iron"];
+                this.columncrop = base.Columns["crop"];
+                this.columnproduceTime = base.Columns["produceTime"];
+                this.columnproducePerHour = base.Columns["producePerHour"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1238,24 +1238,24 @@ namespace ProjectUTS {
             private void InitClass() {
                 this.columnlevel = new global::System.Data.DataColumn("level", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnlevel);
-                this.columnwoodIronMine = new global::System.Data.DataColumn("woodIronMine", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnwoodIronMine);
-                this.columnclayIronMine = new global::System.Data.DataColumn("clayIronMine", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnclayIronMine);
-                this.columnironIronMine = new global::System.Data.DataColumn("ironIronMine", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnironIronMine);
-                this.columncropIronMine = new global::System.Data.DataColumn("cropIronMine", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncropIronMine);
-                this.columnproduceTimeIronMine = new global::System.Data.DataColumn("produceTimeIronMine", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnproduceTimeIronMine);
-                this.columnproducePerHourIronMine = new global::System.Data.DataColumn("producePerHourIronMine", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnproducePerHourIronMine);
-                this.columnwoodIronMine.Caption = "woodWoodCutter";
-                this.columnclayIronMine.Caption = "clayWoodCutter";
-                this.columnironIronMine.Caption = "ironWoodCutter";
-                this.columncropIronMine.Caption = "cropWoodCutter";
-                this.columnproduceTimeIronMine.Caption = "produceTimeWoodCutter";
-                this.columnproducePerHourIronMine.Caption = "producePerHourWoodCutter";
+                this.columnwood = new global::System.Data.DataColumn("wood", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnwood);
+                this.columnclay = new global::System.Data.DataColumn("clay", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnclay);
+                this.columniron = new global::System.Data.DataColumn("iron", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columniron);
+                this.columncrop = new global::System.Data.DataColumn("crop", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncrop);
+                this.columnproduceTime = new global::System.Data.DataColumn("produceTime", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnproduceTime);
+                this.columnproducePerHour = new global::System.Data.DataColumn("producePerHour", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnproducePerHour);
+                this.columnwood.Caption = "woodWoodCutter";
+                this.columnclay.Caption = "clayWoodCutter";
+                this.columniron.Caption = "ironWoodCutter";
+                this.columncrop.Caption = "cropWoodCutter";
+                this.columnproduceTime.Caption = "produceTimeWoodCutter";
+                this.columnproducePerHour.Caption = "producePerHourWoodCutter";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1391,17 +1391,17 @@ namespace ProjectUTS {
             
             private global::System.Data.DataColumn columnlevel;
             
-            private global::System.Data.DataColumn columnwoodCropLand;
+            private global::System.Data.DataColumn columnwood;
             
-            private global::System.Data.DataColumn columnclayCropLand;
+            private global::System.Data.DataColumn columnclay;
             
-            private global::System.Data.DataColumn columnironCropLand;
+            private global::System.Data.DataColumn columniron;
             
-            private global::System.Data.DataColumn columncropCropLand;
+            private global::System.Data.DataColumn columncrop;
             
-            private global::System.Data.DataColumn columnproduceTimeCropLand;
+            private global::System.Data.DataColumn columnproduceTime;
             
-            private global::System.Data.DataColumn columnproducePerHourCropLand;
+            private global::System.Data.DataColumn columnproducePerHour;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -1446,49 +1446,49 @@ namespace ProjectUTS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn woodCropLandColumn {
+            public global::System.Data.DataColumn woodColumn {
                 get {
-                    return this.columnwoodCropLand;
+                    return this.columnwood;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn clayCropLandColumn {
+            public global::System.Data.DataColumn clayColumn {
                 get {
-                    return this.columnclayCropLand;
+                    return this.columnclay;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ironCropLandColumn {
+            public global::System.Data.DataColumn ironColumn {
                 get {
-                    return this.columnironCropLand;
+                    return this.columniron;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn cropCropLandColumn {
+            public global::System.Data.DataColumn cropColumn {
                 get {
-                    return this.columncropCropLand;
+                    return this.columncrop;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn produceTimeCropLandColumn {
+            public global::System.Data.DataColumn produceTimeColumn {
                 get {
-                    return this.columnproduceTimeCropLand;
+                    return this.columnproduceTime;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn producePerHourCropLandColumn {
+            public global::System.Data.DataColumn producePerHourColumn {
                 get {
-                    return this.columnproducePerHourCropLand;
+                    return this.columnproducePerHour;
                 }
             }
             
@@ -1529,16 +1529,16 @@ namespace ProjectUTS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public cropLandRow AddcropLandRow(long level, long woodCropLand, long clayCropLand, long ironCropLand, long cropCropLand, long produceTimeCropLand, long producePerHourCropLand) {
+            public cropLandRow AddcropLandRow(long level, long wood, long clay, long iron, long crop, long produceTime, long producePerHour) {
                 cropLandRow rowcropLandRow = ((cropLandRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         level,
-                        woodCropLand,
-                        clayCropLand,
-                        ironCropLand,
-                        cropCropLand,
-                        produceTimeCropLand,
-                        producePerHourCropLand};
+                        wood,
+                        clay,
+                        iron,
+                        crop,
+                        produceTime,
+                        producePerHour};
                 rowcropLandRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowcropLandRow);
                 return rowcropLandRow;
@@ -1562,12 +1562,12 @@ namespace ProjectUTS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
                 this.columnlevel = base.Columns["level"];
-                this.columnwoodCropLand = base.Columns["woodCropLand"];
-                this.columnclayCropLand = base.Columns["clayCropLand"];
-                this.columnironCropLand = base.Columns["ironCropLand"];
-                this.columncropCropLand = base.Columns["cropCropLand"];
-                this.columnproduceTimeCropLand = base.Columns["produceTimeCropLand"];
-                this.columnproducePerHourCropLand = base.Columns["producePerHourCropLand"];
+                this.columnwood = base.Columns["wood"];
+                this.columnclay = base.Columns["clay"];
+                this.columniron = base.Columns["iron"];
+                this.columncrop = base.Columns["crop"];
+                this.columnproduceTime = base.Columns["produceTime"];
+                this.columnproducePerHour = base.Columns["producePerHour"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1575,24 +1575,24 @@ namespace ProjectUTS {
             private void InitClass() {
                 this.columnlevel = new global::System.Data.DataColumn("level", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnlevel);
-                this.columnwoodCropLand = new global::System.Data.DataColumn("woodCropLand", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnwoodCropLand);
-                this.columnclayCropLand = new global::System.Data.DataColumn("clayCropLand", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnclayCropLand);
-                this.columnironCropLand = new global::System.Data.DataColumn("ironCropLand", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnironCropLand);
-                this.columncropCropLand = new global::System.Data.DataColumn("cropCropLand", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncropCropLand);
-                this.columnproduceTimeCropLand = new global::System.Data.DataColumn("produceTimeCropLand", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnproduceTimeCropLand);
-                this.columnproducePerHourCropLand = new global::System.Data.DataColumn("producePerHourCropLand", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnproducePerHourCropLand);
-                this.columnwoodCropLand.Caption = "woodWoodCutter";
-                this.columnclayCropLand.Caption = "clayWoodCutter";
-                this.columnironCropLand.Caption = "ironWoodCutter";
-                this.columncropCropLand.Caption = "cropWoodCutter";
-                this.columnproduceTimeCropLand.Caption = "produceTimeWoodCutter";
-                this.columnproducePerHourCropLand.Caption = "producePerHourWoodCutter";
+                this.columnwood = new global::System.Data.DataColumn("wood", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnwood);
+                this.columnclay = new global::System.Data.DataColumn("clay", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnclay);
+                this.columniron = new global::System.Data.DataColumn("iron", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columniron);
+                this.columncrop = new global::System.Data.DataColumn("crop", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncrop);
+                this.columnproduceTime = new global::System.Data.DataColumn("produceTime", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnproduceTime);
+                this.columnproducePerHour = new global::System.Data.DataColumn("producePerHour", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnproducePerHour);
+                this.columnwood.Caption = "woodWoodCutter";
+                this.columnclay.Caption = "clayWoodCutter";
+                this.columniron.Caption = "ironWoodCutter";
+                this.columncrop.Caption = "cropWoodCutter";
+                this.columnproduceTime.Caption = "produceTimeWoodCutter";
+                this.columnproducePerHour.Caption = "producePerHourWoodCutter";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1751,97 +1751,97 @@ namespace ProjectUTS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long woodWoodCutter {
+            public long wood {
                 get {
                     try {
-                        return ((long)(this[this.tablewoodCutter.woodWoodCutterColumn]));
+                        return ((long)(this[this.tablewoodCutter.woodColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'woodWoodCutter\' in table \'woodCutter\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'wood\' in table \'woodCutter\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablewoodCutter.woodWoodCutterColumn] = value;
+                    this[this.tablewoodCutter.woodColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long clayWoodCutter {
+            public long clay {
                 get {
                     try {
-                        return ((long)(this[this.tablewoodCutter.clayWoodCutterColumn]));
+                        return ((long)(this[this.tablewoodCutter.clayColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'clayWoodCutter\' in table \'woodCutter\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'clay\' in table \'woodCutter\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablewoodCutter.clayWoodCutterColumn] = value;
+                    this[this.tablewoodCutter.clayColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long ironWoodCutter {
+            public long iron {
                 get {
                     try {
-                        return ((long)(this[this.tablewoodCutter.ironWoodCutterColumn]));
+                        return ((long)(this[this.tablewoodCutter.ironColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ironWoodCutter\' in table \'woodCutter\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'iron\' in table \'woodCutter\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablewoodCutter.ironWoodCutterColumn] = value;
+                    this[this.tablewoodCutter.ironColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long cropWoodCutter {
+            public long crop {
                 get {
                     try {
-                        return ((long)(this[this.tablewoodCutter.cropWoodCutterColumn]));
+                        return ((long)(this[this.tablewoodCutter.cropColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'cropWoodCutter\' in table \'woodCutter\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'crop\' in table \'woodCutter\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablewoodCutter.cropWoodCutterColumn] = value;
+                    this[this.tablewoodCutter.cropColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long produceTimeWoodCutter {
+            public long produceTime {
                 get {
                     try {
-                        return ((long)(this[this.tablewoodCutter.produceTimeWoodCutterColumn]));
+                        return ((long)(this[this.tablewoodCutter.produceTimeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'produceTimeWoodCutter\' in table \'woodCutter\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'produceTime\' in table \'woodCutter\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablewoodCutter.produceTimeWoodCutterColumn] = value;
+                    this[this.tablewoodCutter.produceTimeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long producePerHourWoodCutter {
+            public long producePerHour {
                 get {
                     try {
-                        return ((long)(this[this.tablewoodCutter.producePerHourWoodCutterColumn]));
+                        return ((long)(this[this.tablewoodCutter.producePerHourColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'producePerHourWoodCutter\' in table \'woodCutter\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'producePerHour\' in table \'woodCutter\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablewoodCutter.producePerHourWoodCutterColumn] = value;
+                    this[this.tablewoodCutter.producePerHourColumn] = value;
                 }
             }
             
@@ -1859,74 +1859,74 @@ namespace ProjectUTS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IswoodWoodCutterNull() {
-                return this.IsNull(this.tablewoodCutter.woodWoodCutterColumn);
+            public bool IswoodNull() {
+                return this.IsNull(this.tablewoodCutter.woodColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetwoodWoodCutterNull() {
-                this[this.tablewoodCutter.woodWoodCutterColumn] = global::System.Convert.DBNull;
+            public void SetwoodNull() {
+                this[this.tablewoodCutter.woodColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsclayWoodCutterNull() {
-                return this.IsNull(this.tablewoodCutter.clayWoodCutterColumn);
+            public bool IsclayNull() {
+                return this.IsNull(this.tablewoodCutter.clayColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetclayWoodCutterNull() {
-                this[this.tablewoodCutter.clayWoodCutterColumn] = global::System.Convert.DBNull;
+            public void SetclayNull() {
+                this[this.tablewoodCutter.clayColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsironWoodCutterNull() {
-                return this.IsNull(this.tablewoodCutter.ironWoodCutterColumn);
+            public bool IsironNull() {
+                return this.IsNull(this.tablewoodCutter.ironColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetironWoodCutterNull() {
-                this[this.tablewoodCutter.ironWoodCutterColumn] = global::System.Convert.DBNull;
+            public void SetironNull() {
+                this[this.tablewoodCutter.ironColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IscropWoodCutterNull() {
-                return this.IsNull(this.tablewoodCutter.cropWoodCutterColumn);
+            public bool IscropNull() {
+                return this.IsNull(this.tablewoodCutter.cropColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetcropWoodCutterNull() {
-                this[this.tablewoodCutter.cropWoodCutterColumn] = global::System.Convert.DBNull;
+            public void SetcropNull() {
+                this[this.tablewoodCutter.cropColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsproduceTimeWoodCutterNull() {
-                return this.IsNull(this.tablewoodCutter.produceTimeWoodCutterColumn);
+            public bool IsproduceTimeNull() {
+                return this.IsNull(this.tablewoodCutter.produceTimeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetproduceTimeWoodCutterNull() {
-                this[this.tablewoodCutter.produceTimeWoodCutterColumn] = global::System.Convert.DBNull;
+            public void SetproduceTimeNull() {
+                this[this.tablewoodCutter.produceTimeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsproducePerHourWoodCutterNull() {
-                return this.IsNull(this.tablewoodCutter.producePerHourWoodCutterColumn);
+            public bool IsproducePerHourNull() {
+                return this.IsNull(this.tablewoodCutter.producePerHourColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetproducePerHourWoodCutterNull() {
-                this[this.tablewoodCutter.producePerHourWoodCutterColumn] = global::System.Convert.DBNull;
+            public void SetproducePerHourNull() {
+                this[this.tablewoodCutter.producePerHourColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1962,97 +1962,97 @@ namespace ProjectUTS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long woodClayPit {
+            public long wood {
                 get {
                     try {
-                        return ((long)(this[this.tableclayPit.woodClayPitColumn]));
+                        return ((long)(this[this.tableclayPit.woodColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'woodClayPit\' in table \'clayPit\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'wood\' in table \'clayPit\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableclayPit.woodClayPitColumn] = value;
+                    this[this.tableclayPit.woodColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long clayClayPit {
+            public long clay {
                 get {
                     try {
-                        return ((long)(this[this.tableclayPit.clayClayPitColumn]));
+                        return ((long)(this[this.tableclayPit.clayColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'clayClayPit\' in table \'clayPit\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'clay\' in table \'clayPit\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableclayPit.clayClayPitColumn] = value;
+                    this[this.tableclayPit.clayColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long ironClayPit {
+            public long iron {
                 get {
                     try {
-                        return ((long)(this[this.tableclayPit.ironClayPitColumn]));
+                        return ((long)(this[this.tableclayPit.ironColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ironClayPit\' in table \'clayPit\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'iron\' in table \'clayPit\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableclayPit.ironClayPitColumn] = value;
+                    this[this.tableclayPit.ironColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long cropClayPit {
+            public long crop {
                 get {
                     try {
-                        return ((long)(this[this.tableclayPit.cropClayPitColumn]));
+                        return ((long)(this[this.tableclayPit.cropColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'cropClayPit\' in table \'clayPit\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'crop\' in table \'clayPit\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableclayPit.cropClayPitColumn] = value;
+                    this[this.tableclayPit.cropColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long produceTimeClayPit {
+            public long produceTime {
                 get {
                     try {
-                        return ((long)(this[this.tableclayPit.produceTimeClayPitColumn]));
+                        return ((long)(this[this.tableclayPit.produceTimeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'produceTimeClayPit\' in table \'clayPit\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'produceTime\' in table \'clayPit\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableclayPit.produceTimeClayPitColumn] = value;
+                    this[this.tableclayPit.produceTimeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long producePerHourClayPit {
+            public long producePerHour {
                 get {
                     try {
-                        return ((long)(this[this.tableclayPit.producePerHourClayPitColumn]));
+                        return ((long)(this[this.tableclayPit.producePerHourColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'producePerHourClayPit\' in table \'clayPit\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'producePerHour\' in table \'clayPit\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableclayPit.producePerHourClayPitColumn] = value;
+                    this[this.tableclayPit.producePerHourColumn] = value;
                 }
             }
             
@@ -2070,74 +2070,74 @@ namespace ProjectUTS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IswoodClayPitNull() {
-                return this.IsNull(this.tableclayPit.woodClayPitColumn);
+            public bool IswoodNull() {
+                return this.IsNull(this.tableclayPit.woodColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetwoodClayPitNull() {
-                this[this.tableclayPit.woodClayPitColumn] = global::System.Convert.DBNull;
+            public void SetwoodNull() {
+                this[this.tableclayPit.woodColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsclayClayPitNull() {
-                return this.IsNull(this.tableclayPit.clayClayPitColumn);
+            public bool IsclayNull() {
+                return this.IsNull(this.tableclayPit.clayColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetclayClayPitNull() {
-                this[this.tableclayPit.clayClayPitColumn] = global::System.Convert.DBNull;
+            public void SetclayNull() {
+                this[this.tableclayPit.clayColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsironClayPitNull() {
-                return this.IsNull(this.tableclayPit.ironClayPitColumn);
+            public bool IsironNull() {
+                return this.IsNull(this.tableclayPit.ironColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetironClayPitNull() {
-                this[this.tableclayPit.ironClayPitColumn] = global::System.Convert.DBNull;
+            public void SetironNull() {
+                this[this.tableclayPit.ironColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IscropClayPitNull() {
-                return this.IsNull(this.tableclayPit.cropClayPitColumn);
+            public bool IscropNull() {
+                return this.IsNull(this.tableclayPit.cropColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetcropClayPitNull() {
-                this[this.tableclayPit.cropClayPitColumn] = global::System.Convert.DBNull;
+            public void SetcropNull() {
+                this[this.tableclayPit.cropColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsproduceTimeClayPitNull() {
-                return this.IsNull(this.tableclayPit.produceTimeClayPitColumn);
+            public bool IsproduceTimeNull() {
+                return this.IsNull(this.tableclayPit.produceTimeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetproduceTimeClayPitNull() {
-                this[this.tableclayPit.produceTimeClayPitColumn] = global::System.Convert.DBNull;
+            public void SetproduceTimeNull() {
+                this[this.tableclayPit.produceTimeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsproducePerHourClayPitNull() {
-                return this.IsNull(this.tableclayPit.producePerHourClayPitColumn);
+            public bool IsproducePerHourNull() {
+                return this.IsNull(this.tableclayPit.producePerHourColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetproducePerHourClayPitNull() {
-                this[this.tableclayPit.producePerHourClayPitColumn] = global::System.Convert.DBNull;
+            public void SetproducePerHourNull() {
+                this[this.tableclayPit.producePerHourColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2173,97 +2173,97 @@ namespace ProjectUTS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long woodIronMine {
+            public long wood {
                 get {
                     try {
-                        return ((long)(this[this.tableironMine.woodIronMineColumn]));
+                        return ((long)(this[this.tableironMine.woodColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'woodIronMine\' in table \'ironMine\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'wood\' in table \'ironMine\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableironMine.woodIronMineColumn] = value;
+                    this[this.tableironMine.woodColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long clayIronMine {
+            public long clay {
                 get {
                     try {
-                        return ((long)(this[this.tableironMine.clayIronMineColumn]));
+                        return ((long)(this[this.tableironMine.clayColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'clayIronMine\' in table \'ironMine\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'clay\' in table \'ironMine\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableironMine.clayIronMineColumn] = value;
+                    this[this.tableironMine.clayColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long ironIronMine {
+            public long iron {
                 get {
                     try {
-                        return ((long)(this[this.tableironMine.ironIronMineColumn]));
+                        return ((long)(this[this.tableironMine.ironColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ironIronMine\' in table \'ironMine\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'iron\' in table \'ironMine\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableironMine.ironIronMineColumn] = value;
+                    this[this.tableironMine.ironColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long cropIronMine {
+            public long crop {
                 get {
                     try {
-                        return ((long)(this[this.tableironMine.cropIronMineColumn]));
+                        return ((long)(this[this.tableironMine.cropColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'cropIronMine\' in table \'ironMine\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'crop\' in table \'ironMine\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableironMine.cropIronMineColumn] = value;
+                    this[this.tableironMine.cropColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long produceTimeIronMine {
+            public long produceTime {
                 get {
                     try {
-                        return ((long)(this[this.tableironMine.produceTimeIronMineColumn]));
+                        return ((long)(this[this.tableironMine.produceTimeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'produceTimeIronMine\' in table \'ironMine\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'produceTime\' in table \'ironMine\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableironMine.produceTimeIronMineColumn] = value;
+                    this[this.tableironMine.produceTimeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long producePerHourIronMine {
+            public long producePerHour {
                 get {
                     try {
-                        return ((long)(this[this.tableironMine.producePerHourIronMineColumn]));
+                        return ((long)(this[this.tableironMine.producePerHourColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'producePerHourIronMine\' in table \'ironMine\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'producePerHour\' in table \'ironMine\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableironMine.producePerHourIronMineColumn] = value;
+                    this[this.tableironMine.producePerHourColumn] = value;
                 }
             }
             
@@ -2281,74 +2281,74 @@ namespace ProjectUTS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IswoodIronMineNull() {
-                return this.IsNull(this.tableironMine.woodIronMineColumn);
+            public bool IswoodNull() {
+                return this.IsNull(this.tableironMine.woodColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetwoodIronMineNull() {
-                this[this.tableironMine.woodIronMineColumn] = global::System.Convert.DBNull;
+            public void SetwoodNull() {
+                this[this.tableironMine.woodColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsclayIronMineNull() {
-                return this.IsNull(this.tableironMine.clayIronMineColumn);
+            public bool IsclayNull() {
+                return this.IsNull(this.tableironMine.clayColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetclayIronMineNull() {
-                this[this.tableironMine.clayIronMineColumn] = global::System.Convert.DBNull;
+            public void SetclayNull() {
+                this[this.tableironMine.clayColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsironIronMineNull() {
-                return this.IsNull(this.tableironMine.ironIronMineColumn);
+            public bool IsironNull() {
+                return this.IsNull(this.tableironMine.ironColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetironIronMineNull() {
-                this[this.tableironMine.ironIronMineColumn] = global::System.Convert.DBNull;
+            public void SetironNull() {
+                this[this.tableironMine.ironColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IscropIronMineNull() {
-                return this.IsNull(this.tableironMine.cropIronMineColumn);
+            public bool IscropNull() {
+                return this.IsNull(this.tableironMine.cropColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetcropIronMineNull() {
-                this[this.tableironMine.cropIronMineColumn] = global::System.Convert.DBNull;
+            public void SetcropNull() {
+                this[this.tableironMine.cropColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsproduceTimeIronMineNull() {
-                return this.IsNull(this.tableironMine.produceTimeIronMineColumn);
+            public bool IsproduceTimeNull() {
+                return this.IsNull(this.tableironMine.produceTimeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetproduceTimeIronMineNull() {
-                this[this.tableironMine.produceTimeIronMineColumn] = global::System.Convert.DBNull;
+            public void SetproduceTimeNull() {
+                this[this.tableironMine.produceTimeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsproducePerHourIronMineNull() {
-                return this.IsNull(this.tableironMine.producePerHourIronMineColumn);
+            public bool IsproducePerHourNull() {
+                return this.IsNull(this.tableironMine.producePerHourColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetproducePerHourIronMineNull() {
-                this[this.tableironMine.producePerHourIronMineColumn] = global::System.Convert.DBNull;
+            public void SetproducePerHourNull() {
+                this[this.tableironMine.producePerHourColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2384,97 +2384,97 @@ namespace ProjectUTS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long woodCropLand {
+            public long wood {
                 get {
                     try {
-                        return ((long)(this[this.tablecropLand.woodCropLandColumn]));
+                        return ((long)(this[this.tablecropLand.woodColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'woodCropLand\' in table \'cropLand\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'wood\' in table \'cropLand\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablecropLand.woodCropLandColumn] = value;
+                    this[this.tablecropLand.woodColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long clayCropLand {
+            public long clay {
                 get {
                     try {
-                        return ((long)(this[this.tablecropLand.clayCropLandColumn]));
+                        return ((long)(this[this.tablecropLand.clayColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'clayCropLand\' in table \'cropLand\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'clay\' in table \'cropLand\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablecropLand.clayCropLandColumn] = value;
+                    this[this.tablecropLand.clayColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long ironCropLand {
+            public long iron {
                 get {
                     try {
-                        return ((long)(this[this.tablecropLand.ironCropLandColumn]));
+                        return ((long)(this[this.tablecropLand.ironColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ironCropLand\' in table \'cropLand\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'iron\' in table \'cropLand\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablecropLand.ironCropLandColumn] = value;
+                    this[this.tablecropLand.ironColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long cropCropLand {
+            public long crop {
                 get {
                     try {
-                        return ((long)(this[this.tablecropLand.cropCropLandColumn]));
+                        return ((long)(this[this.tablecropLand.cropColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'cropCropLand\' in table \'cropLand\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'crop\' in table \'cropLand\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablecropLand.cropCropLandColumn] = value;
+                    this[this.tablecropLand.cropColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long produceTimeCropLand {
+            public long produceTime {
                 get {
                     try {
-                        return ((long)(this[this.tablecropLand.produceTimeCropLandColumn]));
+                        return ((long)(this[this.tablecropLand.produceTimeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'produceTimeCropLand\' in table \'cropLand\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'produceTime\' in table \'cropLand\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablecropLand.produceTimeCropLandColumn] = value;
+                    this[this.tablecropLand.produceTimeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long producePerHourCropLand {
+            public long producePerHour {
                 get {
                     try {
-                        return ((long)(this[this.tablecropLand.producePerHourCropLandColumn]));
+                        return ((long)(this[this.tablecropLand.producePerHourColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'producePerHourCropLand\' in table \'cropLand\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'producePerHour\' in table \'cropLand\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablecropLand.producePerHourCropLandColumn] = value;
+                    this[this.tablecropLand.producePerHourColumn] = value;
                 }
             }
             
@@ -2492,74 +2492,74 @@ namespace ProjectUTS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IswoodCropLandNull() {
-                return this.IsNull(this.tablecropLand.woodCropLandColumn);
+            public bool IswoodNull() {
+                return this.IsNull(this.tablecropLand.woodColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetwoodCropLandNull() {
-                this[this.tablecropLand.woodCropLandColumn] = global::System.Convert.DBNull;
+            public void SetwoodNull() {
+                this[this.tablecropLand.woodColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsclayCropLandNull() {
-                return this.IsNull(this.tablecropLand.clayCropLandColumn);
+            public bool IsclayNull() {
+                return this.IsNull(this.tablecropLand.clayColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetclayCropLandNull() {
-                this[this.tablecropLand.clayCropLandColumn] = global::System.Convert.DBNull;
+            public void SetclayNull() {
+                this[this.tablecropLand.clayColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsironCropLandNull() {
-                return this.IsNull(this.tablecropLand.ironCropLandColumn);
+            public bool IsironNull() {
+                return this.IsNull(this.tablecropLand.ironColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetironCropLandNull() {
-                this[this.tablecropLand.ironCropLandColumn] = global::System.Convert.DBNull;
+            public void SetironNull() {
+                this[this.tablecropLand.ironColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IscropCropLandNull() {
-                return this.IsNull(this.tablecropLand.cropCropLandColumn);
+            public bool IscropNull() {
+                return this.IsNull(this.tablecropLand.cropColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetcropCropLandNull() {
-                this[this.tablecropLand.cropCropLandColumn] = global::System.Convert.DBNull;
+            public void SetcropNull() {
+                this[this.tablecropLand.cropColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsproduceTimeCropLandNull() {
-                return this.IsNull(this.tablecropLand.produceTimeCropLandColumn);
+            public bool IsproduceTimeNull() {
+                return this.IsNull(this.tablecropLand.produceTimeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetproduceTimeCropLandNull() {
-                this[this.tablecropLand.produceTimeCropLandColumn] = global::System.Convert.DBNull;
+            public void SetproduceTimeNull() {
+                this[this.tablecropLand.produceTimeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsproducePerHourCropLandNull() {
-                return this.IsNull(this.tablecropLand.producePerHourCropLandColumn);
+            public bool IsproducePerHourNull() {
+                return this.IsNull(this.tablecropLand.producePerHourColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetproducePerHourCropLandNull() {
-                this[this.tablecropLand.producePerHourCropLandColumn] = global::System.Convert.DBNull;
+            public void SetproducePerHourNull() {
+                this[this.tablecropLand.producePerHourColumn] = global::System.Convert.DBNull;
             }
         }
         
