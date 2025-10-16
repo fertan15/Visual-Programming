@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,7 @@ namespace ProjectUTS
         public static int totalMap = 18;
         public static bool isThereSavedProgress = false;
         public static bool isBagian2Randomized = false;
+        public static List<Panel> savedGrid = new List<Panel>(); // Add this property
 
         public static List<Map> mapList = new List<Map>();
 
@@ -101,6 +103,64 @@ namespace ProjectUTS
             progress.WriteXml("saveProgress.xml");
             player.WriteXml("savePlayer.xml");
             
+        }
+
+        //============================Save Form 2==============================================
+        public static void saveGrids(List<Panel> Cells)
+        {
+            String filePath = "saveGrid.txt";
+            try
+            {
+                using (StreamWriter streamWriter = new StreamWriter(filePath))
+                {
+                    foreach (Panel cell in Cells)
+                    {
+                        streamWriter.WriteLine($"{cell.BackColor.ToArgb()},{cell.Location.X},{cell.Location.Y},{cell.Width},{cell.Height},{cell.BorderStyle}");
+                    }
+                }
+
+            }
+            catch (IOException e)
+            {
+                MessageBox.Show("Error: " + e.Message);
+            }
+        }
+
+        public static List<Panel> loadGrids()
+        {
+            List<Panel> grids = new List<Panel>();
+            String filePath = "saveGrid.txt";
+
+            if (!File.Exists(filePath))
+                return grids;
+
+            try
+            {
+                using (StreamReader streamReader = new StreamReader(filePath))
+                {
+                    string line;
+                    while ((line = streamReader.ReadLine()) != null)
+                    {
+                        string[] parts = line.Split(',');
+                        if (parts.Length == 6)
+                        {
+                            Panel cell = new Panel();
+                            cell.BackColor = Color.FromArgb(int.Parse(parts[0]));
+                            cell.Location = new Point(int.Parse(parts[1]), int.Parse(parts[2]));
+                            cell.Size = new Size(int.Parse(parts[3]), int.Parse(parts[4]));
+                            cell.BorderStyle = (BorderStyle)Enum.Parse(typeof(BorderStyle), parts[5]);
+                            grids.Add(cell);
+                        }
+                    }
+                }
+                
+            }
+            catch (IOException e)
+            {
+                MessageBox.Show("Error: " + e.Message);
+                
+            }
+            return grids;
         }
 
         //============================GET TOTAL PRODUCTION PER HOUR=============================================

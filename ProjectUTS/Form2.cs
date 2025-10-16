@@ -46,6 +46,7 @@ namespace ProjectUTS
             }
 
             List<Panel> panelsToRemove = new List<Panel>();
+            bool gridStateChanged = false;
 
             foreach (Panel movingPanel in movingPanels.ToList())
             {
@@ -95,12 +96,20 @@ namespace ProjectUTS
                     movingPanel.Visible = false;
                     cells.Remove(movingPanel);
                     panelsToRemove.Add(movingPanel);
+                    gridStateChanged = true;
                 }
             }
 
             foreach (Panel panel in panelsToRemove)
             {
                 movingPanels.Remove(panel);
+            }
+
+            // Save grid when state changes
+            if (gridStateChanged)
+            {
+                Data.saveGrids(cells);
+                Data.savedGrid = new List<Panel>(cells);
             }
 
             isMoving = movingPanels.Count > 0;
@@ -115,7 +124,33 @@ namespace ProjectUTS
             var color = Color.White;
             Boolean userGenerated = false;
             
-            if(!Data.isBagian2Randomized)
+            var loadPanels = Data.loadGrids();
+            
+            if (loadPanels.Count > 0) // kalo udh ada file
+            {
+                foreach (var savedPanel in loadPanels)
+                {
+                    Panel newPanel = new Panel();
+                    newPanel.Size = savedPanel.Size;
+                    newPanel.Location = savedPanel.Location;
+                    newPanel.BackColor = savedPanel.BackColor;
+                    newPanel.BorderStyle = savedPanel.BorderStyle;
+                    if(newPanel.BackColor != Color.White)
+                    {
+                        newPanel.Click += Cell_Click;
+                    }
+                    if (savedPanel.BackColor == Color.Black)
+                    {
+                        userPosition = new Point(savedPanel.Location.X / 50, savedPanel.Location.Y / 50);
+                    }
+                    
+                    this.Controls.Add(newPanel);
+                    cells.Add(newPanel);
+                }
+                Data.savedGrid = new List<Panel>(cells);
+                Data.isBagian2Randomized = true;
+            }
+            else if(!Data.isBagian2Randomized)
             {
                 for (int i = 0; i < gridHeight; i++)           //ini tak buat 50% something 50%empty biar gk terlalu rame
                 {
@@ -169,28 +204,28 @@ namespace ProjectUTS
                 Data.savedGrid = new List<Panel>(cells);
                 Data.isBagian2Randomized = true;
             } 
-            else if(Data.isBagian2Randomized && Data.savedGrid != null)
-            {
-                foreach (var savedPanel in Data.savedGrid)
-                {
-                    Panel newPanel = new Panel();
-                    newPanel.Size = savedPanel.Size;
-                    newPanel.Location = savedPanel.Location;
-                    newPanel.BackColor = savedPanel.BackColor;
-                    newPanel.BorderStyle = savedPanel.BorderStyle;
-                    if(newPanel.BackColor != Color.White)
-                    {
-                        newPanel.Click += Cell_Click;
-                    }
-                    if (savedPanel.BackColor == Color.Black)
-                    {
-                        userPosition = new Point(savedPanel.Location.X / 50, savedPanel.Location.Y / 50);
-                    }
+            //else if(Data.isBagian2Randomized && Data.savedGrid != null)
+            //{
+            //    foreach (var savedPanel in Data.savedGrid)
+            //    {
+            //        Panel newPanel = new Panel();
+            //        newPanel.Size = savedPanel.Size;
+            //        newPanel.Location = savedPanel.Location;
+            //        newPanel.BackColor = savedPanel.BackColor;
+            //        newPanel.BorderStyle = savedPanel.BorderStyle;
+            //        if(newPanel.BackColor != Color.White)
+            //        {
+            //            newPanel.Click += Cell_Click;
+            //        }
+            //        if (savedPanel.BackColor == Color.Black)
+            //        {
+            //            userPosition = new Point(savedPanel.Location.X / 50, savedPanel.Location.Y / 50);
+            //        }
                     
-                    this.Controls.Add(newPanel);
-                    cells.Add(newPanel);
-                }
-            }         
+            //        this.Controls.Add(newPanel);
+            //        cells.Add(newPanel);
+            //    }
+            //}         
         }
 
         private void Cell_Click(object sender, EventArgs e)
@@ -204,6 +239,12 @@ namespace ProjectUTS
                 movingPanels.Add(selectedPanel);
                 isMoving = true;
             }
+        }
+
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Data.saveGrids(cells);
+            Data.savedGrid = new List<Panel>(cells);
         }
     }
 }
