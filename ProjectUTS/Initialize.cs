@@ -32,6 +32,8 @@ namespace ProjectUTS
             addDataIronMine();
             addDataWoodCutter();
 
+            Data.loadProductionMultiplier();
+
 
 
             if (File.Exists("saveMap.xml") && File.Exists("saveProgress.xml") && File.Exists("savePlayer.xml"))

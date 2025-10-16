@@ -55,7 +55,6 @@
             this.woodInven = new System.Windows.Forms.Label();
             this.ironInven = new System.Windows.Forms.Label();
             this.clayInven = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.mapProgressBindingSource)).BeginInit();
             this.production_box.SuspendLayout();
             this.buildingBox.SuspendLayout();
@@ -206,7 +205,6 @@
             // 
             // buildingBox
             // 
-            this.buildingBox.Controls.Add(this.button1);
             this.buildingBox.Controls.Add(this.timeNeeded);
             this.buildingBox.Controls.Add(this.buildingDetails);
             this.buildingBox.Controls.Add(this.upgradeButton);
@@ -305,16 +303,6 @@
             this.clayInven.TabIndex = 11;
             this.clayInven.Text = ".";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(67, 310);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "ke form 2";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -332,11 +320,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.mapProgressBindingSource)).EndInit();
             this.production_box.ResumeLayout(false);
             this.production_box.PerformLayout();
@@ -376,7 +365,6 @@
         private System.Windows.Forms.Label woodInven;
         private System.Windows.Forms.Label ironInven;
         private System.Windows.Forms.Label clayInven;
-        private System.Windows.Forms.Button button1;
     }
 }
 

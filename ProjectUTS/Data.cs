@@ -19,7 +19,11 @@ namespace ProjectUTS
         public static int totalMap = 18;
         public static bool isThereSavedProgress = false;
         public static bool isBagian2Randomized = false;
-        public static List<Panel> savedGrid = new List<Panel>(); // Add this property
+        public static List<Panel> savedGrid = new List<Panel>(); //buat save grid form 2
+        public static double mineMultiplier = 0;
+        public static double forestMultiplier = 0;
+        public static double farmMultiplier = 0;
+        public static double clayPitMultiplier = 0;
 
         public static List<Map> mapList = new List<Map>();
 
@@ -112,8 +116,8 @@ namespace ProjectUTS
             
         }
 
-        //============================Save Form 2==============================================
-        public static void saveGrids(List<Panel> Cells)
+        //============================Semua save sm load punya form 2==============================================
+        public static void saveGrids(List<Panel> Cells) //save grid form 2
         {
             String filePath = "saveGrid.txt";
             try
@@ -133,7 +137,7 @@ namespace ProjectUTS
             }
         }
 
-        public static List<Panel> loadGrids()
+        public static List<Panel> loadGrids() //load grid form 2
         {
             List<Panel> grids = new List<Panel>();
             String filePath = "saveGrid.txt";
@@ -168,6 +172,59 @@ namespace ProjectUTS
                 
             }
             return grids;
+        }
+
+        public static void saveProductionMultiplier() //buat save multiplier production form 2
+        {
+            string filePath = "saveProductionMultiplier.txt";
+            try
+            {
+                using (StreamWriter streamWriter = new StreamWriter(filePath))
+                {
+                    streamWriter.WriteLine(clayPitMultiplier);
+                    streamWriter.WriteLine(mineMultiplier);
+                    streamWriter.WriteLine(forestMultiplier);
+                    streamWriter.WriteLine(farmMultiplier);
+                }
+            }
+            catch (IOException e)
+            {
+                MessageBox.Show("Error: " + e.Message);
+            }
+        }
+
+        public static void loadProductionMultiplier() //buat load multiplier production form 2
+        {
+            string filePath = "saveProductionMultiplier.txt";
+            if (!File.Exists(filePath))
+                return;
+            try
+            {
+                using (StreamReader streamReader = new StreamReader(filePath))
+                {
+                    string line; // ada 4 if soalnya ada 4 line buat 4 multiplier :3
+
+                    line = streamReader.ReadLine();
+                    if (line != null) //line 1 buat clay pit
+                        clayPitMultiplier = double.Parse(line);
+
+                    line = streamReader.ReadLine();
+                    if (line != null) //line 2 buat mine
+                        mineMultiplier = double.Parse(line);
+
+                    line = streamReader.ReadLine();
+                    if (line != null) //line 3 buat forest
+                        forestMultiplier = double.Parse(line);
+
+                    line = streamReader.ReadLine();
+                    if (line != null) //line 4 buat farm
+                        farmMultiplier = double.Parse(line);
+                }
+            }
+            catch (IOException e)
+            {
+                MessageBox.Show("Error: " + e.Message);
+            }
         }
 
         //============================GET TOTAL PRODUCTION PER HOUR=============================================

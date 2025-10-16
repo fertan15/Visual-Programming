@@ -17,6 +17,7 @@ namespace ProjectUTS
         int waktu = 300;
         int gameIntervalNormal = 1000;
         bool gakMiskin = true;
+        ContextMenuStrip contextMenuStrip1;
         public Form1()
         {
             InitializeComponent();
@@ -36,9 +37,14 @@ namespace ProjectUTS
             this.Controls.Add(pic);
             gameTimer.Start();
 
-
-
+            
+            contextMenuStrip1 = new ContextMenuStrip();
+            ToolStripMenuItem huntingItem = new ToolStripMenuItem("Go Hunting");
+            huntingItem.Click += GoHunting_Click;
+            contextMenuStrip1.Items.Add(huntingItem);
         }
+
+
 
 
 
@@ -237,10 +243,10 @@ namespace ProjectUTS
             woodPerHour.Text = Data.getAllWoodProduction().ToString();
             cropPerHour.Text = Data.getAllCropProduction().ToString();
 
-            Data.addClay(Convert.ToDouble(Data.getAllClayProduction()) / 3600 * multiplier);
-            Data.addIron(Convert.ToDouble(Data.getAllIronProduction()) / 3600 * multiplier);
-            Data.addWood(Convert.ToDouble(Data.getAllWoodProduction()) / 3600 * multiplier);
-            Data.addCrop(Convert.ToDouble(Data.getAllCropProduction()) / 3600 * multiplier);
+            Data.addClay((Convert.ToDouble(Data.getAllClayProduction()) / 3600 * multiplier) + ((Convert.ToDouble(Data.getAllClayProduction()) / 3600 * multiplier) * Data.clayPitMultiplier));
+            Data.addIron((Convert.ToDouble(Data.getAllIronProduction()) / 3600 * multiplier) + ((Convert.ToDouble(Data.getAllIronProduction()) / 3600 * multiplier) * Data.mineMultiplier));
+            Data.addWood((Convert.ToDouble(Data.getAllWoodProduction()) / 3600 * multiplier) + ((Convert.ToDouble(Data.getAllWoodProduction()) / 3600 * multiplier) * Data.forestMultiplier));
+            Data.addCrop((Convert.ToDouble(Data.getAllCropProduction()) / 3600 * multiplier) + ((Convert.ToDouble(Data.getAllCropProduction()) / 3600 * multiplier) * Data.farmMultiplier));
 
 
             clayInven.Text = Data.getClay().ToString();
@@ -286,10 +292,19 @@ namespace ProjectUTS
             Data.save();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void GoHunting_Click(object sender, EventArgs e)
         {
             Form2 f2 = new Form2();
             f2.ShowDialog();
+
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if(MouseButtons.Right == e.Button)
+            {
+                contextMenuStrip1.Show((Control)sender, e.Location);
+            }
         }
     }
 }
