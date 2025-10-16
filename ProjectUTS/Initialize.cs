@@ -58,7 +58,8 @@ namespace ProjectUTS
                     MessageBox.Show("Data founded, Lanjutin dari trakhir maen!");
                     Data.loadMap();
                     Data.CalculateOfflineProduction();
-                    if(Data.progress.Rows.Count != Data.totalMap || Data.player.Rows.Count < 1 || Data.map.Rows.Count != 4)
+                    Data.checkOfflineUpgradeCompletion();
+                    if (Data.progress.Rows.Count != Data.totalMap || Data.player.Rows.Count < 1 || Data.map.Rows.Count != 4)
                     {
                         MessageBox.Show("Data ga sesuai ama default ntah napa Jadi bakal ngulang dari awal yeah");
                         initDefaultData();

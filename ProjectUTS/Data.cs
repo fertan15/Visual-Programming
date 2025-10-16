@@ -527,7 +527,7 @@ namespace ProjectUTS
                 "DEBUG PRODUKSI OFFLINE (iron)"
             );
 
-            int initialCrop = getIron();
+            int initialCrop = getCrop();
             int cropProductionPerHour = getAllIronProduction();
 
             double totalcropGained_Raw = cropProductionPerHour * hoursOffline;
@@ -543,7 +543,32 @@ namespace ProjectUTS
                 "DEBUG PRODUKSI OFFLINE (crop)"
             );
         }
+        public static bool checkOfflineUpgradeCompletion()
+        {
+            if (Convert.ToBoolean(player.Rows[0]["upgradeInProgress"]))
+            {
+                MessageBox.Show("masuk upgrade oflenn");
+                DateTime finishTime = Convert.ToDateTime(player.Rows[0]["EstimateTimeFinishUpgrade"]);
 
+                if (finishTime <= DateTime.Now)
+                {
+                    int idMap = Convert.ToInt32(player.Rows[0]["idMapUpgrade"]);
+
+                    Map completedMap = Data.mapList.FirstOrDefault(m => m.id == idMap);
+
+                    if (completedMap != null)
+                    {
+                        completedMap.addLevel();
+                    }
+
+                    upgradeFinish();
+
+                    MessageBox.Show($"Upgrade Map ID {idMap} Selesai saat Anda offline!", "Upgrade Selesai");
+                    return true;
+                }
+            }
+            return false;
+        }
 
 
 
