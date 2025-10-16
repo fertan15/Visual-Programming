@@ -17,8 +17,8 @@ namespace ProjectUTS
             InitializeComponent();
             dataGridView1.DataSource = Data.woodCutter;
             dataGridView2.DataSource = Data.clayPit;
-            dataGridView3.DataSource = Data.player;
-            dataGridView4.DataSource = Data.cropLand;
+            dataGridView3.DataSource = Data.cropLand;
+            dataGridView4.DataSource = Data.ironMine;
 
 
         }

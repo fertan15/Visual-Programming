@@ -30,24 +30,29 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.levelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wood = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.woodCutterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sources = new ProjectUTS.sources();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.levelDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clayPitBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.levelDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iron = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.crop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cropLandBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.levelDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ironMineBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.levelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.wood = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.levelDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.levelDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.levelDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.woodCutterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sources)).BeginInit();
@@ -77,6 +82,24 @@
             this.dataGridView1.Size = new System.Drawing.Size(598, 341);
             this.dataGridView1.TabIndex = 0;
             // 
+            // levelDataGridViewTextBoxColumn
+            // 
+            this.levelDataGridViewTextBoxColumn.DataPropertyName = "level";
+            this.levelDataGridViewTextBoxColumn.HeaderText = "level";
+            this.levelDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.levelDataGridViewTextBoxColumn.Name = "levelDataGridViewTextBoxColumn";
+            this.levelDataGridViewTextBoxColumn.ReadOnly = true;
+            this.levelDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // wood
+            // 
+            this.wood.DataPropertyName = "wood";
+            this.wood.HeaderText = "wood";
+            this.wood.MinimumWidth = 6;
+            this.wood.Name = "wood";
+            this.wood.ReadOnly = true;
+            this.wood.Width = 125;
+            // 
             // woodCutterBindingSource
             // 
             this.woodCutterBindingSource.DataMember = "woodCutter";
@@ -94,7 +117,8 @@
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.levelDataGridViewTextBoxColumn1});
+            this.levelDataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
             this.dataGridView2.DataSource = this.clayPitBindingSource;
             this.dataGridView2.Location = new System.Drawing.Point(634, 26);
             this.dataGridView2.Name = "dataGridView2";
@@ -103,15 +127,6 @@
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(598, 341);
             this.dataGridView2.TabIndex = 1;
-            // 
-            // levelDataGridViewTextBoxColumn1
-            // 
-            this.levelDataGridViewTextBoxColumn1.DataPropertyName = "level";
-            this.levelDataGridViewTextBoxColumn1.HeaderText = "level";
-            this.levelDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.levelDataGridViewTextBoxColumn1.Name = "levelDataGridViewTextBoxColumn1";
-            this.levelDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.levelDataGridViewTextBoxColumn1.Width = 125;
             // 
             // clayPitBindingSource
             // 
@@ -126,6 +141,9 @@
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.levelDataGridViewTextBoxColumn3,
+            this.clay,
+            this.iron,
+            this.crop,
             this.dataGridViewTextBoxColumn1});
             this.dataGridView3.DataSource = this.cropLandBindingSource;
             this.dataGridView3.Location = new System.Drawing.Point(634, 391);
@@ -135,6 +153,51 @@
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.Size = new System.Drawing.Size(598, 341);
             this.dataGridView3.TabIndex = 3;
+            // 
+            // levelDataGridViewTextBoxColumn3
+            // 
+            this.levelDataGridViewTextBoxColumn3.DataPropertyName = "level";
+            this.levelDataGridViewTextBoxColumn3.HeaderText = "level";
+            this.levelDataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.levelDataGridViewTextBoxColumn3.Name = "levelDataGridViewTextBoxColumn3";
+            this.levelDataGridViewTextBoxColumn3.ReadOnly = true;
+            this.levelDataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // clay
+            // 
+            this.clay.DataPropertyName = "clay";
+            this.clay.HeaderText = "clay";
+            this.clay.MinimumWidth = 6;
+            this.clay.Name = "clay";
+            this.clay.ReadOnly = true;
+            this.clay.Width = 125;
+            // 
+            // iron
+            // 
+            this.iron.DataPropertyName = "iron";
+            this.iron.HeaderText = "iron";
+            this.iron.MinimumWidth = 6;
+            this.iron.Name = "iron";
+            this.iron.ReadOnly = true;
+            this.iron.Width = 125;
+            // 
+            // crop
+            // 
+            this.crop.DataPropertyName = "crop";
+            this.crop.HeaderText = "crop";
+            this.crop.MinimumWidth = 6;
+            this.crop.Name = "crop";
+            this.crop.ReadOnly = true;
+            this.crop.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "wood";
+            this.dataGridViewTextBoxColumn1.HeaderText = "wood";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
             // 
             // cropLandBindingSource
             // 
@@ -148,7 +211,8 @@
             this.dataGridView4.AutoGenerateColumns = false;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.levelDataGridViewTextBoxColumn2});
+            this.levelDataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
             this.dataGridView4.DataSource = this.ironMineBindingSource;
             this.dataGridView4.Location = new System.Drawing.Point(3, 391);
             this.dataGridView4.Name = "dataGridView4";
@@ -157,15 +221,6 @@
             this.dataGridView4.RowTemplate.Height = 24;
             this.dataGridView4.Size = new System.Drawing.Size(598, 341);
             this.dataGridView4.TabIndex = 2;
-            // 
-            // levelDataGridViewTextBoxColumn2
-            // 
-            this.levelDataGridViewTextBoxColumn2.DataPropertyName = "level";
-            this.levelDataGridViewTextBoxColumn2.HeaderText = "level";
-            this.levelDataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.levelDataGridViewTextBoxColumn2.Name = "levelDataGridViewTextBoxColumn2";
-            this.levelDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.levelDataGridViewTextBoxColumn2.Width = 125;
             // 
             // ironMineBindingSource
             // 
@@ -208,41 +263,41 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Crop";
             // 
-            // levelDataGridViewTextBoxColumn
+            // levelDataGridViewTextBoxColumn1
             // 
-            this.levelDataGridViewTextBoxColumn.DataPropertyName = "level";
-            this.levelDataGridViewTextBoxColumn.HeaderText = "level";
-            this.levelDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.levelDataGridViewTextBoxColumn.Name = "levelDataGridViewTextBoxColumn";
-            this.levelDataGridViewTextBoxColumn.ReadOnly = true;
-            this.levelDataGridViewTextBoxColumn.Width = 125;
+            this.levelDataGridViewTextBoxColumn1.DataPropertyName = "level";
+            this.levelDataGridViewTextBoxColumn1.HeaderText = "level";
+            this.levelDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.levelDataGridViewTextBoxColumn1.Name = "levelDataGridViewTextBoxColumn1";
+            this.levelDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.levelDataGridViewTextBoxColumn1.Width = 125;
             // 
-            // wood
+            // dataGridViewTextBoxColumn2
             // 
-            this.wood.DataPropertyName = "wood";
-            this.wood.HeaderText = "wood";
-            this.wood.MinimumWidth = 6;
-            this.wood.Name = "wood";
-            this.wood.ReadOnly = true;
-            this.wood.Width = 125;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "wood";
+            this.dataGridViewTextBoxColumn2.HeaderText = "wood";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 125;
             // 
-            // levelDataGridViewTextBoxColumn3
+            // levelDataGridViewTextBoxColumn2
             // 
-            this.levelDataGridViewTextBoxColumn3.DataPropertyName = "level";
-            this.levelDataGridViewTextBoxColumn3.HeaderText = "level";
-            this.levelDataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.levelDataGridViewTextBoxColumn3.Name = "levelDataGridViewTextBoxColumn3";
-            this.levelDataGridViewTextBoxColumn3.ReadOnly = true;
-            this.levelDataGridViewTextBoxColumn3.Width = 125;
+            this.levelDataGridViewTextBoxColumn2.DataPropertyName = "level";
+            this.levelDataGridViewTextBoxColumn2.HeaderText = "level";
+            this.levelDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.levelDataGridViewTextBoxColumn2.Name = "levelDataGridViewTextBoxColumn2";
+            this.levelDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.levelDataGridViewTextBoxColumn2.Width = 125;
             // 
-            // dataGridViewTextBoxColumn1
+            // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "wood";
-            this.dataGridViewTextBoxColumn1.HeaderText = "wood";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 125;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "wood";
+            this.dataGridViewTextBoxColumn3.HeaderText = "wood";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 125;
             // 
             // upgradeIngfo
             // 
@@ -287,7 +342,6 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn levelDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn woodClayPitDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn clayClayPitDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ironClayPitDataGridViewTextBoxColumn;
@@ -302,7 +356,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn produceTimeCropLandDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn producePerHourCropLandDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource cropLandBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn levelDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn woodIronMineDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn clayIronMineDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ironIronMineDataGridViewTextBoxColumn;
@@ -317,6 +370,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn levelDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn wood;
         private System.Windows.Forms.DataGridViewTextBoxColumn levelDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iron;
+        private System.Windows.Forms.DataGridViewTextBoxColumn crop;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn levelDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn levelDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }
 }
