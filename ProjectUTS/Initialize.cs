@@ -19,6 +19,7 @@ namespace ProjectUTS
             Data.map = Data.dataSet.Tables["JenisMap"];
             Data.progress = Data.dataSet.Tables["MapProgress"];
             Data.player = Data.dataSet.Tables["Player"];
+            Data.savedGrid = new List<Panel>();
 
 
             if (File.Exists("saveMap.xml") && File.Exists("saveProgress.xml") && File.Exists("savePlayer.xml"))

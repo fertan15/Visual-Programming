@@ -17,6 +17,7 @@ namespace ProjectUTS
         public static DataTable player;
         public static int totalMap = 18;
         public static bool isThereSavedProgress = false;
+        public static bool isBagian2Randomized = false;
 
         public static List<Map> mapList = new List<Map>();
 
@@ -99,6 +100,7 @@ namespace ProjectUTS
             map.WriteXml("saveMap.xml");
             progress.WriteXml("saveProgress.xml");
             player.WriteXml("savePlayer.xml");
+            
         }
 
         //============================GET TOTAL PRODUCTION PER HOUR=============================================
