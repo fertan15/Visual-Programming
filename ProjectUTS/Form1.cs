@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace ProjectUTS
 {
@@ -17,6 +18,7 @@ namespace ProjectUTS
         int waktu = 300;
         int gameIntervalNormal = 1000;
         bool gakMiskin = true;
+        int wood, clay, iron, crop; //buat dikurangi
         public Form1()
         {
             InitializeComponent();
@@ -35,7 +37,6 @@ namespace ProjectUTS
             placeLabel();
             this.Controls.Add(pic);
             gameTimer.Start();
-
 
 
         }
@@ -120,10 +121,8 @@ namespace ProjectUTS
             //ini set kalo misal map di klik gimana
             selected = (Map)sender;
 
-            MessageBox.Show("Map ID: " + selected.id + "\nProduction : "  + selected.getProductionPerHour());
-
             // ini tak taruk detailnya disini
-            showDetails(selected.getJenis());
+            showUpgradeDetails(selected);
 
         }
 
@@ -134,53 +133,31 @@ namespace ProjectUTS
                 MessageBox.Show("Pilih map dulu");
                 return;
             }
+            
+            cekResource(selected, selected.getLevel(),gakMiskin,clay,iron,wood,crop);
 
-            if(Data.getClay() < 1)
-            {
-                gakMiskin = false;
-                MessageBox.Show("minggir lu miskin");
-                return;
-            }
-            else
-            { 
-                gakMiskin = true; 
-            }
-            if (Data.getIron() < 1)
-            {
-                gakMiskin = false;
-                MessageBox.Show("minggir lu miskin");
-                return;
-            }
-            else
-            {
-                gakMiskin = true;
-            }
-            if (Data.getWood() < 1)
-            {
-                gakMiskin = false;
-                MessageBox.Show("minggir lu miskin");
-                return;
-            }
-            else
-            {
-                gakMiskin = true;
-            }
-            if (Data.getCrop() < 1)
-            {
-                gakMiskin = false;
-                MessageBox.Show("minggir lu miskin");
-                return;
-            }
-            else
-            {
-                gakMiskin = true;
-            }
             if (gakMiskin)
             {
-                Data.addClay(-1);
-                Data.addIron(-1);
-                Data.addWood(-1);
-                Data.addCrop(-1);
+                if (selected.getJenis() == 0)
+                {
+                    waktu = Data.getProduceTime_clayPit(selected.getLevel());
+                }
+                else if (selected.getJenis() == 1)
+                {
+                    waktu = Data.getProduceTime_ironMine(selected.getLevel());
+                }
+                else if (selected.getJenis() == 2)
+                {
+                    waktu = Data.getProduceTime_woodCutter(selected.getLevel());
+                }
+                else if (selected.getJenis() == 3)
+                {
+                    waktu = Data.getProduceTime_cropLand(selected.getLevel());
+                }
+                Data.addClay(-clay);
+                Data.addIron(-iron);
+                Data.addWood(-wood);
+                Data.addCrop(-crop);
                 upgradeButton.Enabled = false;
 
                 countdowntimer.Start();
@@ -204,14 +181,13 @@ namespace ProjectUTS
             if (waktu <= 0)
             {
                 selected.addLevel();
-                selected.setProductionPerHour(20); //nambah produksi bang
+                int produceBaru = Data.getProducePerHour_clayPit(selected.getLevel());
+                selected.setProductionPerHour(selected.getProductionPerHour() + produceBaru); 
                 countDown.Text = "00:00:00";
                 countdowntimer.Stop();
                 upgradeButton.Enabled = true;
                 selected = null;
-                Data.upgradeFinish();
-                //tes
-                waktu = 3;                
+                Data.upgradeFinish();           
             }
         }
 
@@ -225,12 +201,12 @@ namespace ProjectUTS
         {
             gameTimer.Interval = gameIntervalNormal / multiplier; // biar cepet kalo multiplier gede
             countdowntimer.Interval = gameIntervalNormal / multiplier;
-            if (Data.anyUpgrade())
-            {
-                //sek masih rodok rodok error
-                Data.setEstimateTime(waktu/multiplier);
+            //if (Data.anyUpgrade())
+            //{
+            //    //sek masih rodok rodok error
+            //    Data.setEstimateTime(waktu/multiplier);
 
-            }
+            //}s
 
             clayPerHour.Text = Data.getAllClayProduction().ToString();
             ironPerHour.Text = Data.getAllIronProduction().ToString();
@@ -249,34 +225,268 @@ namespace ProjectUTS
             cropInven.Text = Data.getCrop().ToString();
         }
 
-        public void showDetails(int id)
+        public void showDetails(Map selected, int waktus)
         {
+            int detik = waktus;
+            int hours = detik / 3600;
+            detik %= 3600;
+            int minutes = detik / 60;
+            detik %= 60;
 
-            if(id == 0)
+            print(selected, hours, detik, minutes);
+
+        }
+
+        private void print (Map selected, int hours, int detik, int minutes)
+        {
+            if (selected.getJenis() == 0)
             {
-                //clay
-                buildingDetails.Text = "hohoho";
-                timeNeeded.Text = "ko keset pepega";
+                buildingDetails.Text = "Need " + Data.getClay_clayPit(selected.getLevel()) + " clay, " + Data.getIron_clayPit(selected.getLevel()) + " iron, " + Data.getWood_clayPit(selected.getLevel()) + 
+                    " wood, " + Data.getCrop_clayPit(selected.getLevel()) + " crop";
+                timeNeeded.Text = hours.ToString("D2") + ":" + minutes.ToString("D2") + ":" + detik.ToString("D2");
             }
-            else if(id == 1)
+            else if (selected.getJenis() == 1)
             {
                 //iron
-                buildingDetails.Text = "";
-                timeNeeded.Text = "";
+                buildingDetails.Text = "Need " + Data.getClay_ironMine(selected.getLevel()) + " clay, " + Data.getIron_ironMine(selected.getLevel()) + " iron, " + Data.getWood_ironMine(selected.getLevel()) +
+                    " wood, " + Data.getCrop_ironMine(selected.getLevel()) + " crop";
+                timeNeeded.Text = hours.ToString("D2") + ":" + minutes.ToString("D2") + ":" + detik.ToString("D2");
             }
-            else if(id == 2)
+            else if (selected.getJenis() == 2)
             {
                 //wood
-                buildingDetails.Text = "";
-                timeNeeded.Text = "";
+                buildingDetails.Text = "Need " + Data.getClay_woodCutter(selected.getLevel()) + 
+                    " clay, " + Data.getIron_woodCutter(selected.getLevel()) + " iron, " 
+                    + Data.getWood_woodCutter(selected.getLevel()) +
+                    " wood, " + Data.getCrop_woodCutter(selected.getLevel()) + " crop"; 
+                timeNeeded.Text = hours.ToString("D2") + ":" + minutes.ToString("D2") + ":" + detik.ToString("D2");
             }
-            else if(id == 3)
+            else if (selected.getJenis() == 3)
             {
                 //crop
-                buildingDetails.Text = "";
-                timeNeeded.Text = "";
+                buildingDetails.Text = buildingDetails.Text = "Need " + Data.getClay_cropLand(selected.getLevel()) +
+                    " clay, " + Data.getIron_cropLand(selected.getLevel()) + " iron, "
+                    + Data.getWood_cropLand(selected.getLevel()) +
+                    " wood, " + Data.getCrop_cropLand(selected.getLevel()) + " crop"; 
+                timeNeeded.Text = hours.ToString("D2") + ":" + minutes.ToString("D2") + ":" + detik.ToString("D2");
             }
+        }
 
+        private void cekResource(Map selected, int lvl, bool gakMiskin,int clay,int iron, int wood, int crop)
+        {
+            //buat cek resource cukup apa enggak
+            if(selected.getJenis() == 0)
+            {
+                if(Data.getClay() < Data.getClay_clayPit(lvl))
+                {
+                    MessageBox.Show("Miskin lu");
+                    gakMiskin = false;
+                    return;
+                }
+                else
+                {
+                    clay = Data.getClay_clayPit(lvl);
+                    gakMiskin = true;
+                }
+                if (Data.getIron() < Data.getIron_clayPit(lvl))
+                {
+                    MessageBox.Show("Miskin lu");
+                    gakMiskin = false;
+                    return;
+                }
+                else
+                {
+                    iron = Data.getIron_clayPit(lvl);
+                    gakMiskin = true;
+                }
+                if (Data.getWood() < Data.getWood_clayPit(lvl))
+                {
+                    MessageBox.Show("Miskin lu");
+                    gakMiskin = false;
+                    return;
+                }
+                else
+                {
+                    wood = Data.getWood_clayPit(lvl);
+                    gakMiskin = true;
+                }
+                if (Data.getCrop() < Data.getCrop_clayPit(lvl))
+                {
+                    MessageBox.Show("Miskin lu");
+                    gakMiskin = false;
+                    return;
+                }
+                else
+                {
+                    crop = Data.getCrop_clayPit(lvl);
+                    gakMiskin = true;
+                }
+            }
+            else if (selected.getJenis() == 1)
+            {
+                if (Data.getClay() < Data.getClay_ironMine(lvl))
+                {
+                    MessageBox.Show("Miskin lu");
+                    gakMiskin = false;
+                    return;
+                }
+                else
+                {
+                    clay = Data.getClay_ironMine(lvl);
+                    gakMiskin = true;
+                }
+                if (Data.getIron() < Data.getIron_ironMine(lvl))
+                {
+                    MessageBox.Show("Miskin lu");
+                    gakMiskin = false;
+                    return;
+                }
+                else
+                {
+                    iron = Data.getIron_ironMine(lvl);
+                    gakMiskin = true;
+                }
+                if (Data.getWood() < Data.getWood_ironMine(lvl))
+                {
+                    MessageBox.Show("Miskin lu");
+                    gakMiskin = false;
+                    return;
+                }
+                else
+                {
+                    wood = Data.getWood_ironMine(lvl);
+                    gakMiskin = true;
+                }
+                if (Data.getCrop() < Data.getCrop_ironMine(lvl))
+                {
+                    MessageBox.Show("Miskin lu");
+                    gakMiskin = false;
+                    return;
+                }
+                else
+                {
+                    crop = Data.getCrop_ironMine(lvl);
+                    gakMiskin = true;
+                }
+            }
+            else if (selected.getJenis() == 2)
+            {
+                if (Data.getClay() < Data.getClay_woodCutter(lvl))
+                {
+                    MessageBox.Show("Miskin lu");
+                    gakMiskin = false;
+                    return;
+                }
+                else
+                {
+                    clay = Data.getClay_woodCutter(lvl);
+                    gakMiskin = true;
+                }
+                if (Data.getIron() < Data.getIron_woodCutter(lvl))
+                {
+                    MessageBox.Show("Miskin lu");
+                    gakMiskin = false;
+                    return;
+                }
+                else
+                {
+                    iron = Data.getIron_woodCutter(lvl);
+                    gakMiskin = true;
+                }
+                if (Data.getWood() < Data.getWood_woodCutter(lvl))
+                {
+                    MessageBox.Show("Miskin lu");
+                    gakMiskin = false;
+                    return;
+                }
+                else
+                {
+                    wood = Data.getWood_woodCutter(lvl);
+                    gakMiskin = true;
+                }
+                if (Data.getCrop() < Data.getCrop_woodCutter(lvl))
+                {
+                    MessageBox.Show("Miskin lu");
+                    gakMiskin = false;
+                    return;
+                }
+                else
+                {
+                    crop = Data.getCrop_woodCutter(lvl);
+                    gakMiskin = true;
+                }
+            }
+            else if (selected.getJenis() == 3)
+            {
+                if (Data.getClay() < Data.getClay_cropLand(lvl))
+                {
+                    MessageBox.Show("Miskin lu");
+                    gakMiskin = false;
+                    return;
+                }
+                else
+                {
+                    clay = Data.getClay_cropLand(lvl);
+                    gakMiskin = true;
+                }
+                if (Data.getIron() < Data.getIron_cropLand(lvl))
+                {
+                    MessageBox.Show("Miskin lu");
+                    gakMiskin = false;
+                    return;
+                }
+                else
+                {
+                    iron = Data.getIron_cropLand(lvl);
+                    gakMiskin = true;
+                }
+                if (Data.getWood() < Data.getWood_cropLand(lvl))
+                {
+                    MessageBox.Show("Miskin lu");
+                    gakMiskin = false;
+                    return;
+                }
+                else
+                {
+                    wood = Data.getWood_cropLand(lvl);
+                    gakMiskin = true;
+                }
+                if (Data.getCrop() < Data.getCrop_cropLand(lvl))
+                {
+                    gakMiskin = false;
+                    MessageBox.Show("Miskin lu");
+                    return;
+                }
+                else
+                {
+                    crop = Data.getCrop_cropLand(lvl);
+                    gakMiskin = true;
+                }
+            }
+        }
+
+        private void showUpgradeDetails(Map selected)
+        {
+            if (selected.getJenis() == 0)
+            {
+                //clay
+                showDetails(selected, Data.getProduceTime_clayPit(selected.getLevel()));
+            }
+            else if (selected.getJenis() == 1)
+            {
+                //iron
+                showDetails(selected, Data.getProduceTime_ironMine(selected.getLevel()));
+            }
+            else if (selected.getJenis() == 2)
+            {
+                //wood
+                showDetails(selected, Data.getProduceTime_woodCutter(selected.getLevel()));
+            }
+            else if (selected.getJenis() == 3)
+            {
+                //crop
+                showDetails(selected, Data.getProduceTime_cropLand(selected.getLevel()));
+            }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

@@ -199,10 +199,10 @@ namespace ProjectUTS
             player.Rows[0]["EstimateTimeFinishUpgrade"] = DateTime.Now;
         }
 
-        public static bool anyUpgrade()
-        {
-            return Convert.ToBoolean(player.Rows[0]["upgradeInProgress"]);
-        }
+        //public static bool anyUpgrade()
+        //{
+        //    return Convert.ToBoolean(player.Rows[0]["upgradeInProgress"]);
+        //}
 
         //get oll dr table woodCutter
         public static int getWood_woodCutter(int index)
