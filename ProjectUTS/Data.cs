@@ -89,11 +89,12 @@ namespace ProjectUTS
         //ini buat ngisi mapList pas awal jalan
         public static void loadMap()
         {
+            mapList.Clear();
             for (int i = 0; i < totalMap; i++)
             {
                 mapList.Add(new Map(i));
             }
-
+            MessageBox.Show("map berhasil load");
         }
 
 
@@ -160,14 +161,32 @@ namespace ProjectUTS
         public static int getAllWoodProduction()
         {
             int acc = 0;
+            int woodCount = 0; // Tambahkan penghitung untuk Kayu
+
+            // Tampilkan jumlah Map List. HARUS 18.
+            //MessageBox.Show($"MapList Count: {mapList.Count}", "DEBUG JUMLAH MAP");
 
             foreach (Map map in mapList)
             {
-                if (map.getJenis() == 2)
+                int mapJenis = map.getJenis();
+
+                // 🚨 Tampilkan Jenis Map yang Diharapkan (untuk ID 8, 9, 10, 11)
+                if (map.id >= 8 && map.id <= 11)
                 {
-                    acc += map.getProductionPerHour();
+                    //MessageBox.Show($"ID: {map.id}, Jenis yang Dibaca: {mapJenis}", "DEBUG JENIS WOOD");
+                }
+                // -------------------------------------------------------------
+
+                if (mapJenis == 2) // Perbandingan ini gagal
+                {
+                    int mapProd = map.getProductionPerHour();
+                    acc += mapProd;
+                    woodCount++;
                 }
             }
+
+            // Tampilkan hasil akhir
+            //MessageBox.Show($"Total Map Kayu yang Ditemukan: {woodCount}. Total Produksi: {acc}", "DEBUG HASIL AKHIR");
 
             return acc;
         }
@@ -446,7 +465,52 @@ namespace ProjectUTS
             return 0;
         }
 
+        public static void CalculateOfflineProduction()
+        {
+            DateTime lastOnline = Convert.ToDateTime(player.Rows[0]["LastOnline"]);
+            TimeSpan durationOffline = DateTime.Now - lastOnline;
+            double hoursOffline = durationOffline.TotalHours;
 
+            // --- DEBUG CHECKPOINT 1: Waktu Offline ---
+            MessageBox.Show(
+                "Last Online: " + lastOnline.ToString() +
+                "\nCurrent Time: " + DateTime.Now.ToString() +
+                "\nTotal Jam Offline: " + hoursOffline.ToString("F2") + " jam",
+                "DEBUG WAKTU OFFLINE"
+            );
+            // ------------------------------------------
+
+            if (hoursOffline <= 0)
+                return;
+
+            int initialWood = getWood();
+            int woodProductionPerHour = getAllWoodProduction();
+
+            // Total Wood (masih bertipe double/double)
+            double totalWoodGained_Raw = woodProductionPerHour * hoursOffline;
+
+            // 🎯 Konversi/Pembulatan untuk Penambahan: 
+            // Jika Anda ingin hanya menambahkan integer penuh: gunakan Math.Floor
+            int totalWoodGained_Int = (int)Math.Floor(totalWoodGained_Raw);
+
+            // Gunakan fungsi addWood Anda, yang menerima double
+            addWood(totalWoodGained_Int); // Lebih aman jika Anda menambahkannya sebagai integer
+
+            // --- DEBUG CHECKPOINT 2: Hasil Produksi ---
+            MessageBox.Show(
+                "Awal Wood: " + initialWood +
+                "\nProd/Jam: " + woodProductionPerHour +
+                // 🎯 Tampilkan total wood yang BENAR-BENAR ditambahkan (nilai INT)
+                "\nTotal Wood Didapat: " + totalWoodGained_Int +
+                // 🎯 Nilai wood baru harus SAMA dengan (Awal Wood + Total Wood Didapat)
+                "\nWood Baru: " + getWood(),
+                "DEBUG PRODUKSI OFFLINE (WOOD)"
+            );
+            // ------------------------------------------
+
+            // Ulangi untuk Clay, Iron, dan Crop
+            // ...
+        }
 
 
 

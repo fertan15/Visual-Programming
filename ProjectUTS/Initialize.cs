@@ -45,7 +45,9 @@ namespace ProjectUTS
 
             if(!Data.isThereSavedProgress)
             {
-                initDefaultData();
+                initDefaultData(); // ngisi default dataa
+                Data.loadMap(); // koad map e biar isa calculate oflen
+                Data.CalculateOfflineProduction();
                 //MessageBox.Show("No data Found jadi mulai dari awal");
             }
             else
@@ -54,6 +56,8 @@ namespace ProjectUTS
                 if (loaded)
                 {
                     MessageBox.Show("Data founded, Lanjutin dari trakhir maen!");
+                    Data.loadMap();
+                    Data.CalculateOfflineProduction();
                     if(Data.progress.Rows.Count != Data.totalMap || Data.player.Rows.Count < 1 || Data.map.Rows.Count != 4)
                     {
                         MessageBox.Show("Data ga sesuai ama default ntah napa Jadi bakal ngulang dari awal yeah");
