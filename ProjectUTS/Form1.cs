@@ -18,6 +18,7 @@ namespace ProjectUTS
         int waktu = 300;
         int gameIntervalNormal = 1000;
         bool gakMiskin = true;
+        bool clayTrue = true, ironTrue = true, woodTrue = true, cropTrue = true;
         int woodNeeded, clayNeeded, ironNeeded, cropNeeded; //buat dikurangi
         public Form1()
         {
@@ -267,42 +268,50 @@ namespace ProjectUTS
                 if(Data.getClay() < Data.getClay_clayPit(lvl))
                 {
                     MessageBox.Show("Miskin lu");
-                    gakMiskin = false;
+                    clayTrue = false;
                     return;
                 }
                 else
                 {
-                    gakMiskin = true;
+                    clayTrue = true;
                 }
                 if (Data.getIron() < Data.getIron_clayPit(lvl))
                 {
                     MessageBox.Show("Miskin lu");
-                    gakMiskin = false;
+                    ironTrue = false;
                     return;
                 }
                 else
                 {
-                    gakMiskin = true;
+                    ironTrue = true;
                 }
                 if (Data.getWood() < Data.getWood_clayPit(lvl))
                 {
                     MessageBox.Show("Miskin lu");
-                    gakMiskin = false;
+                    woodTrue = false;
                     return;
                 }
                 else
                 {
-                    gakMiskin = true;
+                    woodTrue = true;
                 }
                 if (Data.getCrop() < Data.getCrop_clayPit(lvl))
                 {
                     MessageBox.Show("Miskin lu");
-                    gakMiskin = false;
+                    cropTrue = false;
                     return;
                 }
                 else
                 {
+                    cropTrue = true;
+                }
+                if(cropTrue && ironTrue && woodTrue && clayTrue)
+                {
                     gakMiskin = true;
+                }
+                else
+                {
+                    gakMiskin = false;
                 }
             }
             else if (selected.getJenis() == 1)
@@ -310,42 +319,50 @@ namespace ProjectUTS
                 if (Data.getClay() < Data.getClay_ironMine(lvl))
                 {
                     MessageBox.Show("Miskin lu");
-                    gakMiskin = false;
+                    clayTrue = false;
                     return;
                 }
                 else
                 {
-                    gakMiskin = true;
+                    clayTrue = true;
                 }
                 if (Data.getIron() < Data.getIron_ironMine(lvl))
                 {
                     MessageBox.Show("Miskin lu");
-                    gakMiskin = false;
+                    ironTrue = false;
                     return;
                 }
                 else
                 {
-                    gakMiskin = true;
+                    ironTrue = true;
                 }
                 if (Data.getWood() < Data.getWood_ironMine(lvl))
                 {
                     MessageBox.Show("Miskin lu");
-                    gakMiskin = false;
+                    woodTrue = false;
                     return;
                 }
                 else
                 {
-                    gakMiskin = true;
+                    woodTrue = true;
                 }
                 if (Data.getCrop() < Data.getCrop_ironMine(lvl))
                 {
                     MessageBox.Show("Miskin lu");
-                    gakMiskin = false;
+                    cropTrue = false;
                     return;
                 }
                 else
                 {
+                    cropTrue = true;
+                }
+                if (cropTrue && ironTrue && woodTrue && clayTrue)
+                {
                     gakMiskin = true;
+                }
+                else
+                {
+                    gakMiskin = false;
                 }
             }
             else if (selected.getJenis() == 2)
@@ -353,42 +370,50 @@ namespace ProjectUTS
                 if (Data.getClay() < Data.getClay_woodCutter(lvl))
                 {
                     MessageBox.Show("Miskin lu");
-                    gakMiskin = false;
+                    clayTrue = false;
                     return;
                 }
                 else
                 {
-                    gakMiskin = true;
+                    clayTrue = true;
                 }
                 if (Data.getIron() < Data.getIron_woodCutter(lvl))
                 {
                     MessageBox.Show("Miskin lu");
-                    gakMiskin = false;
+                    ironTrue = false;
                     return;
                 }
                 else
                 {
-                    gakMiskin = true;
+                    ironTrue = true;
                 }
                 if (Data.getWood() < Data.getWood_woodCutter(lvl))
                 {
                     MessageBox.Show("Miskin lu");
-                    gakMiskin = false;
+                    woodTrue = false;
                     return;
                 }
                 else
                 {
-                    gakMiskin = true;
+                    woodTrue = true;
                 }
                 if (Data.getCrop() < Data.getCrop_woodCutter(lvl))
                 {
                     MessageBox.Show("Miskin lu");
-                    gakMiskin = false;
+                    cropTrue = false;
                     return;
                 }
                 else
                 {
+                    cropTrue = true;
+                }
+                if (cropTrue && ironTrue && woodTrue && clayTrue)
+                {
                     gakMiskin = true;
+                }
+                else
+                {
+                    gakMiskin = false;
                 }
             }
             else if (selected.getJenis() == 3)
@@ -396,42 +421,50 @@ namespace ProjectUTS
                 if (Data.getClay() < Data.getClay_cropLand(lvl))
                 {
                     MessageBox.Show("Miskin lu");
-                    gakMiskin = false;
+                    clayTrue = false;
                     return;
                 }
                 else
                 {
-                    gakMiskin = true;
+                    clayTrue = true;
                 }
                 if (Data.getIron() < Data.getIron_cropLand(lvl))
                 {
                     MessageBox.Show("Miskin lu");
-                    gakMiskin = false;
+                    ironTrue = false;
                     return;
                 }
                 else
                 {
-                    gakMiskin = true;
+                    ironTrue = true;
                 }
                 if (Data.getWood() < Data.getWood_cropLand(lvl))
                 {
                     MessageBox.Show("Miskin lu");
-                    gakMiskin = false;
+                    woodTrue = false;
                     return;
                 }
                 else
                 {
-                    gakMiskin = true;
+                    woodTrue = true;
                 }
                 if (Data.getCrop() < Data.getCrop_cropLand(lvl))
                 {
-                    gakMiskin = false;
+                    cropTrue = false;
                     MessageBox.Show("Miskin lu");
                     return;
                 }
                 else
                 {
+                    cropTrue = true;
+                }
+                if (cropTrue && ironTrue && woodTrue && clayTrue)
+                {
                     gakMiskin = true;
+                }
+                else
+                {
+                    gakMiskin = false;
                 }
             }
         }
