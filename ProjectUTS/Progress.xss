@@ -7,14 +7,14 @@
 <DiagramLayout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ex:showrelationlabel="False" ViewPortX="0" ViewPortY="103" xmlns:ex="urn:schemas-microsoft-com:xml-msdatasource-layout-extended" xmlns="urn:schemas-microsoft-com:xml-msdatasource-layout">
   <Shapes>
     <Shape ID="DesignTable:MapProgress" ZOrder="4" X="152" Y="137" Height="171" Width="162" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="167" />
-    <Shape ID="DesignTable:JenisMap" ZOrder="2" X="626" Y="164" Height="79" Width="150" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="75" />
+    <Shape ID="DesignTable:JenisMap" ZOrder="2" X="627" Y="164" Height="79" Width="150" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="75" />
     <Shape ID="DesignTable:Player" ZOrder="1" X="386" Y="337" Height="240" Width="236" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="28" SplitterPosition="236" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:JenisMap_MapProgress" ZOrder="3" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>626</X>
+          <X>627</X>
           <Y>203</Y>
         </Point>
         <Point>
