@@ -960,6 +960,8 @@ namespace ProjectUTS {
             
             private global::System.Data.DataColumn columnLastOnline;
             
+            private global::System.Data.DataColumn columnMultiplier;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public PlayerDataTable() {
@@ -1067,6 +1069,14 @@ namespace ProjectUTS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn MultiplierColumn {
+                get {
+                    return this.columnMultiplier;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1102,7 +1112,7 @@ namespace ProjectUTS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PlayerRow AddPlayerRow(short id, double clay, double iron, double wood, double crop, bool upgradeInProgress, short idMapUpgrade, System.DateTime EstimateTimeFinishUpgrade, System.DateTime LastOnline) {
+            public PlayerRow AddPlayerRow(short id, double clay, double iron, double wood, double crop, bool upgradeInProgress, short idMapUpgrade, System.DateTime EstimateTimeFinishUpgrade, System.DateTime LastOnline, string Multiplier) {
                 PlayerRow rowPlayerRow = ((PlayerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
@@ -1113,7 +1123,8 @@ namespace ProjectUTS {
                         upgradeInProgress,
                         idMapUpgrade,
                         EstimateTimeFinishUpgrade,
-                        LastOnline};
+                        LastOnline,
+                        Multiplier};
                 rowPlayerRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPlayerRow);
                 return rowPlayerRow;
@@ -1145,6 +1156,7 @@ namespace ProjectUTS {
                 this.columnidMapUpgrade = base.Columns["idMapUpgrade"];
                 this.columnEstimateTimeFinishUpgrade = base.Columns["EstimateTimeFinishUpgrade"];
                 this.columnLastOnline = base.Columns["LastOnline"];
+                this.columnMultiplier = base.Columns["Multiplier"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1168,6 +1180,8 @@ namespace ProjectUTS {
                 base.Columns.Add(this.columnEstimateTimeFinishUpgrade);
                 this.columnLastOnline = new global::System.Data.DataColumn("LastOnline", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLastOnline);
+                this.columnMultiplier = new global::System.Data.DataColumn("Multiplier", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMultiplier);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1696,6 +1710,22 @@ namespace ProjectUTS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Multiplier {
+                get {
+                    try {
+                        return ((string)(this[this.tablePlayer.MultiplierColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Multiplier\' in table \'Player\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePlayer.MultiplierColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsidNull() {
                 return this.IsNull(this.tablePlayer.idColumn);
             }
@@ -1800,6 +1830,18 @@ namespace ProjectUTS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetLastOnlineNull() {
                 this[this.tablePlayer.LastOnlineColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsMultiplierNull() {
+                return this.IsNull(this.tablePlayer.MultiplierColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetMultiplierNull() {
+                this[this.tablePlayer.MultiplierColumn] = global::System.Convert.DBNull;
             }
         }
         
