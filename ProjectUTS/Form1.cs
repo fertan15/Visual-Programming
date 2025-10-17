@@ -17,7 +17,7 @@ namespace ProjectUTS
         int multiplier = 1; //buat multiplier production
         int waktu = 300;
         int gameIntervalNormal = 1000;
-        bool gakMiskin = true;
+        bool gakMiskin = false;
         bool clayTrue = true, ironTrue = true, woodTrue = true, cropTrue = true;
         int woodNeeded, clayNeeded, ironNeeded, cropNeeded; //buat dikurangi
         public Form1()
@@ -135,7 +135,7 @@ namespace ProjectUTS
                 return;
             }
             
-            cekResource(selected, selected.getLevel(),gakMiskin);
+            cekResource(selected, selected.getLevel());
 
             if (gakMiskin)
             {
@@ -260,7 +260,7 @@ namespace ProjectUTS
             }
         }
 
-        private void cekResource(Map selected, int lvl, bool gakMiskin)
+        private void cekResource(Map selected, int lvl)
         {
             //buat cek resource cukup apa enggak
             if(selected.getJenis() == 0)
