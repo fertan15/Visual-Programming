@@ -257,6 +257,10 @@ namespace ProjectUTS
             {
                 MessageBox.Show("das you goofy!");
                 return;
+            } else if (Convert.ToInt32(Data.player.Rows[0]["crop"]) < 500)
+            {
+                MessageBox.Show("you don't got at least 500 lil bro");
+                return;
             }
 
             if (!movingPanels.Contains(selectedPanel) && selectedPanel.BackColor.ToArgb() != Color.White.ToArgb())
