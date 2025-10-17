@@ -34,6 +34,9 @@ namespace ProjectUTS
         public static DataTable ironMine;
         public static DataTable cropLand;
 
+        public static Map Selected = null;
+        public static int waktuSisa;
+
         //============================INVENTORY=============================================
 
         //buat liat / mau pake current Inventory
@@ -355,10 +358,10 @@ namespace ProjectUTS
             player.Rows[0]["EstimateTimeFinishUpgrade"] = DateTime.Now;
         }
 
-        //public static bool anyUpgrade()
-        //{
-        //    return Convert.ToBoolean(player.Rows[0]["upgradeInProgress"]);
-        //}
+        public static bool anyUpgrade()
+        {
+            return Convert.ToBoolean(player.Rows[0]["upgradeInProgress"]);
+        }
 
         //get oll dr table woodCutter
         public static int getWood_woodCutter(int index)
@@ -590,13 +593,7 @@ namespace ProjectUTS
             DateTime lastOnline = Convert.ToDateTime(player.Rows[0]["LastOnline"]);
             TimeSpan durationOffline = DateTime.Now - lastOnline;
             double hoursOffline = durationOffline.TotalHours;
-
-            MessageBox.Show(
-                "Last Online: " + lastOnline.ToString() +
-                "\nCurrent Time: " + DateTime.Now.ToString() +
-                "\nTotal Jam Offline: " + hoursOffline.ToString("F2") + " jam",
-                "DEBUG WAKTU OFFLINE"
-            );
+            int multiply = Convert.ToInt16(Data.player.Rows[0]["multiplier"]);
 
             if (hoursOffline <= 0)
                 return;
@@ -604,64 +601,35 @@ namespace ProjectUTS
             int initialWood = getWood();
             int woodProductionPerHour = getAllWoodProduction();
 
-            double totalWoodGained_Raw = woodProductionPerHour * hoursOffline;
+            double totalWoodGained_Raw = woodProductionPerHour * hoursOffline ;
 
             int totalWoodGained_Int = (int)Math.Floor(totalWoodGained_Raw);
 
             addWood(totalWoodGained_Int);
 
-            MessageBox.Show(
-                "Awal Wood: " + initialWood +
-                "\nProd/Jam: " + woodProductionPerHour +
-                "\nTotal Wood Didapat: " + totalWoodGained_Int +
-                "\nWood Baru: " + getWood(),
-                "DEBUG PRODUKSI OFFLINE (WOOD)"
-            );
-
             int initialClay = getClay();
             int clayProductionPerHour = getAllClayProduction();
 
-            double totalClayGained_Raw = clayProductionPerHour * hoursOffline;
+            double totalClayGained_Raw = clayProductionPerHour * hoursOffline * multiply;
 
             int totalClayGained_Int = (int)Math.Floor(totalWoodGained_Raw);
 
             addClay(totalClayGained_Int); 
-            MessageBox.Show(
-                "Awal Clay: " + initialClay +
-                "\nProd/Jam: " + clayProductionPerHour +
-                "\nTotal Clay Didapat: " + totalClayGained_Int +
-                "\nClay Baru: " + getClay(),
-                "DEBUG PRODUKSI OFFLINE (CLAY)"
-            );
 
             int initialIron = getIron();
             int ironProductionPerHour = getAllIronProduction();
-            double totalironGained_Raw = ironProductionPerHour * hoursOffline;
+            double totalironGained_Raw = ironProductionPerHour * hoursOffline * multiply;
             int totalironGained_Int = (int)Math.Floor(totalironGained_Raw);
             addIron(totalironGained_Int);
-            MessageBox.Show(
-                "Awal iron: " + initialIron +
-                "\nProd/Jam: " + ironProductionPerHour +
-                "\nTotal iron Didapat: " + totalironGained_Int +
-                "\nIron  Baru: " + getIron(),
-                "DEBUG PRODUKSI OFFLINE (iron)"
-            );
 
             int initialCrop = getCrop();
             int cropProductionPerHour = getAllIronProduction();
 
-            double totalcropGained_Raw = cropProductionPerHour * hoursOffline;
+            double totalcropGained_Raw = cropProductionPerHour * hoursOffline * multiply;
 
             int totalcropGained_Int = (int)Math.Floor(totalcropGained_Raw);
 
             addCrop(totalcropGained_Int);
-            MessageBox.Show(
-                "Awal crop: " + initialCrop +
-                "\nProd/Jam: " + cropProductionPerHour +
-                "\nTotal crop Didapat: " + totalcropGained_Int +
-                "\ncrop  Baru: " + getCrop(),
-                "DEBUG PRODUKSI OFFLINE (crop)"
-            );
         }
         public static bool checkOfflineUpgradeCompletion()
         {
@@ -670,9 +638,9 @@ namespace ProjectUTS
                 MessageBox.Show("masuk upgrade oflenn");
                 DateTime finishTime = Convert.ToDateTime(player.Rows[0]["EstimateTimeFinishUpgrade"]);
 
+                int idMap = Convert.ToInt32(player.Rows[0]["idMapUpgrade"]);
                 if (finishTime <= DateTime.Now)
                 {
-                    int idMap = Convert.ToInt32(player.Rows[0]["idMapUpgrade"]);
 
                     Map completedMap = Data.mapList.FirstOrDefault(m => m.id == idMap);
 
@@ -685,6 +653,26 @@ namespace ProjectUTS
 
                     MessageBox.Show($"Upgrade Map ID {idMap} Selesai saat Anda offline!", "Upgrade Selesai");
                     return true;
+                }
+                else
+                {
+                    TimeSpan durationOffline = finishTime - DateTime.Now;
+                    Double sisaWaktu = durationOffline.TotalSeconds;
+                    waktuSisa = (int)(sisaWaktu);
+
+                    MessageBox.Show("sisa waktu : " + waktuSisa);
+                    foreach (Map map in Data.mapList)
+                    {
+                        if (map.id == idMap)
+                        {
+                            Selected = map;
+                            break;
+                        }
+                    }
+
+
+
+
                 }
             }
             return false;
