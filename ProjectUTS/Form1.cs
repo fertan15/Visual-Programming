@@ -14,18 +14,30 @@ namespace ProjectUTS
     public partial class Form1 : Form
     {
         Map selected; //buat index map yang tak klik skarang soale ganti2
-        int multiplier = 1; //buat multiplier production
+        int multiplier; //buat multiplier production
         int waktu = 300;
         int gameIntervalNormal = 1000;
         bool gakMiskin = true;
         bool clayTrue = true, ironTrue = true, woodTrue = true, cropTrue = true;
         int woodNeeded, clayNeeded, ironNeeded, cropNeeded; //buat dikurangi
+
         public Form1()
         {
             InitializeComponent();
             new Initialize();
             Data.loadMap();
 
+            selected = Data.Selected;
+            if (selected != null)
+            {
+                waktu = Data.waktuSisa;
+                countdowntimer.Start();
+                upgradeButton.Enabled = false;
+               
+            }
+
+
+            multiplier = Convert.ToInt16(Data.player.Rows[0]["Multiplier"]);
             //set ukuran pic box dulu buat antisipasi manusia dajjal
 
             PictureBox pic = new PictureBox();
@@ -38,6 +50,8 @@ namespace ProjectUTS
             placeLabel();
             this.Controls.Add(pic);
             gameTimer.Start();
+
+
 
 
         }
@@ -166,6 +180,8 @@ namespace ProjectUTS
             countDown.Text = hours.ToString("D2") + ":" + minutes.ToString("D2") + ":" + detik.ToString("D2");
             waktu--;
 
+            
+
             if (waktu <= 0)
             {
                 int produceBaru = Data.getProducePerHour_clayPit(selected.getLevel());
@@ -189,12 +205,14 @@ namespace ProjectUTS
         {
             gameTimer.Interval = gameIntervalNormal / multiplier; // biar cepet kalo multiplier gede
             countdowntimer.Interval = gameIntervalNormal / multiplier;
-            //if (Data.anyUpgrade())
-            //{
-            //    //sek masih rodok rodok error
-            //    Data.setEstimateTime(waktu/multiplier);
+            if (Data.anyUpgrade())
+            {
+                //sek masih rodok rodok error
+                
+                Data.setEstimateTime(waktu / multiplier);
 
-            //}s
+            }
+            
 
             clayPerHour.Text = Data.getAllClayProduction().ToString();
             ironPerHour.Text = Data.getAllIronProduction().ToString();
