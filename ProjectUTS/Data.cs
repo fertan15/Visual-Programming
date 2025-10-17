@@ -128,6 +128,7 @@ namespace ProjectUTS
         {
             //save current time as last online
             player.Rows[0]["lastOnline"] = DateTime.Now;
+            
 
             map.WriteXml("saveMap.xml");
             progress.WriteXml("saveProgress.xml");

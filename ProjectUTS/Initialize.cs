@@ -39,8 +39,6 @@ namespace ProjectUTS
             if (File.Exists("saveMap.xml") && File.Exists("saveProgress.xml") && File.Exists("savePlayer.xml"))
             {
                 Data.isThereSavedProgress = true;
-                
-
 
             }
             
@@ -49,8 +47,7 @@ namespace ProjectUTS
             {
                 initDefaultData(); // ngisi default dataa
                 Data.loadMap(); // koad map e biar isa calculate oflen
-                Data.CalculateOfflineProduction();
-                //MessageBox.Show("No data Found jadi mulai dari awal");
+                MessageBox.Show("No data Found jadi mulai dari awal");
             }
             else
             {
@@ -152,6 +149,7 @@ namespace ProjectUTS
             playerRow["idMapUpgrade"] = -1;
             playerRow["EstimateTimeFinishUpgrade"] = DateTime.Now;
             playerRow["LastOnline"] = DateTime.Now;
+            playerRow["multiplier"] = 1;
             Data.player.Rows.Add(playerRow);
 
         }
