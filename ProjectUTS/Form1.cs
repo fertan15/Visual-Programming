@@ -531,7 +531,8 @@ namespace ProjectUTS
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            Data.player.Rows[0]["multiplier"] = multiplier;
+           
             //save data pas form di tutup
             Data.save();
         }
