@@ -98,6 +98,7 @@ namespace ProjectUTS
             if (e.KeyCode == Keys.D1)
             {
                 multiplier = 1;
+
                 
             }
             if(e.KeyCode == Keys.D2)
@@ -141,12 +142,16 @@ namespace ProjectUTS
 
         private void Map_Click(object sender, EventArgs e)
         {
-            //ini set kalo misal map di klik gimana
-            selected = (Map)sender;
+            //fix isah ganti updatean
+            if (!Data.anyUpgrade())
+            {
 
-            // ini tak taruk detailnya disini
-            showUpgradeDetails(selected);
+                //ini set kalo misal map di klik gimana
+                selected = (Map)sender;
 
+                // ini tak taruk detailnya disini
+                showUpgradeDetails(selected);
+            }
         }
 
         private void upgradeButton_Click(object sender, EventArgs e)
@@ -213,13 +218,6 @@ namespace ProjectUTS
         {
             gameTimer.Interval = gameIntervalNormal / multiplier; // biar cepet kalo multiplier gede
             countdowntimer.Interval = gameIntervalNormal / multiplier;
-            if (Data.anyUpgrade())
-            {
-                //sek masih rodok rodok error
-                
-                Data.setEstimateTime(waktu / multiplier);
-
-            }
             
 
             clayPerHour.Text = Data.getAllClayProduction().ToString();
@@ -558,7 +556,14 @@ namespace ProjectUTS
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Data.player.Rows[0]["multiplier"] = multiplier;
-           
+            if (Data.anyUpgrade())
+            {
+                //update last estimate time
+                Data.setEstimateTime(waktu);
+
+            }
+
+
             //save data pas form di tutup
             Data.save();
         }

@@ -635,7 +635,7 @@ namespace ProjectUTS
         {
             if (Convert.ToBoolean(player.Rows[0]["upgradeInProgress"]))
             {
-                MessageBox.Show("masuk upgrade oflenn");
+                //MessageBox.Show("masuk upgrade oflenn");
                 DateTime finishTime = Convert.ToDateTime(player.Rows[0]["EstimateTimeFinishUpgrade"]);
 
                 int idMap = Convert.ToInt32(player.Rows[0]["idMapUpgrade"]);
